@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=680
 permalink: /2015/03/raspberry-pi-dac-mcp4725-with-wiringpi/
-image: /wp-content/uploads/2015/03/download1-825x413.png
+image: assets/img/uploads/2015/03/download1-825x413.png
 categories:
   - Electronics
   - Programming
@@ -18,7 +18,7 @@ tags:
 ---
 The Raspberry Pi lacks a DAC but using the I2C bus, one can easily add a device like the 12bit [MCP4725](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en532229). The GPIO library [wiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/i2c-library) provides support for I2C devices, however, getting the MCP4725 working with it isn&#8217;t a simple as one might hope. The device is 12bit but the I2C protocol works on bytes (8bits). To send 12bit data, the Microchip designed the message transfer like this:<figure id="attachment_682" aria-describedby="caption-attachment-682" style="width: 632px" class="wp-caption aligncenter">
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/22039d.pdf.jpg" alt="The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other." width="632" height="509" class="size-full wp-image-682" srcset="/assets/img/uploads/2015/03/22039d.pdf.jpg 632w, /assets/img/uploads/2015/03/22039d.pdf-300x242.jpg 300w" sizes="(max-width: 632px) 100vw, 632px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/22039d.pdf.jpg)<figcaption id="caption-attachment-682" class="wp-caption-text">The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other.</figcaption></figure> 
+[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/22039d.pdf.jpg" alt="The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other." width="632" height="509" class="size-full wp-image-682" srcset="/assets/img/uploads/2015/03/22039d.pdf.jpg 632w, /assets/img/uploads/2015/03/22039d.pdf-300x242.jpg 300w" sizes="(max-width: 632px) 100vw, 632px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/22039d.pdf.jpg)<figcaption id="caption-attachment-682" class="wp-caption-text">The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other.</figcaption></figure> 
 
 <!--more-->
 
@@ -143,4 +143,4 @@ build and run in the examples directory with:
 ./dac 4095 #output Vdd<br />
 ./dac #output repeating sine wave`<figure id="attachment_691" aria-describedby="caption-attachment-691" style="width: 660px" class="wp-caption aligncenter">
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/download-768x1024.png" alt="Using my driver for wiringPi, a sine wave being produced by the MCP4725" width="660" height="880" class="size-large wp-image-691" srcset="/assets/img/uploads/2015/03/download-768x1024.png 768w, /assets/img/uploads/2015/03/download-225x300.png 225w, /assets/img/uploads/2015/03/download.png 1536w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/download.png)<figcaption id="caption-attachment-691" class="wp-caption-text">Using my driver for wiringPi, a sine wave being produced by the MCP4725</figcaption></figure>
+[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/download-768x1024.png" alt="Using my driver for wiringPi, a sine wave being produced by the MCP4725" width="660" height="880" class="size-large wp-image-691" srcset="/assets/img/uploads/2015/03/download-768x1024.png 768w, /assets/img/uploads/2015/03/download-225x300.png 225w, /assets/img/uploads/2015/03/download.png 1536w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/download.png)<figcaption id="caption-attachment-691" class="wp-caption-text">Using my driver for wiringPi, a sine wave being produced by the MCP4725</figcaption></figure>

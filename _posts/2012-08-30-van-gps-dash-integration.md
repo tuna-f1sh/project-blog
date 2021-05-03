@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=80
 permalink: /2012/08/van-gps-dash-integration/
-image: /wp-content/uploads/2012/08/2012-08-28-14.27.59-1000x288.jpg
+image: assets/img/uploads/2012/08/2012-08-28-14.27.59-1000x288.jpg
 categories:
   - Fabrication
   - Modification

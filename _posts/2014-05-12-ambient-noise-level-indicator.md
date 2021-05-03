@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=341
 permalink: /2014/05/ambient-noise-level-indicator/
-image: /wp-content/uploads/2014/05/2014-05-14-20.16.55-1000x288.jpg
+image: assets/img/uploads/2014/05/2014-05-14-20.16.55-1000x288.jpg
 categories:
   - Electronics
   - Programming
@@ -29,7 +29,7 @@ The operation is best described by the video below and commented code. I&#8217;v
   * Resample the background
   * Set the frequency band that is used for the amplitude average &#8211; this is useful to demonstrate that it is working and also to ignore low frequency to only show speech for example; screechy children in a classroom!<figure id="attachment_356" aria-describedby="caption-attachment-356" style="width: 814px" class="wp-caption aligncenter">
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png" alt="The control panel when the Java applet is running." width="814" height="536" class="size-full wp-image-356" srcset="/assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png 814w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16-300x197.png 300w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16-455x300.png 455w" sizes="(max-width: 814px) 100vw, 814px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png)<figcaption id="caption-attachment-356" class="wp-caption-text">The control panel when the Java applet is running.</figcaption></figure> 
+[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png" alt="The control panel when the Java applet is running." width="814" height="536" class="size-full wp-image-356" srcset="/assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png 814w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16-300x197.png 300w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16-455x300.png 455w" sizes="(max-width: 814px) 100vw, 814px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png)<figcaption id="caption-attachment-356" class="wp-caption-text">The control panel when the Java applet is running.</figcaption></figure> 
 
 Its only a prototype concept at the moment. I&#8217;d like to design an enclosure that would suit the particular environment, such as a glowing star or dragon for a classroom.
 

@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=945
 permalink: /2016/12/nixie-pipe-modern-day-led-nixie-tube/
-image: /wp-content/uploads/2016/12/Nixie-Pipe-Design-Blog-825x510.png
+image: assets/img/uploads/2016/12/Nixie-Pipe-Design-Blog-825x510.png
 categories:
   - Electronics
   - Fabrication
@@ -97,7 +97,7 @@ My initial design was enclosure based with the layers &#8216;wedged&#8217; insid
 
 ### Electrical<figure id="attachment_1015" aria-describedby="caption-attachment-1015" style="width: 660px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="size-large wp-image-1015" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2016/12/IMG_2175-1024x768.jpg" alt="I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED." width="660" height="495" srcset="/assets/img/uploads/2016/12/IMG_2175-1024x768.jpg 1024w, /assets/img/uploads/2016/12/IMG_2175-300x225.jpg 300w, /assets/img/uploads/2016/12/IMG_2175-768x576.jpg 768w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2016/12/IMG_2175.jpg)<figcaption id="caption-attachment-1015" class="wp-caption-text">I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED.</figcaption></figure> 
+[<img loading="lazy" class="size-large wp-image-1015" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/IMG_2175-1024x768.jpg" alt="I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED." width="660" height="495" srcset="/assets/img/uploads/2016/12/IMG_2175-1024x768.jpg 1024w, /assets/img/uploads/2016/12/IMG_2175-300x225.jpg 300w, /assets/img/uploads/2016/12/IMG_2175-768x576.jpg 768w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/IMG_2175.jpg)<figcaption id="caption-attachment-1015" class="wp-caption-text">I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED.</figcaption></figure> 
 
   1. **PCB 1.0**: The design worked great with only one issue&#8230;I forgot a zero!! Funny how double checking the design a million times one misses the obvious. My mind was obviously still in [binary clock](http://engineer.john-whittington.co.uk/2014/12/wooden-bits-binary-clock/) mode, assuming off would be zero &#8211; I quickly realised that wouldn&#8217;t be obvious enough and just looked like I&#8217;d forgotten a zero&#8230;
   2. **PCB 1.1**: I got rid of the QFN package because I was hand-soldering prototypes and added one more LED for zero. 45deg skew on the QFP actually made the routing easier due to space in the middle.
@@ -151,7 +151,7 @@ pipes.getNumber( function() { console.log(pipes.number); }); // Return display n
 
 #### 4. Electron App<figure id="attachment_1078" aria-describedby="caption-attachment-1078" style="width: 912px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="wp-image-1078 size-full" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2016/12/screenshot.png" width="912" height="612" srcset="/assets/img/uploads/2016/12/screenshot.png 912w, /assets/img/uploads/2016/12/screenshot-300x201.png 300w, /assets/img/uploads/2016/12/screenshot-768x515.png 768w" sizes="(max-width: 912px) 100vw, 912px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2016/12/screenshot.png)<figcaption id="caption-attachment-1078" class="wp-caption-text">I put this app together over a weekend to trial Electron development. I&#8217;ll be using it again in the future.</figcaption></figure> 
+[<img loading="lazy" class="wp-image-1078 size-full" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/screenshot.png" width="912" height="612" srcset="/assets/img/uploads/2016/12/screenshot.png 912w, /assets/img/uploads/2016/12/screenshot-300x201.png 300w, /assets/img/uploads/2016/12/screenshot-768x515.png 768w" sizes="(max-width: 912px) 100vw, 912px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/screenshot.png)<figcaption id="caption-attachment-1078" class="wp-caption-text">I put this app together over a weekend to trial Electron development. I&#8217;ll be using it again in the future.</figcaption></figure> 
 
 With the Node module developed, I went to work making an [Electron app](https://github.com/tuna-f1sh/electron-nixiepipe) &#8211; having not used Electron before I saw it as the project as the perfect test bed. The experience only took a couple of days as I&#8217;m familiar with web design methods and Javascript. Overall I was impressed with Electron and would use it again.
 

@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=487
 permalink: /2014/12/wooden-bits-binary-clock/
-image: /wp-content/uploads/2014/12/concept-672x372.jpg
+image: assets/img/uploads/2014/12/concept-672x372.jpg
 categories:
   - Electronics
   - Fabrication
@@ -32,11 +32,11 @@ I&#8217;ve been meaning to make a binary wall clock for a while and to also try 
 
 # Design<figure id="attachment_515" aria-describedby="caption-attachment-515" style="width: 474px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="size-large wp-image-515" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/wooden-bits-1024x744.jpg" alt="My idea sketched out" width="474" height="344" srcset="/assets/img/uploads/2014/12/wooden-bits-1024x744.jpg 1024w, /assets/img/uploads/2014/12/wooden-bits-300x218.jpg 300w" sizes="(max-width: 474px) 100vw, 474px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/wooden-bits.jpg)<figcaption id="caption-attachment-515" class="wp-caption-text">My idea sketched out</figcaption></figure> 
+[<img loading="lazy" class="size-large wp-image-515" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits-1024x744.jpg" alt="My idea sketched out" width="474" height="344" srcset="/assets/img/uploads/2014/12/wooden-bits-1024x744.jpg 1024w, /assets/img/uploads/2014/12/wooden-bits-300x218.jpg 300w" sizes="(max-width: 474px) 100vw, 474px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits.jpg)<figcaption id="caption-attachment-515" class="wp-caption-text">My idea sketched out</figcaption></figure> 
 
 Above was what I wanted to create; a square matrix formed from one length of plywood, with the curves creating some organic interest to an otherwise boring shape. I opened Vim and started away in lines of _OpenSCAD_.
 
-[<img loading="lazy" class="aligncenter size-large wp-image-505" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/Untitled-1024x420.png" alt="Wooden Bits Print Sheet" width="474" height="194" srcset="/assets/img/uploads/2014/12/Untitled-1024x420.png 1024w, /assets/img/uploads/2014/12/Untitled-300x123.png 300w, /assets/img/uploads/2014/12/Untitled.png 2002w" sizes="(max-width: 474px) 100vw, 474px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/Untitled.png)
+[<img loading="lazy" class="aligncenter size-large wp-image-505" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/Untitled-1024x420.png" alt="Wooden Bits Print Sheet" width="474" height="194" srcset="/assets/img/uploads/2014/12/Untitled-1024x420.png 1024w, /assets/img/uploads/2014/12/Untitled-300x123.png 300w, /assets/img/uploads/2014/12/Untitled.png 2002w" sizes="(max-width: 474px) 100vw, 474px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/Untitled.png)
 
 I ended up creating script that could create a one-piece design but would also split the length into divisions. I did this because the length was too big for the cutter bed. For the initial build, each (of four rows) row is separate and then they are all glued together.  If I make another I&#8217;ll add a _dovetail_ so that each section can be joined, it&#8217;s more complicated because you have to alternate the teeth/dents on the middle male components.
 
@@ -74,7 +74,7 @@ There was some tweaking involved of the kerf spacing to get it strong yet bendab
 
 **UPDATE** I have now created a custom PCB, the size of a single cell.
 
-[<img loading="lazy" class="aligncenter size-medium wp-image-949" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/wooden-bits-300x201.png" alt="wooden-bits" width="300" height="201" srcset="/assets/img/uploads/2014/12/wooden-bits-300x201.png 300w, /assets/img/uploads/2014/12/wooden-bits-768x514.png 768w, /assets/img/uploads/2014/12/wooden-bits-1024x685.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/wooden-bits.png)
+[<img loading="lazy" class="aligncenter size-medium wp-image-949" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits-300x201.png" alt="wooden-bits" width="300" height="201" srcset="/assets/img/uploads/2014/12/wooden-bits-300x201.png 300w, /assets/img/uploads/2014/12/wooden-bits-768x514.png 768w, /assets/img/uploads/2014/12/wooden-bits-1024x685.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits.png)
 
 
 

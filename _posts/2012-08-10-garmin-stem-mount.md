@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=46
 permalink: /2012/08/garmin-stem-mount/
-image: /wp-content/uploads/2012/08/2012-08-04-09.56.29-1000x288.jpg
+image: assets/img/uploads/2012/08/2012-08-04-09.56.29-1000x288.jpg
 categories:
   - Fabrication
 tags:

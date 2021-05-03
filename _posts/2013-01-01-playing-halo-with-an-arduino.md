@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=186
 permalink: /2013/01/playing-halo-with-an-arduino/
-image: /wp-content/uploads/2013/01/2013-01-01-08.53.18-copy-1000x288.jpg
+image: assets/img/uploads/2013/01/2013-01-01-08.53.18-copy-1000x288.jpg
 categories:
   - Electronics
   - Programming

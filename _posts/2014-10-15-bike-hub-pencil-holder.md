@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=421
 permalink: /2014/10/bike-hub-pencil-holder/
-image: /wp-content/uploads/2014/10/IMG_0818-672x372.jpg
+image: assets/img/uploads/2014/10/IMG_0818-672x372.jpg
 categories:
   - Fabrication
   - Mechanical

@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=546
 permalink: /2015/02/developing-simulink-device-drivers-arm-cortex/
-image: /wp-content/uploads/2015/01/blink.png
+image: assets/img/uploads/2015/01/blink.png
 categories:
   - Programming
 tags:
@@ -166,7 +166,7 @@ At this point you can remove the MCU specific define and include from the driver
 
 Connect a pulse generator to the block input. You can set the pin to change state by double clicking the new block and changing the parameter. Simulate the model, it should run as normal (connect a scope between the generator and driver block to check).<figure id="attachment_555" aria-describedby="caption-attachment-555" style="width: 402px" class="wp-caption aligncenter">
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/01/blink.png" alt="Basic LED blink model for ARM Cortex GPIO driver" width="402" height="269" class="size-full wp-image-555" srcset="/assets/img/uploads/2015/01/blink.png 402w, /assets/img/uploads/2015/01/blink-300x201.png 300w" sizes="(max-width: 402px) 100vw, 402px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/01/blink.png)<figcaption id="caption-attachment-555" class="wp-caption-text">Basic LED blink model for ARM Cortex GPIO driver</figcaption></figure> 
+[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/01/blink.png" alt="Basic LED blink model for ARM Cortex GPIO driver" width="402" height="269" class="size-full wp-image-555" srcset="/assets/img/uploads/2015/01/blink.png 402w, /assets/img/uploads/2015/01/blink-300x201.png 300w" sizes="(max-width: 402px) 100vw, 402px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/01/blink.png)<figcaption id="caption-attachment-555" class="wp-caption-text">Basic LED blink model for ARM Cortex GPIO driver</figcaption></figure> 
 
 ## Generate Code
 

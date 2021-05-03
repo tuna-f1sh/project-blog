@@ -24,6 +24,11 @@ layout: default
         </p>
       </header>
       <div class="excerpt">
+        {% if post.image %}
+        <div class="box">
+          <img src="{{ post.image }}" />
+        </div>
+        {% endif %}
         {{ post.excerpt }}
         <a class="button" href="{{ post.url | relative_url }}">
           {{ site.theme_settings.str_continue_reading }}

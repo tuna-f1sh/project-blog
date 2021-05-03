@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=446
 permalink: /2014/11/laser-cut-iphone-5s-dock/
-image: /wp-content/uploads/2014/11/IMG_0871-672x372.jpg
+image: assets/img/uploads/2014/11/IMG_0871-672x372.jpg
 categories:
   - Fabrication
   - Mechanical

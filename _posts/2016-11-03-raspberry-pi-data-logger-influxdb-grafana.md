@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=951
 permalink: /2016/11/raspberry-pi-data-logger-influxdb-grafana/
-image: /wp-content/uploads/2016/11/IMG_2174-2-1-825x510.jpg
+image: assets/img/uploads/2016/11/IMG_2174-2-1-825x510.jpg
 categories:
   - Electronics
   - Programming
@@ -46,7 +46,7 @@ sudo apt-get install -f
 
 Installed via the .deb package, InfluxDB creates a service and enables at startup so there is little more configuration to do. One must create the databases that our scripts will be saving into. This can be done via the web gui. Navigate to your Pi IP on port 8083 (default InfluxDB admin port &#8211; http://localhost:8083 if you&#8217;re doing this on the Pi). Using the &#8216;Query Templates&#8217; dropdown, one can create a database with &#8216;Create Database&#8217; &#8211; it&#8217;s fairly self explainatory. Make one called &#8216;logger&#8217; to store our sample data.
 
-[<img loading="lazy" class="aligncenter size-large wp-image-969" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2016/11/influx-1024x208.gif" alt="InfluxDB Create Database" width="660" height="134" srcset="/assets/img/uploads/2016/11/influx-1024x208.gif 1024w, /assets/img/uploads/2016/11/influx-300x61.gif 300w, /assets/img/uploads/2016/11/influx-768x156.gif 768w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2016/11/influx.gif)
+[<img loading="lazy" class="aligncenter size-large wp-image-969" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/11/influx-1024x208.gif" alt="InfluxDB Create Database" width="660" height="134" srcset="/assets/img/uploads/2016/11/influx-1024x208.gif 1024w, /assets/img/uploads/2016/11/influx-300x61.gif 300w, /assets/img/uploads/2016/11/influx-768x156.gif 768w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2016/11/influx.gif)
 
 ## Create Logging Script
 
@@ -145,7 +145,7 @@ Navigating to port 3000, you should be presented with the Grafana web GUI. Grafa
 
 The first thing you will need to do is add the &#8216;logger&#8217; database as a _Datasource_. Navigate to Datasource->Add New and fill in as below<figure id="attachment_967" aria-describedby="caption-attachment-967" style="width: 728px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="wp-image-967 size-full" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2016/11/datasource.gif" alt="Create the 'logger' InfluxDB database as a Datasource" width="728" height="510" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2016/11/datasource.gif)<figcaption id="caption-attachment-967" class="wp-caption-text">Create the &#8216;logger&#8217; InfluxDB database as a Datasource</figcaption></figure> 
+[<img loading="lazy" class="wp-image-967 size-full" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/11/datasource.gif" alt="Create the 'logger' InfluxDB database as a Datasource" width="728" height="510" />](http://engineer.john-whittington.co.ukassets/img/uploads/2016/11/datasource.gif)<figcaption id="caption-attachment-967" class="wp-caption-text">Create the &#8216;logger&#8217; InfluxDB database as a Datasource</figcaption></figure> 
 
 After this, you need to setup a _Dashboard_. Click the top dropdown button, press &#8216;New&#8217; and create a dashboard called &#8216;logger&#8217;. The dashboards consist of _rows_. Clicking on the green bar on the left-hand edge provides a dropdown where one can add graphs etc &#8211; again, the [Getting Started](http://docs.grafana.org/guides/gettingstarted/) explains this better than me. Below are a couple of captures of how I setup the Automation HAT.
 

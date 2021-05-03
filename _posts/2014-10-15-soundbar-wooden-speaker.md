@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=407
 permalink: /2014/10/soundbar-wooden-speaker/
-image: /wp-content/uploads/2014/10/DSC_0053-672x372.jpg
+image: assets/img/uploads/2014/10/DSC_0053-672x372.jpg
 categories:
   - Electronics
   - Fabrication

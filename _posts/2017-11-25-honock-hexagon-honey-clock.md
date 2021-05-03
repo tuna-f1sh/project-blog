@@ -6,17 +6,14 @@ author: John
 layout: post
 guid: https://engineer.john-whittington.co.uk/?p=1144
 permalink: /2017/11/honock-hexagon-honey-clock/
-image: /wp-content/uploads/2017/11/MeZc5q8-1200x1585.jpg
+image: assets/img/uploads/2017/11/MeZc5q8-1200x1585.jpg
 categories:
   - Electronics
   - Fabrication
   - Mechanical
   - Programming
 ---
-<figure class="wp-block-embed-imgur wp-block-embed is-type-rich is-provider-imgur">
 
-<div class="wp-block-embed__wrapper">
-  <blockquote class="imgur-embed-pub" lang="en" data-id="a/i6B7j">
-    <a href="https://imgur.com/a/i6B7j">View post on imgur.com</a>
-  </blockquote>
-</div></figure>
+<div class="box">
+    <blockquote class="imgur-embed-pub" lang="en" data-id="a/i6B7j" data-context="false" ><a href="//imgur.com/a/i6B7j"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+</div>

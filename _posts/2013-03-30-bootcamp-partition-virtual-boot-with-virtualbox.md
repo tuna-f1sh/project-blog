@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=235
 permalink: /2013/03/bootcamp-partition-virtual-boot-with-virtualbox/
-image: /wp-content/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1000x288.png
+image: assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1000x288.png
 categories:
   - Programming
 tags:
@@ -83,4 +83,4 @@ fi
 
 How it looks when it runs:
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png" alt="BootCamp VM Bash Script" width="584" height="376" class="aligncenter size-large wp-image-238" srcset="/assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png 1024w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-300x193.png 300w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-465x300.png 465w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png 1148w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png)
+[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png" alt="BootCamp VM Bash Script" width="584" height="376" class="aligncenter size-large wp-image-238" srcset="/assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png 1024w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-300x193.png 300w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-465x300.png 465w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png 1148w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png)

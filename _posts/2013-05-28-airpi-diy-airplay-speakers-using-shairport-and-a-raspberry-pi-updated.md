@@ -109,7 +109,7 @@ WantedBy=multi-user.target</pre>
 
 Or you get use `wget` again and download mine:
 
-<pre>wget http://engineer.john-whittington.co.uk/wp-content/uploads/2013/05/shairport.service -O /etc/systemd/system/shairport.service</pre>
+<pre>wget http://engineer.john-whittington.co.ukassets/img/uploads/2013/05/shairport.service -O /etc/systemd/system/shairport.service</pre>
 
 Now enable the new service
 

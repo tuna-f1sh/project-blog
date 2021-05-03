@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=457
 permalink: /2014/12/laser-cut-adaptable-wire-dispenser-openscad/
-image: /wp-content/uploads/2014/12/IMG_0899-672x372.jpg
+image: assets/img/uploads/2014/12/IMG_0899-672x372.jpg
 categories:
   - Fabrication
   - Mechanical
@@ -19,7 +19,7 @@ tags:
 ---
 I wanted a wire dispenser that wasn&#8217;t fixed in place so I could move it to where I was working. To my surprise, such a thing doesn&#8217;t exist (I couldn&#8217;t seem to find fixed ones either, other than using a kitchen towel rail). Keen to put my new found love for [_OpenSCAD_](http://www.openscad.org/) to use, I set about making such a thing.<figure id="attachment_473" aria-describedby="caption-attachment-473" style="width: 640px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="wp-image-473 size-full" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/assembly.png" alt="The &#96;projection()&#96; command in *OpenSCAD* allows one to easily create 3d objects that can be exported as 2d .dxf for printing" width="640" height="218" srcset="/assets/img/uploads/2014/12/assembly.png 640w, /assets/img/uploads/2014/12/assembly-300x102.png 300w" sizes="(max-width: 640px) 100vw, 640px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2014/12/assembly.png)<figcaption id="caption-attachment-473" class="wp-caption-text">The \`projection()\` command in \*OpenSCAD\* allows one to easily create 3d objects that can be exported as 2d .dxf for printing</figcaption></figure> 
+[<img loading="lazy" class="wp-image-473 size-full" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/assembly.png" alt="The &#96;projection()&#96; command in *OpenSCAD* allows one to easily create 3d objects that can be exported as 2d .dxf for printing" width="640" height="218" srcset="/assets/img/uploads/2014/12/assembly.png 640w, /assets/img/uploads/2014/12/assembly-300x102.png 300w" sizes="(max-width: 640px) 100vw, 640px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/assembly.png)<figcaption id="caption-attachment-473" class="wp-caption-text">The \`projection()\` command in \*OpenSCAD\* allows one to easily create 3d objects that can be exported as 2d .dxf for printing</figcaption></figure> 
 
 _OpenSCAD_ really suits this type of design requirement; something that is going to need to scale user defined variables (the wire reel in this case). I didn&#8217;t want to create a design for 6 wire reels from a specific manufacturer, then find they change their spindle, or I decide I need more reels. It&#8217;s particularly hard scaling a laser cut box because of all the teeth/dents that slot it together. With a GUI based CAD program, you&#8217;d send hours fiddling around with the spacings/length or trying to create patterns &#8211; then still ending up with bits that don&#8217;t fit together! This is actually my second project in _OpenSCAD_ that I&#8217;d bashed together quickly. I&#8217;ve got another more complex project to document too.  
 <!--more-->

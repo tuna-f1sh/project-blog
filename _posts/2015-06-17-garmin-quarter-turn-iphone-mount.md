@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=750
 permalink: /2015/06/garmin-quarter-turn-iphone-mount/
-image: /wp-content/uploads/2015/06/DSC_0011-825x510.jpg
+image: assets/img/uploads/2015/06/DSC_0011-825x510.jpg
 categories:
   - Fabrication
   - Mechanical
@@ -47,4 +47,4 @@ I frequently find myself navigating &#8217;round on my bike, juggling Google Ma
 
 <!--more-->
 
-[qt-iphone-stl](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/06/stl-files.zip)
+[qt-iphone-stl](http://engineer.john-whittington.co.ukassets/img/uploads/2015/06/stl-files.zip)

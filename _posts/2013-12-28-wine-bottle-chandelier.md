@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=300
 permalink: /2013/12/wine-bottle-chandelier/
-image: /wp-content/uploads/2013/12/DSCN1138-1000x288.jpg
+image: assets/img/uploads/2013/12/DSCN1138-1000x288.jpg
 categories:
   - Fabrication
   - Mechanical

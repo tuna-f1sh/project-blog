@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=343
 permalink: /2014/05/laser-cut-battery-powered-bluetooth-speaker/
-image: /wp-content/uploads/2014/05/DSC_0024-825x510.jpg
+image: assets/img/uploads/2014/05/DSC_0024-825x510.jpg
 categories:
   - Fabrication
   - Mechanical
@@ -20,7 +20,7 @@ tags:
 ---
 I wanted to create a special birthday present for my girlfriend, whom had no speaker system. I decided a battery powered Bluetooth speaker would be neat, and having just learnt use of the laser cutter I came up with a layered design.<figure id="attachment_349" aria-describedby="caption-attachment-349" style="width: 922px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="size-full wp-image-349" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09.png" alt="I created a mock up in SketchUp, which I used to visualise the layers together and make sure it would work." width="922" height="593" srcset="/assets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09.png 922w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09-300x192.png 300w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09-466x300.png 466w" sizes="(max-width: 922px) 100vw, 922px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09.png)<figcaption id="caption-attachment-349" class="wp-caption-text">I create a mock up in SketchUp, which I used to visualise the layers together and make sure it would work.</figcaption></figure> 
+[<img loading="lazy" class="size-full wp-image-349" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09.png" alt="I created a mock up in SketchUp, which I used to visualise the layers together and make sure it would work." width="922" height="593" srcset="/assets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09.png 922w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09-300x192.png 300w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09-466x300.png 466w" sizes="(max-width: 922px) 100vw, 922px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/05/Screen-Shot-2014-05-08-at-20.36.09.png)<figcaption id="caption-attachment-349" class="wp-caption-text">I create a mock up in SketchUp, which I used to visualise the layers together and make sure it would work.</figcaption></figure> 
 
 The internals consist of a 2x15W RMS digital amp, 2x15W 80 cones, a Bluetooth module, 1800mAh NiMH battery and a basic fast charger &#8211; plus a few voltage regulators to bring everything together. It&#8217;s all wired so that you can charge while plugged in and still play, and turn the Bluetooth on and off. Finally it&#8217;s all insulated with sheep&#8217;s wool I had left from doing my van. I found the insulation helped reduce reverberation (probably due to the thin layers) that muddied the mid-ranges. One thing I like about it is that the front and back can be easily changed: the front grill pattern to change the look and the rear could be tuned to include a bass port for better bass response.
 

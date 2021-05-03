@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=877
 permalink: /2016/04/remote-nixie-energy-meter/
-image: /wp-content/uploads/2016/04/IMG_4674-e1460371544341-480x510.jpg
+image: assets/img/uploads/2016/04/IMG_4674-e1460371544341-480x510.jpg
 categories:
   - Electronics
   - Programming

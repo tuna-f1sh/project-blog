@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=176
 permalink: /2012/12/pump-teardown/
-image: /wp-content/uploads/2012/12/Media1-e1356092685770.jpeg
+image: assets/img/uploads/2012/12/Media1-e1356092685770.jpeg
 categories:
   - Mechanical
 tags:
@@ -20,7 +20,7 @@ I&#8217;d assumed that I&#8217;d find a turbine pump but the design is something
 
 Attached to the drive-shaft is a cam in the x-axis, creating an eccentric motion that knocks into, and depresses each piston. Each piston sits above a chamber in the pump casing with one-way valves leading into, and back out.
 
-<a href="http://engineer.john-whittington.co.uk/2012/12/pump-teardown/media1/" rel="attachment wp-att-178"><img loading="lazy" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2012/12/Media1-e1356092685770-1024x646.jpeg" alt="Pump Diagram" width="584" height="368" class="aligncenter size-large wp-image-178" srcset="/assets/img/uploads/2012/12/Media1-e1356092685770-1024x646.jpeg 1024w, /assets/img/uploads/2012/12/Media1-e1356092685770-300x189.jpeg 300w" sizes="(max-width: 584px) 100vw, 584px" /></a>
+<a href="http://engineer.john-whittington.co.uk/2012/12/pump-teardown/media1/" rel="attachment wp-att-178"><img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2012/12/Media1-e1356092685770-1024x646.jpeg" alt="Pump Diagram" width="584" height="368" class="aligncenter size-large wp-image-178" srcset="/assets/img/uploads/2012/12/Media1-e1356092685770-1024x646.jpeg 1024w, /assets/img/uploads/2012/12/Media1-e1356092685770-300x189.jpeg 300w" sizes="(max-width: 584px) 100vw, 584px" /></a>
 
 Opening it up, here&#8217;s a diagram to figure out how it worked. This is the casting on the right in the video, with the flow other-side overlayed in blue pen. From the inlet, the water is sucked through a one-way valve as the piston pulls back and into the piston chamber. With three pistons pulling at different phases there are three one-way valves to maximise each engine revolution, each chamber filling at a different stroke and creating a more consistent pressure. On the downstroke, the water is forced through another one-way valve positioned vertically at the top here and then along to the outlet. The vertical valves at positioned in series so all the chambers lead to the same final outlet pipe.
 

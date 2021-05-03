@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=928
 permalink: /2016/07/chess-table/
-image: /wp-content/uploads/2016/07/IMG_1616-825x510.jpg
+image: assets/img/uploads/2016/07/IMG_1616-825x510.jpg
 categories:
   - Fabrication
 tags:

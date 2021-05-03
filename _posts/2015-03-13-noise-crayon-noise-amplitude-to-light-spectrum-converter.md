@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=649
 permalink: /2015/03/noise-crayon-noise-amplitude-to-light-spectrum-converter/
-image: /wp-content/uploads/2015/03/IMG_1129-825x510.jpg
+image: assets/img/uploads/2015/03/IMG_1129-825x510.jpg
 categories:
   - Electronics
   - Fabrication
@@ -42,11 +42,11 @@ A potentiometer allows me to change the rate of colour change or gain of the amp
 
 ## Enclosure<figure id="attachment_668" aria-describedby="caption-attachment-668" style="width: 660px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="wp-image-668 size-large" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/sound-bits-crop-1024x577.jpg" alt="" width="660" height="372" srcset="/assets/img/uploads/2015/03/sound-bits-crop-1024x577.jpg 1024w, /assets/img/uploads/2015/03/sound-bits-crop-300x169.jpg 300w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/sound-bits-crop.jpg)<figcaption id="caption-attachment-668" class="wp-caption-text">Sketch of my first enclosure idea, constructed from wood and acrylic sections. I opted for a simpler single material design.</figcaption></figure> 
+[<img loading="lazy" class="wp-image-668 size-large" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/sound-bits-crop-1024x577.jpg" alt="" width="660" height="372" srcset="/assets/img/uploads/2015/03/sound-bits-crop-1024x577.jpg 1024w, /assets/img/uploads/2015/03/sound-bits-crop-300x169.jpg 300w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/sound-bits-crop.jpg)<figcaption id="caption-attachment-668" class="wp-caption-text">Sketch of my first enclosure idea, constructed from wood and acrylic sections. I opted for a simpler single material design.</figcaption></figure> 
 
 The enclosure needed to diffuse the light from the LED, contain the electronics and also allow noise to easily penetrate to the mic. I considered a perforated square enclosure &#8211; like a microphone cover &#8211; but to make it look more interesting I decided to employ kerf bending to create a curved shape. The kerf bend provides the opening for the air to move whilst creating an interesting enclosure design. Form and function! I actually found enclosing the mic helped increase the range of the microphone and effectiveness &#8211; presumably due to the smaller air space and resonance of the plastic.<figure id="attachment_653" aria-describedby="caption-attachment-653" style="width: 660px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="size-large wp-image-653" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/DSC_0020-1024x681.jpg" alt="Long gaps allow the acrylic to bend due to the greater spread of the torsional loading." width="660" height="439" srcset="/assets/img/uploads/2015/03/DSC_0020-1024x681.jpg 1024w, /assets/img/uploads/2015/03/DSC_0020-300x199.jpg 300w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/DSC_0020.jpg)<figcaption id="caption-attachment-653" class="wp-caption-text">Long gaps allow the acrylic to bend due to the greater spread of the torsional loading.</figcaption></figure> 
+[<img loading="lazy" class="size-large wp-image-653" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/DSC_0020-1024x681.jpg" alt="Long gaps allow the acrylic to bend due to the greater spread of the torsional loading." width="660" height="439" srcset="/assets/img/uploads/2015/03/DSC_0020-1024x681.jpg 1024w, /assets/img/uploads/2015/03/DSC_0020-300x199.jpg 300w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/DSC_0020.jpg)<figcaption id="caption-attachment-653" class="wp-caption-text">Long gaps allow the acrylic to bend due to the greater spread of the torsional loading.</figcaption></figure> 
 
 I hadn&#8217;t tried kerf bending acrylic until this project. It is stiffer and more brittle than plywood so is much less forgiving, requiring thought into the gap size/link spacing and some trial and error. I&#8217;m going to cover what I found and my results in another post.
 

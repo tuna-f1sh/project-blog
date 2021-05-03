@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=728
 permalink: /2015/06/simulink-raspberry-pi-driver-blocks/
-image: /wp-content/uploads/2015/06/blocks-730x510.png
+image: assets/img/uploads/2015/06/blocks-730x510.png
 categories:
   - Programming
 tags:
@@ -42,8 +42,8 @@ Using the S-Function Builder and some other [user created blocks](http://www.ma
 
 After a long time digging around in the remote build templates I finally found an undocumented command to get it working: `xmakefilesetup`. Run this in the MATLAB command window with the Raspberry Pi model open. The settings should be as below. Navigate to Linker > Arguments and add &#8216;lwiringPi&#8217; on the end (this tells the linker to use the wiringPi library and so the wiringPi functions will be linked). If you&#8217;re using my ADC/DAC blocks with ADS1115 and MCP4725, you&#8217;ll also have to update the wiringPi library with [my library](https://github.com/tuna-f1sh/wiringPi-mcp4725) by logging on via SSH and following [these steps](https://github.com/tuna-f1sh/wiringPi-mcp4725/blob/master/INSTALL).<figure id="attachment_734" aria-describedby="caption-attachment-734" style="width: 716px" class="wp-caption aligncenter">
 
-[<img loading="lazy" class="wp-image-734 size-full" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/06/xmakefilesetup.png" alt="Add '-lwiringPi' to the linker 'Arguments' command string." width="716" height="435" srcset="/assets/img/uploads/2015/06/xmakefilesetup.png 716w, /assets/img/uploads/2015/06/xmakefilesetup-300x182.png 300w" sizes="(max-width: 716px) 100vw, 716px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/06/xmakefilesetup.png)<figcaption id="caption-attachment-734" class="wp-caption-text">Add &#8216;-lwiringPi&#8217; to the linker &#8216;Arguments&#8217; command string. This will affect upon all Linux remote build models.</figcaption></figure> 
+[<img loading="lazy" class="wp-image-734 size-full" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/06/xmakefilesetup.png" alt="Add '-lwiringPi' to the linker 'Arguments' command string." width="716" height="435" srcset="/assets/img/uploads/2015/06/xmakefilesetup.png 716w, /assets/img/uploads/2015/06/xmakefilesetup-300x182.png 300w" sizes="(max-width: 716px) 100vw, 716px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/06/xmakefilesetup.png)<figcaption id="caption-attachment-734" class="wp-caption-text">Add &#8216;-lwiringPi&#8217; to the linker &#8216;Arguments&#8217; command string. This will affect upon all Linux remote build models.</figcaption></figure> 
 
 I created a model with four driver blocks with example usage that can be copied and pasted into other models &#8211; remember to &#8216;Build&#8217; the s-functions in the model directories and install my version of wiringPi. It can be downloaded below.
 
-[rpi-driver-blocks](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/06/rpi-driver-blocks.zip)
+[rpi-driver-blocks](http://engineer.john-whittington.co.ukassets/img/uploads/2015/06/rpi-driver-blocks.zip)

@@ -27,7 +27,7 @@ Second I wanted to use an ESP8266 I had ordered a while ago with all the hype su
 
 Set-up as an access point, one can connect to the device and send HTTP get requests. These requests can then be read from the chip with the Arduino serial link, and the buffered data processed and acted upon. Similar to the BLE UART but with a bit more data handling due to the included HTTP header information and interfacing with the chip.
 
-[<img loading="lazy" class="aligncenter size-full wp-image-720" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/05/Capture.png" alt="Capture" width="800" height="835" srcset="/assets/img/uploads/2015/05/Capture.png 800w, /assets/img/uploads/2015/05/Capture-287x300.png 287w" sizes="(max-width: 800px) 100vw, 800px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/05/Capture.png)
+[<img loading="lazy" class="aligncenter size-full wp-image-720" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/05/Capture.png" alt="Capture" width="800" height="835" srcset="/assets/img/uploads/2015/05/Capture.png 800w, /assets/img/uploads/2015/05/Capture-287x300.png 287w" sizes="(max-width: 800px) 100vw, 800px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/05/Capture.png)
 
 To send the HTTP requests, I created a basic [Bootstrap](http://getbootstrap.com/) GUI, with a small amount of Javascript to parse the actual requests, eg:
 

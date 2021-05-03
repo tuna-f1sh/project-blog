@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=702
 permalink: /2015/03/pijig-raspberry-pi-breadboard-jig/
-image: /wp-content/uploads/2015/03/DSC_0012-825x510.jpg
+image: assets/img/uploads/2015/03/DSC_0012-825x510.jpg
 categories:
   - Fabrication
 format: gallery
@@ -27,4 +27,4 @@ format: gallery
   </div><figcaption class='wp-caption-text gallery-caption' id='gallery-15-704'> Handy GPIO pin-out </figcaption></figure>
 </div>
 
-[PiJig Draft](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/03/rpi-jig.cdr_.zip)
+[PiJig Draft](http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/rpi-jig.cdr_.zip)

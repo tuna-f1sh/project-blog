@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=795
 permalink: /2015/12/nixie-tube-energy-meter/
-image: /wp-content/uploads/2015/12/DSC_0066-1-e1450862704432-825x510.jpg
+image: assets/img/uploads/2015/12/DSC_0066-1-e1450862704432-825x510.jpg
 categories:
   - Electronics
   - Fabrication
@@ -42,7 +42,7 @@ Having recently bought a house, project time has been a bit thin on the ground. 
 
 The box covering did the job but felt a bit cumbersome with all that spare space; it needed something else to give it more purpose. An energy meter was the obvious thing but I didn&#8217;t want a garish LCD or 7 segment display, it need to match the blown glass electricity meter&#8230; &#8230;[nixie tubes](https://www.google.co.uk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nixie%20tube)!<figure id="attachment_810" aria-describedby="caption-attachment-810" style="width: 660px" class="wp-caption aligncenter">
 
-<a href="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/12/IMG_1473.jpg" rel="attachment wp-att-810"><img loading="lazy" class="size-large wp-image-810" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/12/IMG_1473-1024x577.jpg" alt="The Nixie Module runs off 5V and SPI" width="660" height="372" srcset="/assets/img/uploads/2015/12/IMG_1473-1024x577.jpg 1024w, /assets/img/uploads/2015/12/IMG_1473-300x169.jpg 300w, /assets/img/uploads/2015/12/IMG_1473-768x432.jpg 768w, /assets/img/uploads/2015/12/IMG_1473.jpg 1918w" sizes="(max-width: 660px) 100vw, 660px" /></a><figcaption id="caption-attachment-810" class="wp-caption-text">The Nixie Module runs off 5V and SPI making the project quick to get off the ground</figcaption></figure> 
+<a href="http://engineer.john-whittington.co.ukassets/img/uploads/2015/12/IMG_1473.jpg" rel="attachment wp-att-810"><img loading="lazy" class="size-large wp-image-810" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/12/IMG_1473-1024x577.jpg" alt="The Nixie Module runs off 5V and SPI" width="660" height="372" srcset="/assets/img/uploads/2015/12/IMG_1473-1024x577.jpg 1024w, /assets/img/uploads/2015/12/IMG_1473-300x169.jpg 300w, /assets/img/uploads/2015/12/IMG_1473-768x432.jpg 768w, /assets/img/uploads/2015/12/IMG_1473.jpg 1918w" sizes="(max-width: 660px) 100vw, 660px" /></a><figcaption id="caption-attachment-810" class="wp-caption-text">The Nixie Module runs off 5V and SPI making the project quick to get off the ground</figcaption></figure> 
 
 <!--more-->
 
@@ -52,7 +52,7 @@ I&#8217;ve wanted to use nixie tubes in a project for a long time &#8211; almost
 
 ## Display<figure id="attachment_820" aria-describedby="caption-attachment-820" style="width: 660px" class="wp-caption aligncenter">
 
-<a href="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/12/panel-e1450805521376.png" rel="attachment wp-att-820"><img loading="lazy" class="size-large wp-image-820" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2015/12/panel-1024x375.png" alt="An OpenSCAD box meant an OpenSCAD panel. I also modelled the nixie tube for verification." width="660" height="242" /></a><figcaption id="caption-attachment-820" class="wp-caption-text">An OpenSCAD box meant an OpenSCAD panel. I also modelled the nixie tube for verification.</figcaption></figure> 
+<a href="http://engineer.john-whittington.co.ukassets/img/uploads/2015/12/panel-e1450805521376.png" rel="attachment wp-att-820"><img loading="lazy" class="size-large wp-image-820" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/12/panel-1024x375.png" alt="An OpenSCAD box meant an OpenSCAD panel. I also modelled the nixie tube for verification." width="660" height="242" /></a><figcaption id="caption-attachment-820" class="wp-caption-text">An OpenSCAD box meant an OpenSCAD panel. I also modelled the nixie tube for verification.</figcaption></figure> 
 
 Considering the expense of the Nixie module and the irony of a high energy impact energy meter not lost on me (the tubes draw around 300mA each), I opted to use only two tubes; I was going to require SI notification anyway for full scale display. Handily, the tubes have colon points on the right-hand side (for clock use), which I designed as indicators for x10 and x1. With both SI units and x10 x1 decimals, one can display from 0 to 100MW &#8211; albeit with only 2 significant figures (considering the accuracy of a current transformer system like this, that isn&#8217;t a problem).
 

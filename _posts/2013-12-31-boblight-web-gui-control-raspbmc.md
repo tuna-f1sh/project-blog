@@ -13,7 +13,7 @@ tags:
   - linux
   - raspberrypi
 ---
-[<img loading="lazy" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22.png" alt="Boblight GUI Control" width="492" height="515" class="aligncenter size-full wp-image-312" srcset="/assets/img/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22.png 492w, /assets/img/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22-286x300.png 286w" sizes="(max-width: 492px) 100vw, 492px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22.png)
+[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22.png" alt="Boblight GUI Control" width="492" height="515" class="aligncenter size-full wp-image-312" srcset="/assets/img/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22.png 492w, /assets/img/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22-286x300.png 286w" sizes="(max-width: 492px) 100vw, 492px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2013/12/Screen-Shot-2013-12-31-at-10.21.22.png)
 
 Since [setting up an boblight on my RaspBMC](http://engineer.john-whittington.co.uk/2013/08/boblight-with-raspbmc-ambilight-clone/ "Boblight with Raspbmc – Ambilight Clone"), I&#8217;ve been wanting a nice gui to manage it; turn it on and off, change colours.
 

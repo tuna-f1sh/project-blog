@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=599
 permalink: /2015/02/building-atmel-studio-asf-project-using-external-makefile/
-image: /wp-content/uploads/2015/02/Capture-e1423476065874-612x510.png
+image: assets/img/uploads/2015/02/Capture-e1423476065874-612x510.png
 categories:
   - Programming
 tags:
@@ -51,4 +51,4 @@ Finally, check the &#8216;CPPFLAGS&#8217; defines are the same as those in the I
 
 Once configured, simply `make` at the command line will build the project &#8211; completely non-reliant on the Atmel Project. The Makefile and config.mk can also be used for general Atmel projects without the ASF. The files below are examples for a simple GCC application:
 
-[Atmel Make SAM Template](http://engineer.john-whittington.co.uk/wp-content/uploads/2015/02/Atmel-Make.zip)
+[Atmel Make SAM Template](http://engineer.john-whittington.co.ukassets/img/uploads/2015/02/Atmel-Make.zip)

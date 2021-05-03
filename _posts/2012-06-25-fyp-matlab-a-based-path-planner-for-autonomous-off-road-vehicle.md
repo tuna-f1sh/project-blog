@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=7
 permalink: /2012/06/fyp-matlab-a-based-path-planner-for-autonomous-off-road-vehicle/
-image: /wp-content/uploads/2012/06/cropped-wordpress.jpg
+image: assets/img/uploads/2012/06/cropped-wordpress.jpg
 categories:
   - University
 tags:
@@ -16,7 +16,7 @@ tags:
   - path planning
   - robotics
 ---
-<figure id="attachment_9" aria-describedby="caption-attachment-9" style="width: 584px" class="wp-caption alignnone">[<img loading="lazy" class="size-large wp-image-9" title="Final Year Project Poster" src="http://engineer.john-whittington.co.uk/wp-content/uploads/2012/06/PosterA3-723x1024.jpg" alt="" width="584" height="827" srcset="/assets/img/uploads/2012/06/PosterA3-723x1024.jpg 723w, /assets/img/uploads/2012/06/PosterA3-212x300.jpg 212w, /assets/img/uploads/2012/06/PosterA3.jpg 1754w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.uk/wp-content/uploads/2012/06/PosterA3.jpg)<figcaption id="caption-attachment-9" class="wp-caption-text">A picture says 1000 words</figcaption></figure> 
+<figure id="attachment_9" aria-describedby="caption-attachment-9" style="width: 584px" class="wp-caption alignnone">[<img loading="lazy" class="size-large wp-image-9" title="Final Year Project Poster" src="http://engineer.john-whittington.co.ukassets/img/uploads/2012/06/PosterA3-723x1024.jpg" alt="" width="584" height="827" srcset="/assets/img/uploads/2012/06/PosterA3-723x1024.jpg 723w, /assets/img/uploads/2012/06/PosterA3-212x300.jpg 212w, /assets/img/uploads/2012/06/PosterA3.jpg 1754w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2012/06/PosterA3.jpg)<figcaption id="caption-attachment-9" class="wp-caption-text">A picture says 1000 words</figcaption></figure> 
 
 # Synopsis
 
@@ -29,4 +29,4 @@ A path planner is required as part of an autonomous off-road vehicle project at 
 
 Field D* interpolation is successfully implemented and forms the final planner in both off-line and on-line routines, generating a path in average times 1.8s and 50ms respectively, for a 0.1km2 workspace, 1m node size, and a 7.5◦ interpolation step; parameters found to be most suiting to our vehicle with a 22.5◦ steering limit. Heuristic weighting is found to improve searching time by 130%, using a value 20. Steering weight is less decisive and depends on the workspace configuration, a marginal inclusion in f(n) using a value 15 is seen to reduce drive time. All results are simulated due to the project and other sub-systems not yet being at a testing stage; real-world testing remains as the principle of any future work.
 
-[FinalReport](http://engineer.john-whittington.co.uk/wp-content/uploads/2012/06/FinalReport.pdf)
+[FinalReport](http://engineer.john-whittington.co.ukassets/img/uploads/2012/06/FinalReport.pdf)
