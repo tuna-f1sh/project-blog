@@ -54,4 +54,7 @@ header {
   .post-content {
     @extend %padding-regular;
   }
+  footer {
+    padding: 5%;
+  }
 }

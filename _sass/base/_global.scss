@@ -81,6 +81,12 @@ pre,
 samp {
   margin: 1em 0;
 }
+code {
+  font-size: 0.9em;
+}
+pre.highlight {
+  padding: 1em;
+}
 dt {
   font-weight: bold;
 }
@@ -123,9 +129,18 @@ a {
 iframe, img, embed, object, video {
   max-width: 100%;
 }
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
 img[align=left] {
   margin-right: 3%;
 }
 img[align=right] {
   margin-left: 3%;
+}
+header {
+   background-position: center;
 }
