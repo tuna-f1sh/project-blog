@@ -23,7 +23,7 @@ tags:
 ---
 **21/12/18 UPDATE: Hello to Hack a Day readers. This project was shared when I did it but re-posted recently. It is 2.5 years old and there are many things I would do differently. I am considering work on a IO board specific to the project (RS232 driver, GPIO break-out, proper RX/TX LED buffers and potentially internal LiPo UPS). Glad there is renewed interest in the project as I still use it day to day :).**
 
-30/06/19 UPDATE: I did what I was considering! See the updated [WT-220 2.0 here](https://engineer.john-whittington.co.uk/2019/06/whitterm-220-2-0/)
+30/06/19 UPDATE: I did what I was considering! See the updated [WT-220 2.0 here](/2019/06/whitterm-220-2-0/)
 
 The Whitterm-220 (WT-220) is my latest project. It&#8217;s a _clever_ terminal, in the sense that it aims to emulate the dumb terminals of the 80s but with the versatility of something produced now. The name comes from my inspiration for the project: failure to win a [VT-220](https://en.wikipedia.org/wiki/VT220]) on eBay. I decided it would be fun to make a homage to the VT-220, that would actually be useful &#8211; a not so dumb, or _clever_ terminal &#8211; that would do more than simply parsing RS232 levels into Ascii characters.
 

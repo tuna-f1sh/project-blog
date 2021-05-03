@@ -4,7 +4,7 @@ title: 'Honock &#8211; Hexagon Honey Clock'
 date: 2017-11-25T11:57:58+00:00
 author: John
 layout: post
-guid: https://engineer.john-whittington.co.uk/?p=1144
+guid: /?p=1144
 permalink: /2017/11/honock-hexagon-honey-clock/
 image: assets/img/uploads/2017/11/MeZc5q8-1200x1585.jpg
 categories:

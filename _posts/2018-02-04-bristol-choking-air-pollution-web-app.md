@@ -4,7 +4,7 @@ title: 'Is Bristol Choking &#8211; Air Pollution Web App'
 date: 2018-02-04T10:16:57+00:00
 author: John
 layout: post
-guid: https://engineer.john-whittington.co.uk/?p=1161
+guid: /?p=1161
 permalink: /2018/02/bristol-choking-air-pollution-web-app/
 image: assets/img/uploads/2018/02/Screen-Shot-2018-02-04-at-10.16.06-825x510.png
 categories:

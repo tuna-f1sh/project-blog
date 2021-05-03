@@ -4,7 +4,13 @@
   box-sizing: border-box;
 }
 figure {
-  margin: 0;
+  margin: 1em 0;
+  border: 1px solid $border-color;
+}
+figcaption {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.67em;
 }
 // For correct line number width in Github Gists
 .gist table tbody tr td {
@@ -82,7 +88,7 @@ samp {
   margin: 1em 0;
 }
 code {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 pre.highlight {
   padding: 1em;

@@ -4,7 +4,7 @@ title: Game of Life on a Flip-Dot Display
 date: 2020-04-28T12:41:59+01:00
 author: John
 layout: post
-guid: https://engineer.john-whittington.co.uk/?p=1382
+guid: /?p=1382
 permalink: /2020/04/game-of-life-on-a-flip-dot-display/
 image: assets/img/uploads/2020/04/Screenshot-2020-04-28-at-14.54.20-e1588078613172-1200x698.png
 categories:

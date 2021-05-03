@@ -4,7 +4,7 @@ title: Pi-Hole and Smokeping using Same lighttpd Service
 date: 2019-12-09T17:10:03+00:00
 author: John
 layout: post
-guid: https://engineer.john-whittington.co.uk/?p=1362
+guid: /?p=1362
 permalink: /2019/12/pi-hole-and-smokeping-using-same-lighttpd-service/
 categories:
   - Programming
