@@ -22,30 +22,21 @@ I won&#8217;t go into too much detail but the data transfer is based around a co
 
 Little has changed beyond that, [see the original project for full details](http://engineer.john-whittington.co.uk/2015/12/nixie-tube-energy-meter/). The remote sensor unit has a single LED indicator: RED when disconnected from display/error; GREEN when connected. It is contained in a simple laser cut box.
 
-<div id='gallery-23' class='gallery galleryid-877 gallery-columns-3 gallery-size-thumbnail'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon portrait'>
-    <a href='http://localhost/2016/04/remote-nixie-energy-meter/img_4674/'><img width="150" height="150" src="/assets/img/uploads/2016/04/IMG_4674-e1460371544341-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-878" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-23-878'> My dad mounted the meter on next to the door in the entrance area </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/04/remote-nixie-energy-meter/img_1659/'><img width="150" height="150" src="/assets/img/uploads/2016/04/IMG_1659-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-879" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-23-879'> The sensor unit is simple with a power inlet, transformer sense input and a single bi-colour LED status indicator. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/04/remote-nixie-energy-meter/img_1655/'><img width="150" height="150" src="/assets/img/uploads/2016/04/IMG_1655-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-881" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-23-881'> An Arduino Pro Mini, NRF24l01 and breadboard current sense resistor </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/04/remote-nixie-energy-meter/img_1660/'><img width="150" height="150" src="/assets/img/uploads/2016/04/IMG_1660-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-880" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-23-880'> The display panel remains the same, with added layers to create an shallow enclosure. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/04/remote-nixie-energy-meter/img_1656/'><img width="150" height="150" src="/assets/img/uploads/2016/04/IMG_1656-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-882" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-23-882'> I added indication for when connection from the sensor unit is lost. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/04/remote-nixie-energy-meter/img_1658/'><img width="150" height="150" src="/assets/img/uploads/2016/04/IMG_1658-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-883" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-23-883'> Just a power inlet at the rear. </figcaption></figure>
-</div>
+<figure class='gallery-item'> 
+<img src="/assets/img/uploads/2016/04/IMG_4674-e1460371544341.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-878" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-23-878'> My dad mounted the meter on next to the door in the entrance area </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/04/IMG_1659.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-879" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-23-879'> The sensor unit is simple with a power inlet, transformer sense input and a single bi-colour LED status indicator. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/04/IMG_1655.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-881" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-23-881'> An Arduino Pro Mini, NRF24l01 and breadboard current sense resistor </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/04/IMG_1660.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-880" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-23-880'> The display panel remains the same, with added layers to create an shallow enclosure. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/04/IMG_1656.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-882" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-23-882'> I added indication for when connection from the sensor unit is lost. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/04/IMG_1658.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-23-883" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-23-883'> Just a power inlet at the rear. </figcaption></figure>

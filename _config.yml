@@ -65,7 +65,7 @@ theme_settings:
 
 # PAGINATION
 paginate: 8
-paginate_path: "blog/page:num"
+paginate_path: "blog/:num"
 
 # ARCHIVES
 # jekyll-archives:

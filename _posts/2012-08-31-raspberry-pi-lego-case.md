@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=92
 permalink: /2012/08/raspberry-pi-lego-case/
-image: assets/img/uploads/2012/08/20120831-120545-1000x288.jpg
+image: assets/img/uploads/2012/08/20120831-120545.jpg
 categories:
   - Fabrication
 tags:
@@ -14,4 +14,5 @@ tags:
   - raspberrypi
 format: image
 ---
-<figure id="attachment_91" aria-describedby="caption-attachment-91" style="width: 584px" class="wp-caption aligncenter">[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2012/08/20120831-120545-1024x764.jpg" alt="" title="Raspberry Pi Lego Case" width="584" height="435" class="size-large wp-image-91" srcset="/assets/img/uploads/2012/08/20120831-120545-1024x764.jpg 1024w, /assets/img/uploads/2012/08/20120831-120545-300x224.jpg 300w, /assets/img/uploads/2012/08/20120831-120545-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2012/08/20120831-120545.jpg)<figcaption id="caption-attachment-91" class="wp-caption-text">With handle cable _manager_</figcaption></figure>
+
+<figure id="attachment_91" aria-describedby="caption-attachment-91" class="wp-caption aligncenter"><img loading="lazy" src="/assets/img/uploads/2012/08/20120831-120545.jpg" alt="" title="Raspberry Pi Lego Case" class="size-large wp-image-91" /><figcaption id="caption-attachment-91" class="wp-caption-text">With handle cable _manager_</figcaption></figure>

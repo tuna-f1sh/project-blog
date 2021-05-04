@@ -6,7 +6,7 @@ author: John
 layout: post
 guid: http://engineer.john-whittington.co.uk/?p=680
 permalink: /2015/03/raspberry-pi-dac-mcp4725-with-wiringpi/
-image: assets/img/uploads/2015/03/download1-825x413.png
+image: assets/img/uploads/2015/03/download1.png
 categories:
   - Electronics
   - Programming
@@ -16,18 +16,19 @@ tags:
   - guide
   - raspberrypi
 ---
-The Raspberry Pi lacks a DAC but using the I2C bus, one can easily add a device like the 12bit [MCP4725](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en532229). The GPIO library [wiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/i2c-library) provides support for I2C devices, however, getting the MCP4725 working with it isn&#8217;t a simple as one might hope. The device is 12bit but the I2C protocol works on bytes (8bits). To send 12bit data, the Microchip designed the message transfer like this:<figure id="attachment_682" aria-describedby="caption-attachment-682" style="width: 632px" class="wp-caption aligncenter">
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/22039d.pdf.jpg" alt="The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other." width="632" height="509" class="size-full wp-image-682" srcset="/assets/img/uploads/2015/03/22039d.pdf.jpg 632w, /assets/img/uploads/2015/03/22039d.pdf-300x242.jpg 300w" sizes="(max-width: 632px) 100vw, 632px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/22039d.pdf.jpg)<figcaption id="caption-attachment-682" class="wp-caption-text">The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other.</figcaption></figure> 
+The Raspberry Pi lacks a DAC but using the I2C bus, one can easily add a device like the 12bit [MCP4725](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en532229). The GPIO library [wiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/i2c-library) provides support for I2C devices, however, getting the MCP4725 working with it isn&#8217;t a simple as one might hope. The device is 12bit but the I2C protocol works on bytes (8bits). To send 12bit data, the Microchip designed the message transfer like this:
 
-<!--more-->
+<figure id="attachment_682" aria-describedby="caption-attachment-682" style="class=wp-caption aligncenter">
+<img loading="lazy" src="/assets/img/uploads/2015/03/22039d.pdf.jpg" alt="The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other." class="size-full wp-image-682" /><figcaption id="caption-attachment-682" class="wp-caption-text">The MC4725 expects the 12bit data to be broken into two bytes and sent directly after each other.</figcaption></figure> 
 
 Trying to send this 12bit data using the standard commands to send bytes won&#8217;t work because the opening messages will be resent between the bytes. The solution is to write the register to be written (0x40 for standard or 0x60 for saving the output state to EEPROM) followed by the two bytes in a row &#8211; one is bodged in place of the register. One could write a new i2c_smbus function to do this but it&#8217;s useful to incorporate it into the existing wiringPi library.
 
 I started by writing a basic function for using wiringPi:
 
-<pre><code class="c">#include &lt;wiringPi.h&gt;
-#include &lt;wiringPiI2C.h&gt;
+```c
+#include <wiringPi.h>;
+#include <wiringPiI2C.h>;
 
 #include "mcp4725.h"
 
@@ -53,7 +54,7 @@ void setVoltage(int fd, int voltage, int persist) {
   // this ensures the data stream is as the MCP4725 expects
   wiringPiI2CWriteReg8(fd, data[0], data[1]);
 }
-</code></pre>
+```
 
 With this working, I integrated it with the wiringPi methods. I&#8217;ve hosted my fork of the library on github:
 
@@ -61,7 +62,8 @@ With this working, I integrated it with the wiringPi methods. I&#8217;ve hosted 
 
 Installing this library, one can then use the chip like any other wiringPi chip, here the example I&#8217;ve put in &#8216;/examples&#8217;:
 
-<pre><code class="c">/*
+```c
+/*
  * MCP4725 driver for wiringPi:
  *    https://projects.drogon.net/raspberry-pi/wiringpi/
  *
@@ -69,10 +71,10 @@ Installing this library, one can then use the chip like any other wiringPi chip,
  *
 *==============================================================*/
 
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;wiringPi.h&gt;
+#include <stdio.h>;
+#include <stdint.h>
+#include <stdlib.h>
+#include <wiringPi.h>
 
 #include "mcp4725.h"
 
@@ -135,12 +137,15 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
-</code></pre>
+```
 
 build and run in the examples directory with:
 
-`make dac<br />
+```bash
+make dac<br />
 ./dac 4095 #output Vdd<br />
-./dac #output repeating sine wave`<figure id="attachment_691" aria-describedby="caption-attachment-691" style="width: 660px" class="wp-caption aligncenter">
+./dac #output repeating sine wave
+```
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/download-768x1024.png" alt="Using my driver for wiringPi, a sine wave being produced by the MCP4725" width="660" height="880" class="size-large wp-image-691" srcset="/assets/img/uploads/2015/03/download-768x1024.png 768w, /assets/img/uploads/2015/03/download-225x300.png 225w, /assets/img/uploads/2015/03/download.png 1536w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2015/03/download.png)<figcaption id="caption-attachment-691" class="wp-caption-text">Using my driver for wiringPi, a sine wave being produced by the MCP4725</figcaption></figure>
+<figure id="attachment_691" aria-describedby="caption-attachment-691" style="class=wp-caption aligncenter">
+<img loading="lazy" src="/assets/img/uploads/2015/03/download.png" alt="Using my driver for wiringPi, a sine wave being produced by the MCP4725" class="size-large wp-image-691" /><figcaption id="caption-attachment-691" class="wp-caption-text">Using my driver for wiringPi, a sine wave being produced by the MCP4725</figcaption></figure>

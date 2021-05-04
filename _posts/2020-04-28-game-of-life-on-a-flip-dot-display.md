@@ -12,14 +12,13 @@ categories:
 tags:
     - flipdot
 ---
+With the passing of John Conway, I decided to add &#8216;Game of Life&#8217; to a Flip-Dot project I&#8217;m working on, in honour of his work.
+
+I show a couple of random starts, a start from text &#8216;Hello!&#8217; and a start with some known forms.
 
 <div class="box">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FjQ4jZS2f9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-With the passing of John Conway, I decided to add &#8216;Game of Life&#8217; to a Flip-Dot project I&#8217;m working on, in honour of his work.
-
-I show a couple of random starts, a start from text &#8216;Hello!&#8217; and a start with some known forms.
 
 Physical display is an Alfa-Zeta XY5 28&#215;14. I&#8217;m building it into a much larger display (252&#215;56) so I develop with a curses based simulator most of the time. I show Game of Life running in this at the end, the larger area allows for some known persistent patterns at start.
 

@@ -24,19 +24,18 @@ tags:
 ---
 Nixie Pipe is my interpretation of a modern day Nixie Tube &#8211; the cold-cathode <del datetime="2016-12-03T17:07:49+00:00">vacuum</del> gas-filled tubes from the 1960s.
 
-The project came about when I decided to make a clock for my kitchen, with specific requirement for an egg timer function! I&#8217;ve always wanted to make a Nixie Tube clock but having completed a [Nixie Tube](http://engineer.john-whittington.co.uk/2015/12/nixie-tube-energy-meter/) project recently and one pipe failing after around 6,000 hours, I wanted to come up this something better. Something that didn&#8217;t require high voltages, special driving circuitry, could be easily interfaced and was modular, but which maintained the unique visual depth of a Nixie Tube.<!--more-->
-
-<div id='gallery-29' class='gallery galleryid-945 gallery-columns-2 gallery-size-thumbnail'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/12/nixie-pipe-modern-day-led-nixie-tube/fullsizeoutput_1a9e/'><img width="150" height="150" src="/assets/img/uploads/2016/12/fullsizeoutput_1a9e-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-29-1023" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-29-1023'> This unit salvaged from a telephone exchange confirmed that a engraved light pipe technique would work. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/12/nixie-pipe-modern-day-led-nixie-tube/img_2318/'><img width="150" height="150" src="/assets/img/uploads/2016/12/IMG_2318-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-29-1022" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-29-1022'> It&#8217;s depth is due to the filament bulbs used for illumination. With LEDs available now, I was able to refine the concept into a much smaller package. </figcaption></figure>
+<div class="box">
+<iframe width="560px" height="315px" src="https://www.youtube.com/embed/2T2dwJ4tU8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+The project came about when I decided to make a clock for my kitchen, with specific requirement for an egg timer function! I&#8217;ve always wanted to make a Nixie Tube clock but having completed a [Nixie Tube](http://engineer.john-whittington.co.uk/2015/12/nixie-tube-energy-meter/) project recently and one pipe failing after around 6,000 hours, I wanted to come up this something better. Something that didn&#8217;t require high voltages, special driving circuitry, could be easily interfaced and was modular, but which maintained the unique visual depth of a Nixie Tube.
+
+<figure class='gallery-item'> 
+<img src="/assets/img/uploads/2016/12/fullsizeoutput_1a9e.jpeg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-29-1023" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-29-1023'> This unit salvaged from a telephone exchange confirmed that a engraved light pipe technique would work. </figcaption></figure>
+<figure class='gallery-item'> 
+<img src="/assets/img/uploads/2016/12/IMG_2318.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-29-1022" />
+  <figcaption class='wp-caption-text gallery-caption' id='gallery-29-1022'> It&#8217;s depth is due to the filament bulbs used for illumination. With LEDs available now, I was able to refine the concept into a much smaller package. </figcaption></figure>
 
 At around the same time, my dad showed me the above from an old telephone exchange. It&#8217;s a 70s way of displaying digits by using engraved light pipes, lit by channeling emission from filament bulbs within. Putting the two together, Nixie Pipe is the design I came up with. I&#8217;ve called it Nixie Pipe because it uses _light pipes_. Each Nixie Pipe contains ten individually controlled RGB LEDs, which sit below channelled layers of acrylic acting as light pipes. By laser engraving the acrylic layers, the piped light diffracts, creating controlled illumination.
 
@@ -69,35 +68,29 @@ First thing I did was cut some layers, engraved them, then lit them from below. 
 
 ### Hardware
 
-<div id='gallery-30' class='gallery galleryid-945 gallery-columns-2 gallery-size-thumbnail'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/12/nixie-pipe-modern-day-led-nixie-tube/img_2310/'><img width="150" height="150" src="/assets/img/uploads/2016/12/IMG_2310-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1013" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-30-1013'> My initial design was a self-enclosed box holding the acrylic layers and pcb. It was ugly and too cumbersome. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/12/nixie-pipe-modern-day-led-nixie-tube/fullsizeoutput_1a9f/'><img width="150" height="150" src="/assets/img/uploads/2016/12/fullsizeoutput_1a9f-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1027" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-30-1027'> Prototypes in a line. There were obviously more changes along the way but this photo shows the main physical design changes. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/12/nixie-pipe-modern-day-led-nixie-tube/img_2019/'><img width="150" height="150" src="/assets/img/uploads/2016/12/IMG_2019-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1026" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-30-1026'> I experimented with acrylic paint to &#8216;black out&#8217; the exposed layers. It didn&#8217;t really help increase clarity but did make the display dimmer. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2016/12/nixie-pipe-modern-day-led-nixie-tube/fullsizeoutput_1aa0/'><img width="150" height="150" src="/assets/img/uploads/2016/12/fullsizeoutput_1aa0-150x150.jpeg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1028" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-30-1028'> I developed an mechanical joint to vertically constrain the modules and prevent the electrical connection taking all the *physical* load. With both vertical and horizontal joints, the modules are well fixed but can be easily pulled apart. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon portrait'>
-    <a href='http://localhost/2016/12/nixie-pipe-modern-day-led-nixie-tube/screen-shot-2016-12-15-at-08-17-44/'><img width="150" height="150" src="/assets/img/uploads/2016/12/Screen-Shot-2016-12-15-at-08.17.44-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1081" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-30-1081'> I used OpenSCAD for the mechanical design as it allows easy exporting of 2d DXF and the spacing of the LEDs owed to variable based design. </figcaption></figure>
-</div>
+<figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/12/IMG_2310.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1013" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-30-1013'> My initial design was a self-enclosed box holding the acrylic layers and pcb. It was ugly and too cumbersome. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/12/fullsizeoutput_1a9f.jpeg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1027" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-30-1027'> Prototypes in a line. There were obviously more changes along the way but this photo shows the main physical design changes. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/12/IMG_2019.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1026" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-30-1026'> I experimented with acrylic paint to &#8216;black out&#8217; the exposed layers. It didn&#8217;t really help increase clarity but did make the display dimmer. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/12/fullsizeoutput_1aa0.jpeg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1028" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-30-1028'> I developed an mechanical joint to vertically constrain the modules and prevent the electrical connection taking all the *physical* load. With both vertical and horizontal joints, the modules are well fixed but can be easily pulled apart. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2016/12/Screen-Shot-2016-12-15-at-08.17.44.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-30-1081" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-30-1081'> I used OpenSCAD for the mechanical design as it allows easy exporting of 2d DXF and the spacing of the LEDs owed to variable based design. </figcaption></figure>
 
 My initial design was enclosure based with the layers &#8216;wedged&#8217; inside on top of a PCB. It was all a bit bulky, cumbersome and not very elegant. I ditched the sides, tooth/dent construction and went for a design whereby the layers are clamped together, with slots to suspend the PCB below. The mechanical design remained largely untouched after that, other than addition of strain relief around the slotting and the inter-locking nodes.
 
-### Electrical<figure id="attachment_1015" aria-describedby="caption-attachment-1015" style="width: 660px" class="wp-caption aligncenter">
+### Electrical
 
-[<img loading="lazy" class="size-large wp-image-1015" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/IMG_2175-1024x768.jpg" alt="I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED." width="660" height="495" srcset="/assets/img/uploads/2016/12/IMG_2175-1024x768.jpg 1024w, /assets/img/uploads/2016/12/IMG_2175-300x225.jpg 300w, /assets/img/uploads/2016/12/IMG_2175-768x576.jpg 768w" sizes="(max-width: 660px) 100vw, 660px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/IMG_2175.jpg)<figcaption id="caption-attachment-1015" class="wp-caption-text">I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED.</figcaption></figure> 
+<figure id="attachment_1015" aria-describedby="caption-attachment-1015" style="class=wp-caption aligncenter">
+<img loading="lazy" class="size-large wp-image-1015" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/IMG_2175-1024x768.jpg" alt="I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED." srcset="/assets/img/uploads/2016/12/IMG_2175-1024x768.jpg 1024w, /assets/img/uploads/2016/12/IMG_2175-300x225.jpg 300w, /assets/img/uploads/2016/12/IMG_2175-768x576.jpg 768w" /><figcaption id="caption-attachment-1015" class="wp-caption-text">I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED.</figcaption></figure> 
 
   1. **PCB 1.0**: The design worked great with only one issue&#8230;I forgot a zero!! Funny how double checking the design a million times one misses the obvious. My mind was obviously still in [binary clock](http://engineer.john-whittington.co.uk/2014/12/wooden-bits-binary-clock/) mode, assuming off would be zero &#8211; I quickly realised that wouldn&#8217;t be obvious enough and just looked like I&#8217;d forgotten a zero&#8230;
   2. **PCB 1.1**: I got rid of the QFN package because I was hand-soldering prototypes and added one more LED for zero. 45deg skew on the QFP actually made the routing easier due to space in the middle.
@@ -120,7 +113,8 @@ Pipes are `set` (display number, colour changed) prior to manipulation of the LE
 
 For quick scripting I made a [Python class](https://github.com/tuna-f1sh/py-nixiepipe) that interfaces with the firmware using SYS_EX like commands. I actually developed the interrupter firmware and Python package in parallel so you could call that five code projects!
 
-<pre><code class="python">import nixiepipe
+```python
+import nixiepipe
 
 # Create pipe object from nixiepipe class. Will auto find serial port using device descriptor
 pipe = nixiepipe.pipe()
@@ -131,14 +125,13 @@ pipe.setNumber(9999) # Set array number to 9999
 
 # Write and show new settings
 pipe.show()
-</code></pre>
+```
 
 #### 3. [Node Module](https://github.com/tuna-f1sh/node-nixiepipe)
 
 I started looking at making a GUI as most people I showed the Nixie Pipes to loved it but had no knowledge of programming. [Electron](http://electron.atom.io/) caught my eye and having first considering using it with a Python backend, I decided against mixing the two and so ported my Python class to Node. My Node was a bit rusty having not developed with it for a few years so it ended up being the perfect refresher.
 
-<pre><code class="javascript">var NixiePipe = require('nixiepipe');
-
+```javascript
 var pipes = new NixiePipe();
 
 pipes.once("connected", function() {
@@ -147,18 +140,20 @@ pipes.setColour(0,0,255); // Set blue
 pipes.show(); // Write and set new settings
 pipes.getNumber( function() { console.log(pipes.number); }); // Return display number
 });
-</code></pre>
+```
 
-#### 4. Electron App<figure id="attachment_1078" aria-describedby="caption-attachment-1078" style="width: 912px" class="wp-caption aligncenter">
+#### 4. Electron App
 
-[<img loading="lazy" class="wp-image-1078 size-full" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/screenshot.png" width="912" height="612" srcset="/assets/img/uploads/2016/12/screenshot.png 912w, /assets/img/uploads/2016/12/screenshot-300x201.png 300w, /assets/img/uploads/2016/12/screenshot-768x515.png 768w" sizes="(max-width: 912px) 100vw, 912px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/screenshot.png)<figcaption id="caption-attachment-1078" class="wp-caption-text">I put this app together over a weekend to trial Electron development. I&#8217;ll be using it again in the future.</figcaption></figure> 
+<figure id="attachment_1078" aria-describedby="caption-attachment-1078" style="class=wp-caption aligncenter" >
+<img loading="lazy" class="wp-image-1078 size-full" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/screenshot.png" srcset="/assets/img/uploads/2016/12/screenshot.png 912w, /assets/img/uploads/2016/12/screenshot-300x201.png 300w, /assets/img/uploads/2016/12/screenshot-768x515.png 768w" /><figcaption id="caption-attachment-1078" class="wp-caption-text">I put this app together over a weekend to trial Electron development. I&#8217;ll be using it again in the future.</figcaption>
+</figure>
 
 With the Node module developed, I went to work making an [Electron app](https://github.com/tuna-f1sh/electron-nixiepipe) &#8211; having not used Electron before I saw it as the project as the perfect test bed. The experience only took a couple of days as I&#8217;m familiar with web design methods and Javascript. Overall I was impressed with Electron and would use it again.
 
 ## Demo Video
 
-
+<div class="box">
+<iframe width="560px" height="315px" src="https://www.youtube.com/embed/kQZ-W9qw2LU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Thanks for reading. If you like the Nixie Pipes, I&#8217;m [selling a limited number through my shop](http://shop.jbrengineering.co.uk/product-category/nixie-pipe/). I&#8217;m currently making them myself but if interest is high may run a Kickstarter to outsource production. If you know what you&#8217;re doing, you can [download the project files](https://github.com/tuna-f1sh/nixiepipe-hardware) and build one yourself. All aspects of the project are licensed under GPL 3.0.
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CFA7TQXNFURLQ)
