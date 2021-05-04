@@ -4,7 +4,7 @@ title: 'Raspberry Pi DAC &#8211; MCP4725 with wiringPi'
 date: 2015-03-19T19:45:39+00:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=680
+guid: /?p=680
 permalink: /2015/03/raspberry-pi-dac-mcp4725-with-wiringpi/
 image: assets/img/uploads/2015/03/download1.png
 categories:

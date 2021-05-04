@@ -4,7 +4,7 @@ title: Raspberry Pi Data Logger with InfluxDB and Grafana
 date: 2016-11-03T18:07:21+00:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=951
+guid: /?p=951
 permalink: /2016/11/raspberry-pi-data-logger-influxdb-grafana/
 image: assets/img/uploads/2016/11/IMG_2174-2-1-825x510.jpg
 categories:
@@ -45,7 +45,7 @@ sudo apt-get install -f
 
 Installed via the .deb package, InfluxDB creates a service and enables at startup so there is little more configuration to do. One must create the databases that our scripts will be saving into. This can be done via the web gui. Navigate to your Pi IP on port 8083 (default InfluxDB admin port &#8211; http://localhost:8083 if you&#8217;re doing this on the Pi). Using the &#8216;Query Templates&#8217; dropdown, one can create a database with &#8216;Create Database&#8217; &#8211; it&#8217;s fairly self explainatory. Make one called &#8216;logger&#8217; to store our sample data.
 
-<img loading="lazy" class="aligncenter size-large wp-image-969" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/11/influx-1024x208.gif" alt="InfluxDB Create Database" srcset="/assets/img/uploads/2016/11/influx-1024x208.gif 1024w, /assets/img/uploads/2016/11/influx.gif 300w, /assets/img/uploads/2016/11/influx-768x156.gif 768w" />
+<img loading="lazy" class="aligncenter size-large wp-image-969" src="/assets/img/uploads/2016/11/influx-1024x208.gif" alt="InfluxDB Create Database" srcset="/assets/img/uploads/2016/11/influx-1024x208.gif 1024w, /assets/img/uploads/2016/11/influx.gif 300w, /assets/img/uploads/2016/11/influx-768x156.gif 768w" />
 
 ## Create Logging Script
 

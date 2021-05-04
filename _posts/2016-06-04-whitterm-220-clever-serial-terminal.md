@@ -4,7 +4,7 @@ title: Whitterm-220 Clever Serial Terminal
 date: 2016-06-04T11:38:20+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=888
+guid: /?p=888
 permalink: /2016/06/whitterm-220-clever-serial-terminal/
 image: assets/img/uploads/2016/06/DSC_0034-825x510.jpg
 categories:

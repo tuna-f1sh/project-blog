@@ -4,7 +4,7 @@ title: Garmin Stem Mount
 date: 2012-08-10T08:09:15+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=46
+guid: /?p=46
 permalink: /2012/08/garmin-stem-mount/
 image: assets/img/uploads/2012/08/2012-08-04-09.56.29.jpg
 categories:

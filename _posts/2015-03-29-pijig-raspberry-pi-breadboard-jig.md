@@ -4,7 +4,7 @@ title: 'PiJig &#8211; Raspberry Pi Breadboard Jig'
 date: 2015-03-29T09:58:49+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=702
+guid: /?p=702
 permalink: /2015/03/pijig-raspberry-pi-breadboard-jig/
 image: assets/img/uploads/2015/03/DSC_0012.jpg
 categories:

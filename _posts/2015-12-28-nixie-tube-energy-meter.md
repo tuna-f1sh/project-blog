@@ -4,7 +4,7 @@ title: Nixie Tube Energy Meter
 date: 2015-12-28T08:45:57+00:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=795
+guid: /?p=795
 permalink: /2015/12/nixie-tube-energy-meter/
 image: assets/img/uploads/2015/12/DSC_0066-1-e1450862704432-825x510.jpg
 categories:
@@ -95,7 +95,7 @@ void printPwr(uint16_t Pwr) {
 
 ## Power Measurement
 
-The power measurement comes by way of [SCT-013 clip-on current transformer](http://www.ebay.co.uk/itm/SCT-013-000-Non-invasive-AC-Current-Sensor-Transformer-BF-/262194656888?hash=item3d0c04f678:g:toEAAOSwJcZWcUJc) with a current sensing resistor in parallel, biased by VREF/2, then sampled by the Arduino ADC. [Open Energy Monitor have plenty of detail on this](http://openenergymonitor.org/emon/buildingblocks/ct-sensors-interface), which I followed and a [useful library](http://engineer.john-whittington.co.uk/wp-admin/post.php?post=795&action=edit), that I used. In its most basic form, the library samples the ADC reading over a number of samples (in phase with 50Hz mains) and returns the RMS current. With the RMS current and assumed RMS voltage (230V) using $$P = V * I$$, the _apparent_ power is calculated. 
+The power measurement comes by way of [SCT-013 clip-on current transformer](http://www.ebay.co.uk/itm/SCT-013-000-Non-invasive-AC-Current-Sensor-Transformer-BF-/262194656888?hash=item3d0c04f678:g:toEAAOSwJcZWcUJc) with a current sensing resistor in parallel, biased by VREF/2, then sampled by the Arduino ADC. [Open Energy Monitor have plenty of detail on this](http://openenergymonitor.org/emon/buildingblocks/ct-sensors-interface), which I followed and a [useful library](/wp-admin/post.php?post=795&action=edit), that I used. In its most basic form, the library samples the ADC reading over a number of samples (in phase with 50Hz mains) and returns the RMS current. With the RMS current and assumed RMS voltage (230V) using $$P = V * I$$, the _apparent_ power is calculated. 
 
 _Apparent_ power is the assumed power and is what a resistive load will draw. _Real_ power is what we&#8217;re billed for and that takes into account non-linear voltage/current relationships and phase lag created by other loads such as motors (which feed power back at certain points in the cycle) and DC converters. The differences are again best [summarised by Open Energy Monitor](http://openenergymonitor.org/emon/buildingblocks/ac-power-introduction).
 
@@ -217,4 +217,4 @@ I have commands to stream JSON formated data, with a plan to have a locally runn
 
 If you want to make one yourself or part of the design, the code and OpenSCAD designs are in [this Github](https://github.com/tuna-f1sh/nixie-energy-meter)
 
-**[UPDATED: See the wireless version](http://engineer.john-whittington.co.uk/2016/04/remote-nixie-energy-meter/)**
+**[UPDATED: See the wireless version](/2016/04/remote-nixie-energy-meter/)**

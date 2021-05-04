@@ -4,7 +4,7 @@ title: Simulink Raspberry Pi Driver Blocks
 date: 2015-06-13T10:02:18+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=728
+guid: /?p=728
 permalink: /2015/06/simulink-raspberry-pi-driver-blocks/
 image: assets/img/uploads/2015/06/blocks.png
 categories:
@@ -14,7 +14,7 @@ tags:
   - MATLAB
   - simulink
 ---
-Following on from [adding support to wiringPi for the MCP4725 DAC](http://engineer.john-whittington.co.uk/2015/03/raspberry-pi-dac-mcp4725-with-wiringpi/), I wanted to add driver blocks to Simulink such that one could use them to create graphical models for the Raspberry Pi that could interface with the real-world &#8211; a workable alternative to expensive real-time targets.
+Following on from [adding support to wiringPi for the MCP4725 DAC](/2015/03/raspberry-pi-dac-mcp4725-with-wiringpi/), I wanted to add driver blocks to Simulink such that one could use them to create graphical models for the Raspberry Pi that could interface with the real-world &#8211; a workable alternative to expensive real-time targets.
 
 Using the S-Function Builder and some other [user created blocks](http://www.mathworks.com/matlabcentral/fileexchange/41491-raspberry-pi-driver-block-sfunction) (which didn&#8217;t work &#8211; see below) as a basis, the process isn&#8217;t too difficult thanks to the generic function prototypes wiringPi uses. All the low-level stuff is done in the library as explained in my previous post, the S-Function just has to call `mcp4725Setup()` at first step, followed by `analogWrite()` at each proceeding step. See the screenshots below.
 

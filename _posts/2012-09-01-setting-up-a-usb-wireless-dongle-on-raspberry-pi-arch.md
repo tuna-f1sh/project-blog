@@ -4,7 +4,7 @@ title: Setting Up a USB WiFi Dongle on Raspberry Pi Arch
 date: 2012-09-01T09:36:35+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=95
+guid: /?p=95
 permalink: /2012/09/setting-up-a-usb-wireless-dongle-on-raspberry-pi-arch/
 categories:
   - Programming
@@ -16,7 +16,7 @@ tags:
   - raspberrypi
   - wireless
 ---
-For my [AirPi](http://engineer.john-whittington.co.uk/2012/08/airpi-diy-airplay-speakers/), I needed to make my Raspberry Pi wireless. Being the man of thrift that I am, I found the cheapest dongle on eBay: a [(Digitaz) RaLink RT5370](http://www.ebay.co.uk/itm/221074985041?ssPageName=STRK:MEWNX:IT&_trksid=p3984.m1497.l2649).
+For my [AirPi](/2012/08/airpi-diy-airplay-speakers/), I needed to make my Raspberry Pi wireless. Being the man of thrift that I am, I found the cheapest dongle on eBay: a [(Digitaz) RaLink RT5370](http://www.ebay.co.uk/itm/221074985041?ssPageName=STRK:MEWNX:IT&_trksid=p3984.m1497.l2649).
 
 Now Arch isn&#8217;t exactly plug and play, but that&#8217;s part of the fun. Plugging it in, the only way you&#8217;ll know it is there is using:  
 <!--more-->

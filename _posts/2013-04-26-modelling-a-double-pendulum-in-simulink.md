@@ -4,9 +4,9 @@ title: Modelling a Double Pendulum in Simulink
 date: 2013-04-26T07:35:06+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=245
+guid: /?p=245
 permalink: /2013/04/modelling-a-double-pendulum-in-simulink/
-image: assets/img/uploads/2013/04/4-1000x288.jpg
+image: assets/img/uploads/2013/04/4.jpg
 categories:
   - Programming
   - University
@@ -21,84 +21,99 @@ The approach involved deriving the equations of from the highest order of motion
 
 Below is the method extract from my report as the YouTube demo has generated some interest in the solution.
 
-<!--more--><figure id="attachment_262" aria-describedby="caption-attachment-262" style="width: 584px" class="wp-caption aligncenter">
+<figure id="attachment_262" aria-describedby="caption-attachment-262" style="width: 584px" class="wp-caption aligncenter">
+<img loading="lazy" class="size-large wp-image-262" src="/assets/img/uploads/2013/04/3.jpg" alt="The double pendulum to be modelled." /><figcaption id="caption-attachment-262" class="wp-caption-text">The double pendulum to be modelled.</figcaption></figure> 
 
-[<img loading="lazy" class="size-large wp-image-262" src="http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/3-1024x601.jpg" alt="The double pendulum to be modelled." width="584" height="342" srcset="/assets/img/uploads/2013/04/3-1024x601.jpg 1024w, /assets/img/uploads/2013/04/3-300x176.jpg 300w, /assets/img/uploads/2013/04/3-500x293.jpg 500w, /assets/img/uploads/2013/04/3.jpg 1230w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/3.jpg)<figcaption id="caption-attachment-262" class="wp-caption-text">The double pendulum to be modelled.</figcaption></figure> 
-
-**Theory**
+## Theory
 
 Double pendula are an example of a simple physical system which can exhibit chaotic behavior [[1]](http://scienceworld.wolfram.com/physics/DoublePendulum.html). That is to say it is sensitive to initial conditions and that its movements, although predictable, appear random. Equations of motion for the pendulum of Fig.?? can be derived by first considering the x and y components of displacement:
 
-<p class="ql-center-displayed-equation" style="line-height: 82px;">
-  <span class="ql-right-eqno"> (1) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-43cf1d92577216001fcc2e1dd629fe31_l3.png" height="82" width="216" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125; &#120;&#95;&#49;&#32;&#38;&#61;&#38;&#32;&#108;&#95;&#49;&#92;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#92;&#99;&#114; &#121;&#95;&#49;&#32;&#38;&#61;&#38;&#32;&#45;&#108;&#95;&#49;&#92;&#99;&#111;&#115;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#92;&#99;&#114; &#120;&#95;&#50;&#32;&#38;&#61;&#38;&#32;&#108;&#95;&#49;&#92;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#43;&#108;&#95;&#50;&#92;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#32;&#92;&#99;&#114; &#121;&#95;&#50;&#32;&#38;&#61;&#38;&#32;&#45;&#108;&#95;&#49;&#92;&#99;&#111;&#115;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#45;&#108;&#95;&#50;&#92;&#99;&#111;&#115;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+$$
+    \begin{align}
+    x_1 = l_{1}\sin(\theta_{1}) \\
+    y_2 = -l_{1}\cos(\theta_{1}) \\
+    x_2 = l_{1}\sin(\theta_{1}) + l_{2}\sin(\theta{2}) \\
+    y_2 = -l_{1}\cos(\theta_{1}) - l_{2}\cos(\theta{2})
+    \end{align}
+$$
 
 Leading to potential and kinetic energies of the system:  
-<a name="id1898658830"></a>
 
-<p class="ql-center-displayed-equation" style="line-height: 123px;">
-  <span class="ql-right-eqno"> (2) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-1196f62df3a1c338398e8ab698238af2_l3.png" height="123" width="670" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125; &#92;&#116;&#101;&#120;&#116;&#114;&#109;&#123;&#80;&#69;&#125;&#32;&#38;&#61;&#38;&#32;&#86;&#32;&#61;&#32;&#109;&#95;&#49;&#103;&#121;&#95;&#49;&#32;&#43;&#32;&#109;&#95;&#50;&#103;&#121;&#95;&#50;&#32;&#92;&#110;&#111;&#110;&#117;&#109;&#98;&#101;&#114;&#32;&#92;&#99;&#114; &#38;&#61;&#38;&#32;&#45;&#40;&#109;&#95;&#49;&#43;&#109;&#95;&#50;&#41;&#103;&#108;&#95;&#49;&#92;&#99;&#111;&#115;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#45;&#32;&#109;&#95;&#50;&#103;&#108;&#95;&#50;&#92;&#99;&#111;&#115;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#32;&#92;&#99;&#114; &#92;&#116;&#101;&#120;&#116;&#114;&#109;&#123;&#75;&#69;&#125;&#32;&#38;&#61;&#38;&#32;&#84;&#32;&#61;&#32;&#92;&#102;&#114;&#97;&#99;&#123;&#49;&#125;&#123;&#50;&#125;&#109;&#95;&#49;&#118;&#95;&#49;&#94;&#50;&#43;&#92;&#102;&#114;&#97;&#99;&#123;&#49;&#125;&#123;&#50;&#125;&#109;&#95;&#50;&#118;&#95;&#50;&#32;&#92;&#110;&#111;&#110;&#117;&#109;&#98;&#101;&#114;&#32;&#92;&#99;&#114; &#38;&#61;&#38;&#32;&#92;&#117;&#110;&#100;&#101;&#114;&#98;&#114;&#97;&#99;&#101;&#123;&#92;&#102;&#114;&#97;&#99;&#123;&#49;&#125;&#123;&#50;&#125;&#109;&#95;&#49;&#108;&#95;&#49;&#94;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#94;&#50;&#125;&#125;&#60;&#101;&#109;&#62;&#123;&#109;&#95;&#49;&#125;&#32;&#43;&#32;&#92;&#117;&#110;&#100;&#101;&#114;&#98;&#114;&#97;&#99;&#101;&#123;&#92;&#102;&#114;&#97;&#99;&#123;&#49;&#125;&#32;&#123;&#50;&#125;&#109;&#95;&#50;&#091;&#108;&#95;&#49;&#94;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#94;&#50;&#125;&#43;&#108;&#95;&#50;&#94;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#94;&#50;&#125;&#43;&#50;&#108;&#95;&#49;&#108;&#95;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#92;&#99;&#111;&#115;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#32;&#45;&#32;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#093;&#125;&#60;&#47;&#101;&#109;&#62;&#123;&#109;&#95;&#50;&#125;&#32; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+$$
+    \begin{align}
+    PE = V = m_1gy_1 + m_2gy_2 \\
+    = -(m_1+m_2)gl_1\cos{\theta_1} - m_2gl_2\cos{\theta_2} \\
+    KE = T = \frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2 \\
+    = \underbrace{\frac{1}{2}m_1l_1^2\dot{\theta_1^2}}{m_1} + \underbrace{\frac{1} {2}m_2[l_1^2\dot{\theta_1^2}+l_2^2\dot{\theta_2^2}+2l_1l_2\dot{\theta_1}\dot{\theta_2}\cos{(\theta_1 - \theta_2)}]}{m_2}
+    \end{align}
+$$
 
 And Langrangian:
 
-<p class="ql-center-displayed-equation" style="line-height: 12px;">
-  <span class="ql-right-eqno"> (3) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-05e3baf04d6965eee4f00458c14f0c18_l3.png" height="12" width="84" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#117;&#97;&#116;&#105;&#111;&#110;&#42;&#125; &#76;&#32;&#92;&#101;&#113;&#117;&#105;&#118;&#32;&#84;&#45;&#86;&#32;&#92;&#110;&#111;&#110;&#117;&#109;&#98;&#101;&#114; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#117;&#97;&#116;&#105;&#111;&#110;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+$$
+    L \equiv T-V \\
+    = \frac{1}{2}(m_1+m_2)l_1^2\dot{\theta_1^2} + \frac{1}{2}m_2l_2^2\dot{\theta_2^2} \\ + m_2l_1l_2\dot{\theta_1}\dot{\theta_2}\cos{(\theta_1-\theta_2)} + (m_1+m_2)gl_1\cos{\theta_1} + m_2gl_2cos{\theta_2}
+$$
 
-<p class="ql-center-displayed-equation" style="line-height: 59px;">
-  <span class="ql-right-eqno"> (4) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-eb4ad5146baf30ef25b4d8f5eadfbd23_l3.png" height="59" width="521" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125; &#61;&#32;&#92;&#108;&#101;&#102;&#116;&#101;&#113;&#110;&#123;&#92;&#102;&#114;&#97;&#99;&#123;&#49;&#125;&#123;&#50;&#125;&#40;&#109;&#95;&#49;&#43;&#109;&#95;&#50;&#41;&#108;&#95;&#49;&#94;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#94;&#50;&#125;&#32;&#43;&#32;&#92;&#102;&#114;&#97;&#99;&#123;&#49;&#125;&#123;&#50;&#125;&#109;&#95;&#50;&#108;&#95;&#50;&#94;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#94;&#50;&#125;&#125;&#32;&#92;&#110;&#111;&#110;&#117;&#109;&#98;&#101;&#114;&#32;&#92;&#99;&#114;&#32;&#38;&#38;&#32;&#43;&#32;&#109;&#95;&#50;&#108;&#95;&#49;&#108;&#95;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#92;&#99;&#111;&#115;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#32;&#43;&#32;&#40;&#109;&#95;&#49;&#43;&#109;&#95;&#50;&#41;&#103;&#108;&#95;&#49;&#92;&#99;&#111;&#115;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#43;&#32;&#109;&#95;&#50;&#103;&#108;&#95;&#50;&#99;&#111;&#115;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+For $$\theta_1$$, the simplified Euler-Lagrange differential equation becomes:
 
-For<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-ae0ed3941c1234a407a2f291691d1f5a_l3.png" class="ql-img-inline-formula " alt="&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;" title="Rendered by QuickLaTeX.com" height="15" width="14" style="vertical-align: -3px;" /> , the simplified Euler-Lagrange differential equation becomes:  
-<a name="id635968605"></a>
+$$
+    (m_1+m_2)l_1\ddot{\theta_1} + m_2l_1\ddot{\theta_2}\cos{(\theta_1-\theta_2)} + m_2l_2\dot{\theta_2^2}\sin{(\theta_1-\theta_2)} + (m_1+m_2)g\sin{\theta_1} = 0
+$$
 
-<p class="ql-center-displayed-equation" style="line-height: 46px;">
-  <span class="ql-right-eqno"> (5) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-9422d7943e0321e135262f6d1d442a99_l3.png" height="46" width="382" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;&#32; &#92;&#108;&#101;&#102;&#116;&#101;&#113;&#110;&#123;&#40;&#109;&#95;&#49;&#43;&#109;&#95;&#50;&#41;&#108;&#95;&#49;&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#43;&#32;&#109;&#95;&#50;&#108;&#95;&#49;&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#92;&#99;&#111;&#115;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#125;&#32;&#92;&#110;&#111;&#110;&#117;&#109;&#98;&#101;&#114;&#32;&#92;&#99;&#114;&#32;&#38;&#38;&#32;&#43;&#32;&#109;&#95;&#50;&#108;&#95;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#94;&#50;&#125;&#92;&#115;&#105;&#110;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#32;&#43;&#32;&#40;&#109;&#95;&#49;&#43;&#109;&#95;&#50;&#41;&#103;&#92;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#61;&#32;&#48; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+Or in this case $$LHS=T$$. Similarly, $$\theta_2$$ becomes:
 
-Or in this case<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-194ff76846dbb1d76a317d8715fdd8a9_l3.png" class="ql-img-inline-formula " alt="&#76;&#72;&#83;&#61;&#84;" title="Rendered by QuickLaTeX.com" height="12" width="77" style="vertical-align: 0px;" /> . Similarly,<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-24076072dbf228daa82251a5e8e5fc50_l3.png" class="ql-img-inline-formula " alt="&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;" title="Rendered by QuickLaTeX.com" height="15" width="15" style="vertical-align: -3px;" /> becomes:  
-<a name="id3169393751"></a>
-
-<p class="ql-center-displayed-equation" style="line-height: 46px;">
-  <span class="ql-right-eqno"> (6) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-80e51646cffacd5d314a9696a805d1ab_l3.png" height="46" width="324" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;&#32; &#92;&#108;&#101;&#102;&#116;&#101;&#113;&#110;&#123;&#109;&#95;&#50;&#108;&#95;&#50;&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#32;&#43;&#32;&#109;&#95;&#50;&#108;&#95;&#49;&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#92;&#99;&#111;&#115;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#125;&#32;&#92;&#110;&#111;&#110;&#117;&#109;&#98;&#101;&#114;&#32;&#92;&#99;&#114;&#32;&#38;&#38;&#32;&#45;&#32;&#109;&#95;&#50;&#108;&#95;&#49;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#94;&#50;&#125;&#92;&#115;&#105;&#110;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#32;&#43;&#32;&#109;&#95;&#50;&#103;&#92;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#32;&#61;&#32;&#48; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+$$
+    m_2l_2\ddot{\theta_2} + m_2l_1\ddot{\theta_1}\cos{(\theta_1-\theta_2)} - m_2l_1\dot{\theta_1^2}\sin{(\theta_1-\theta_2)} + m_2g\sin{\theta_2} = 0
+$$
 
 **Simulink Model**
 
-The _Simulink_ model was constructed by first considering the various terms which make up the equations of motion ([5](#id635968605)), ([6](#id3169393751)); each of the terms can be derived from the highest order of<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-68686eaaca315d71e5498078ab67e4f3_l3.png" class="ql-img-inline-formula " alt="&#92;&#116;&#104;&#101;&#116;&#97;" title="Rendered by QuickLaTeX.com" height="12" width="9" style="vertical-align: 0px;" /> :<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-bb5208667d16bbfb0b3fc93c31f8ceac_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#125;" title="Rendered by QuickLaTeX.com" height="17" width="9" style="vertical-align: 0px;" /> . Hence, development begin by creating a mathematical flow of blocks, with each output a term within the equation [Fig.??].<figure id="attachment_261" aria-describedby="caption-attachment-261" style="width: 584px" class="wp-caption aligncenter">
+The _Simulink_ model was constructed by first considering the various terms which make up the equations of motion ([5](#id635968605)), ([6](#id3169393751)); each of the terms can be derived from the highest order of $$\theta$$: $$\ddot{\theta}$$. Hence, development begin by creating a mathematical flow of blocks, with each output a term within the equation [Fig.??].
 
-[<img loading="lazy" class="size-large wp-image-261" src="http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/2-1024x561.jpg" alt="The starting point for the Simulink model." width="584" height="319" srcset="/assets/img/uploads/2013/04/2-1024x561.jpg 1024w, /assets/img/uploads/2013/04/2-300x164.jpg 300w, /assets/img/uploads/2013/04/2-500x274.jpg 500w, /assets/img/uploads/2013/04/2.jpg 1217w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/2.jpg)<figcaption id="caption-attachment-261" class="wp-caption-text">The starting point for the Simulink model.</figcaption></figure> 
+<figure id="attachment_261" aria-describedby="caption-attachment-261" class="wp-caption aligncenter">
+<img loading="lazy" class="size-large wp-image-261" src="/assets/img/uploads/2013/04/2.jpg" alt="The starting point for the Simulink model." /><figcaption id="caption-attachment-261" class="wp-caption-text">The starting point for the Simulink model.</figcaption></figure>
 
-Outputs for<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-4ad14507d65a9d695dad4efa8ed7a763_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#94;&#50;&#125;&#44;&#32;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#94;&#50;&#125;&#44;&#32;&#92;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;" title="Rendered by QuickLaTeX.com" height="24" width="87" style="vertical-align: -5px;" /> , etc. had been created but the inputs<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-f375e94e8ca3d978c91ebf9322637c13_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;" title="Rendered by QuickLaTeX.com" height="20" width="14" style="vertical-align: -3px;" /> and<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-769010ac73008604ab18bde36c47bbbc_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;" title="Rendered by QuickLaTeX.com" height="20" width="15" style="vertical-align: -3px;" /> where unknown. By rearranging the equations of motion to a set of functions in terms of<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-f375e94e8ca3d978c91ebf9322637c13_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;" title="Rendered by QuickLaTeX.com" height="20" width="14" style="vertical-align: -3px;" /> and<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-769010ac73008604ab18bde36c47bbbc_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;" title="Rendered by QuickLaTeX.com" height="20" width="15" style="vertical-align: -3px;" /> , they can be applied to the outputs and result fed back to the inputs:
+Outputs for $$\dot{\theta_1^2}, \dot{\theta_2^2}, \sin{\theta_1}$$, etc. had been created but the inputs $$\ddot{\theta_1}$$ and $$\ddot{\theta_2}$$ where unknown. By rearranging the equations of motion to a set of functions in terms of $$\ddot{\theta_1}$$ and $$\ddot{\theta_2}$$, they can be applied to the outputs and result fed back to the inputs:
 
-<p class="ql-center-displayed-equation" style="line-height: 80px;">
-  <span class="ql-right-eqno"> (7) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-50cb79b430abb9bb8728d2c75b4067f6_l3.png" height="80" width="94" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125; &#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#61;&#32;&#92;&#102;&#114;&#97;&#99;&#123;&#98;&#95;&#49;&#32;&#45;&#32;&#98;&#95;&#50;&#125;&#123;&#98;&#95;&#51;&#125;&#32;&#92;&#99;&#114; &#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#32;&#61;&#32;&#92;&#102;&#114;&#97;&#99;&#123;&#98;&#95;&#50;&#32;&#45;&#32;&#98;&#95;&#52;&#125;&#123;&#98;&#95;&#53;&#125; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+$$
+    \begin{align}
+    \ddot{\theta_1} = \frac{b_1 - b_2}{b_3} \\
+    \ddot{\theta_2} = \frac{b_2 - b_4}{b_5}
+    \end{align}
+$$
 
 Where:
 
-<p class="ql-center-displayed-equation" style="line-height: 114px;">
-  <span class="ql-right-eqno"> (8) </span><span class="ql-left-eqno"> &nbsp; </span><img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-83ae260e64dace040ea578bbc4a7182a_l3.png" height="114" width="394" class="ql-img-displayed-equation " alt="&#92;&#98;&#101;&#103;&#105;&#110;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125; &#98;&#95;&#49;&#32;&#38;&#61;&#38;&#32;&#84;&#32;&#45;&#32;&#40;&#109;&#95;&#49;&#43;&#109;&#95;&#50;&#41;&#103;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#32;&#45;&#32;&#109;&#95;&#50;&#108;&#95;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#94;&#50;&#125;&#115;&#105;&#110;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#32;&#92;&#99;&#114; &#98;&#95;&#50;&#32;&#38;&#61;&#38;&#32;&#109;&#95;&#50;&#108;&#95;&#50;&#92;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#94;&#50;&#115;&#105;&#110;&#123;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#125;&#45;&#109;&#95;&#50;&#103;&#115;&#105;&#110;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;&#32;&#92;&#99;&#114; &#98;&#95;&#51;&#32;&#38;&#61;&#38;&#32;&#40;&#109;&#95;&#49;&#43;&#109;&#95;&#50;&#41;&#108;&#95;&#49;&#32;&#45;&#32;&#109;&#95;&#50;&#108;&#95;&#49;&#92;&#99;&#111;&#115;&#94;&#50;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#32;&#92;&#99;&#114; &#98;&#95;&#52;&#32;&#38;&#61;&#38;&#32;&#109;&#95;&#50;&#108;&#95;&#49;&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;&#99;&#111;&#115;&#40;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#45;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#41;&#32;&#92;&#102;&#111;&#111;&#116;&#110;&#111;&#116;&#101;&#109;&#97;&#114;&#107;&#32;&#92;&#99;&#114; &#98;&#95;&#53;&#32;&#38;&#61;&#38;&#32;&#109;&#95;&#50;&#108;&#95;&#50; &#92;&#101;&#110;&#100;&#123;&#101;&#113;&#110;&#97;&#114;&#114;&#97;&#121;&#42;&#125;" title="Rendered by QuickLaTeX.com" />
-</p>
+$$
+    \begin{align}
+    b_1 = T - (m_1+m_2)gsin{\theta_1} - m_2l_2\dot{\theta_2^2}sin{(\theta_1-\theta_2)} \\
+    b_2 = m_2l_2\dot{\theta_1}^2sin{(\theta_1-\theta_2)}-m_2gsin{\theta_2} \\
+    b_3 = (m_1+m_2)l_1 - m_2l_1\cos^2(\theta_1-\theta_2) \\
+    b_4 = m_2l_1\ddot{\theta_1}cos(\theta_1-\theta_2) \\
+    b_5 = m_2l_2
+    \end{align}
+$$
 
-[Fig.??] The outputs are combined using a _Mux_ block, a multiplexor which creates an array of its inputs. Similarly, the masked system parameters are defined using _MATLAB_ variables as _Constant_ blocks and combined with another _Mux_. The<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-e7c54e5da7d3b714dcb386e0d7bcef18_l3.png" class="ql-img-inline-formula " alt="&#98;" title="Rendered by QuickLaTeX.com" height="12" width="8" style="vertical-align: 0px;" /> terms are then found by creating _Function_ blocks referencing these arrays, which are then equated accordingly to find<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-f375e94e8ca3d978c91ebf9322637c13_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#49;&#125;" title="Rendered by QuickLaTeX.com" height="20" width="14" style="vertical-align: -3px;" /> and<img loading="lazy" src="/assets/img/ql-cache/quicklatex.com-769010ac73008604ab18bde36c47bbbc_l3.png" class="ql-img-inline-formula " alt="&#92;&#100;&#100;&#111;&#116;&#123;&#92;&#116;&#104;&#101;&#116;&#97;&#95;&#50;&#125;" title="Rendered by QuickLaTeX.com" height="20" width="15" style="vertical-align: -3px;" /> . Kinetic energies of the masses are also found at this stage in a similar manor, referring to ([2](#id1898658830)). The angular accelerations are then fed back to the start of the block diagram. Initial angle conditions are set in the displacement _Integrator_ to the _MATLAB_ variables.<figure id="attachment_260" aria-describedby="caption-attachment-260" style="width: 584px" class="wp-caption aligncenter">
+The outputs are combined using a Mux block, a multiplexor which creates an array of its inputs. Similarly, the masked system parameters are defined using MATLAB variables as Constant blocks and combined with another Mux. The $$b$$ terms are then found by creating Function blocks referencing these arrays, which are then equated accordingly to find $$\ddot{\theta_1}$$ and $$\ddot{\theta_2}$$. Kinetic energies of the masses are also found at this stage in a similar manor.. The angular accelerations are then fed back to the start of the block diagram. Initial angle conditions are set in the displacement Integrator to the MATLAB variables.
 
-[<img loading="lazy" class="size-large wp-image-260" src="http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/1-1024x511.jpg" alt="The complete un-masked sub-system" width="584" height="291" srcset="/assets/img/uploads/2013/04/1-1024x511.jpg 1024w, /assets/img/uploads/2013/04/1-300x149.jpg 300w, /assets/img/uploads/2013/04/1-500x249.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/1.jpg)<figcaption id="caption-attachment-260" class="wp-caption-text">The complete un-masked sub-system</figcaption></figure> 
+<figure id="attachment_260" aria-describedby="caption-attachment-260" class="wp-caption aligncenter">
+<img loading="lazy" class="size-large wp-image-260" src="/assets/img/uploads/2013/04/1.jpg" alt="The complete un-masked sub-system" /><figcaption id="caption-attachment-260" class="wp-caption-text">The complete un-masked sub-system</figcaption></figure> 
 
 The pendulum model was &#8216;masked&#8217; into a sub-system block for cleaner integration with the proceeding models [Appendix: ??]. Firstly, for Steps.2-5 of the experiment, the system of Fig.?? was used, which saves the outputs of the pendulum to file for manipulation within _MATLAB_. Secondly, for Step.5, a closed loop system with a _PID_ block was used [Fig.??].
 
 For the purpose of experimenting with the system for the report, I created two simple _MATLAB_ scripts:
 
-  * Pre-processing &#8211; to define the variables (masses, length, gravity etc.)
-  * Post-processing &#8211; to create output plots and an animation.
+* Pre-processing &#8211; to define the variables (masses, length, gravity etc.)
+* Post-processing &#8211; to create output plots and an animation.
 
-This made the whole model very easy to use and play around with. I also various disturbances and feedback loops to the system, that can be turned on and off.<figure id="attachment_263" aria-describedby="caption-attachment-263" style="width: 584px" class="wp-caption aligncenter">
+This made the whole model very easy to use and play around with. I also various disturbances and feedback loops to the system, that can be turned on and off.
 
-[<img loading="lazy" class="size-large wp-image-263" src="http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/4-1024x543.jpg" alt="The final system with masked sub-system, PID control and disturbances." width="584" height="309" srcset="/assets/img/uploads/2013/04/4-1024x543.jpg 1024w, /assets/img/uploads/2013/04/4-300x159.jpg 300w, /assets/img/uploads/2013/04/4-500x265.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/4.jpg)<figcaption id="caption-attachment-263" class="wp-caption-text">The final system with masked sub-system, PID control and disturbances.</figcaption></figure> 
+<figure id="attachment_263" aria-describedby="caption-attachment-263" class="wp-caption aligncenter">
+<img loading="lazy" class="size-large wp-image-263" src="/assets/img/uploads/2013/04/4.jpg" alt="The final system with masked sub-system, PID control and disturbances." /><figcaption id="caption-attachment-263" class="wp-caption-text">The final system with masked sub-system, PID control and disturbances.</figcaption></figure> 
 
 
 
 Here&#8217;s the code and model:
 
-[Pendulum](http://engineer.john-whittington.co.ukassets/img/uploads/2013/04/Pendulum.zip)
+[Pendulum](/assets/img/uploads/2013/04/Pendulum.zip)

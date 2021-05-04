@@ -4,9 +4,9 @@ title: 'Wooden Bits &#8211; Binary Clock'
 date: 2014-12-11T09:44:44+00:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=487
+guid: /?p=487
 permalink: /2014/12/wooden-bits-binary-clock/
-image: assets/img/uploads/2014/12/concept-672x372.jpg
+image: assets/img/uploads/2014/12/concept.jpg
 categories:
   - Electronics
   - Fabrication
@@ -24,19 +24,19 @@ tags:
   - wood
   - ws2812
 ---
+
 ![Wooden Bits Gif](http://i.imgur.com/n8bL5TM.gif)
 
 I&#8217;ve been meaning to make a binary wall clock for a while and to also try out [kerf bending](https://www.google.co.uk/search?q=kerf+bend&espv=2&biw=1920&bih=1139&source=lnms&tbm=isch&sa=X&ei=tnSIVKGhH8O9Ue2MgOgC&ved=0CAYQ_AUoAQ) with the laser cutter. What put me off creating kerf bends before I found [OpenSCAD](http://www.openscad.com), was the manual creation of all the lines in the right places. It&#8217;s the kind of repetitive, uniform task computers were made to do.
 
-<!--more-->
+# Design
 
-# Design<figure id="attachment_515" aria-describedby="caption-attachment-515" style="width: 474px" class="wp-caption aligncenter">
-
-[<img loading="lazy" class="size-large wp-image-515" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits-1024x744.jpg" alt="My idea sketched out" width="474" height="344" srcset="/assets/img/uploads/2014/12/wooden-bits-1024x744.jpg 1024w, /assets/img/uploads/2014/12/wooden-bits-300x218.jpg 300w" sizes="(max-width: 474px) 100vw, 474px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits.jpg)<figcaption id="caption-attachment-515" class="wp-caption-text">My idea sketched out</figcaption></figure> 
+<figure id="attachment_515" aria-describedby="caption-attachment-515" class="wp-caption aligncenter">
+<img loading="lazy" class="size-large wp-image-515" src="/assets/img/uploads/2014/12/wooden-bits.jpg" alt="My idea sketched out" /><figcaption id="caption-attachment-515" class="wp-caption-text">My idea sketched out</figcaption></figure> 
 
 Above was what I wanted to create; a square matrix formed from one length of plywood, with the curves creating some organic interest to an otherwise boring shape. I opened Vim and started away in lines of _OpenSCAD_.
 
-[<img loading="lazy" class="aligncenter size-large wp-image-505" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/Untitled-1024x420.png" alt="Wooden Bits Print Sheet" width="474" height="194" srcset="/assets/img/uploads/2014/12/Untitled-1024x420.png 1024w, /assets/img/uploads/2014/12/Untitled-300x123.png 300w, /assets/img/uploads/2014/12/Untitled.png 2002w" sizes="(max-width: 474px) 100vw, 474px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/Untitled.png)
+<img loading="lazy" class="aligncenter size-large wp-image-505" src="/assets/img/uploads/2014/12/Untitled.png" alt="Wooden Bits Print Sheet" />
 
 I ended up creating script that could create a one-piece design but would also split the length into divisions. I did this because the length was too big for the cutter bed. For the initial build, each (of four rows) row is separate and then they are all glued together.  If I make another I&#8217;ll add a _dovetail_ so that each section can be joined, it&#8217;s more complicated because you have to alternate the teeth/dents on the middle male components.
 
@@ -44,29 +44,21 @@ I ended up creating script that could create a one-piece design but would also s
 
 There was some tweaking involved of the kerf spacing to get it strong yet bendable but overall it was a relatively pain-free construction.
 
-<div id='gallery-11' class='gallery galleryid-487 gallery-columns-3 gallery-size-thumbnail'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/img_0892/'><img width="150" height="150" src="/assets/img/uploads/2014/12/IMG_0892-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-511" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-11-511'> Sections laid out on the bench during construction. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/img_0889/'><img width="150" height="150" src="/assets/img/uploads/2014/12/IMG_0889-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-513" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-11-513'> One of the rows complete. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/img_0890/'><img width="150" height="150" src="/assets/img/uploads/2014/12/IMG_0890-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-512" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-11-512'> I created the rows of pixels in 4 LED chains then connected them once in the clock. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/img_0893/'><img width="150" height="150" src="/assets/img/uploads/2014/12/IMG_0893-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-510" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-11-510'> All wired up with only the acrylic diffusers to install </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/img_0894/'><img width="150" height="150" src="/assets/img/uploads/2014/12/IMG_0894-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-509" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-11-509'> The components sit in the bottom left corner </figcaption></figure>
-</div>
+<figure class='gallery-item'> 
+<img src="/assets/img/uploads/2014/12/IMG_0892.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-511" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-11-511'> Sections laid out on the bench during construction. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/IMG_0889.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-513" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-11-513'> One of the rows complete. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/IMG_0890.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-512" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-11-512'> I created the rows of pixels in 4 LED chains then connected them once in the clock. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/IMG_0893.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-510" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-11-510'> All wired up with only the acrylic diffusers to install </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/IMG_0894.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-11-509" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-11-509'> The components sit in the bottom left corner </figcaption></figure>
 
 # Electronics
 
@@ -74,7 +66,7 @@ There was some tweaking involved of the kerf spacing to get it strong yet bendab
 
 **UPDATE** I have now created a custom PCB, the size of a single cell.
 
-[<img loading="lazy" class="aligncenter size-medium wp-image-949" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits-300x201.png" alt="wooden-bits" width="300" height="201" srcset="/assets/img/uploads/2014/12/wooden-bits-300x201.png 300w, /assets/img/uploads/2014/12/wooden-bits-768x514.png 768w, /assets/img/uploads/2014/12/wooden-bits-1024x685.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/12/wooden-bits.png)
+<img loading="lazy" class="aligncenter size-medium wp-image-949" src="/assets/img/uploads/2014/12/wooden-bits.png" alt="wooden-bits" />
 
 
 
@@ -96,16 +88,18 @@ I had a quick Google for Arduino binary clock code and the top hits weren&#8217;
 
 My method is to create an 4 element array of binary nibbles, one for each clock digit. 13:40 would look like this:
 
-<pre class="theme:solarized-dark font-size:10 toolbar:2 lang:c decode:true ">{0}{1}{2}{3}
+```assci
+{0}{1}{2}{3}
 [0][0][0][0]
 [0][0][1][0]
 [0][1][0][0]
 [1][1][0][0]
-</pre>
+```
 
 One can then loop through each binary nyble and use a bit-shift on each bit to set the pixel on or off (there are twice as many `for` to allow the clock to scale and fill any size matrix):
 
-<pre class="theme:solarized-dark font-size:10 toolbar:2 lang:c decode:true ">uint8_t x; // row inc.
+```c
+uint8_t x; // row inc.
   uint8_t y; // height inc.
   uint8_t i; // binary set matrix
   uint8_t yy; // full column inc.
@@ -114,7 +108,7 @@ One can then loop through each binary nyble and use a bit-shift on each bit to s
   for ( i = 0; i &lt; size; i++) {
     for (yy = 0;yy &lt; PIXEL_COLUMN; yy += height) {
       for (y = 0; y &lt; height; y++) {
-        for (x = 0; x &lt; width; x++) {
+        for (x = 0; x &lt; {
           if (x == 0 && y == 0) {
             setPixel(pixelMap[xx+x][yy+y],((bMatrix[i] &gt;&gt; yy/height) & 1),color1);
           } else {
@@ -123,13 +117,13 @@ One can then loop through each binary nyble and use a bit-shift on each bit to s
         }
       }
     }
-    xx += width;
-  }
-</pre>
+    xx += 
+```
 
 Wiring an LED matrix creates a _snakes and ladders_ index, which is hard to reference without a map. The pixelMap is created like so:
 
-<pre class="theme:solarized-dark font-size:10 toolbar:2 lang:c decode:true ">uint8_t i; // row inc.
+```c
+uint8_t i; // row inc.
   uint8_t j; // column inc.
   uint16_t pixel_inc; // pixel number inc.
 
@@ -160,11 +154,12 @@ Wiring an LED matrix creates a _snakes and ladders_ index, which is hard to refe
     pixel_inc += PIXEL_ROW;
     (i % 2 == 0) ? pixel_inc-- : pixel_inc++;
   }
-</pre>
+```
 
 The binary nybles are created using bit-wise comparison on the decimal digit. For the power of ten times, one has to do a extract each digit using a mix of flooring and division/multiplication:
 
-<pre class="theme:solarized-dark font-size:10 toolbar:2 lang:c decode:true ">// convert the time into 4 nybles for each column of matrix
+```c
+// convert the time into 4 nybles for each column of matrix
   if (hour &gt;= 0 && hour &lt; 10) { bTime[1] = hour | 0b0000; bTime[0] = 0b0000; // 2nd digit still needs clearing } else { bTime[1] = (uint8_t) (hour-(floor(hour/10)*10)) | 0b0000; bTime[0] = (uint8_t) (floor(hour-(hour-floor(hour)))/10) | 0b0000; } if (minute &gt;= 0 && minute &lt; 10) {
     bTime[3] = minute | 0b0000;
     bTime[2] = 0b0000; // 2nd digit still needs clearing
@@ -172,13 +167,15 @@ The binary nybles are created using bit-wise comparison on the decimal digit. Fo
     bTime[3] = (uint8_t) (minute-(floor(minute/10)*10)) | 0b0000;
     bTime[2] = (uint8_t) (floor(minute-(minute-floor(minute)))/10) | 0b0000;
   }
-</pre>
+```
 
 The code is on GitHub: [**https://github.com/tuna-f1sh/wooden-bits**](https://github.com/tuna-f1sh/wooden-bits)
 
 # Raspberry Pi
 
-
+<div class="box">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NP-Fatqpo6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 After I&#8217;d completed it I felt like porting it to the Raspberry Pi and [Pimoroni&#8217;s Unicorn Hat](http://shop.pimoroni.com/products/unicorn-hat). I was already using the [Arduino Make](https://github.com/sudar/Arduino-Makefile) Makefile so had a header with declarations unlike most Arduino projects. The main changes were the GPIO functions to actually set the matrix. Thankfully a [WS2812 Driver](https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812) exists with the same functions as the _NeoPixel_ library, so the task wasn&#8217;t all the difficult. Rather than referencing the _pixels_ object, the functions are directly called since it&#8217;s straight C.
 
@@ -186,73 +183,56 @@ Because the _Unicorn Hat_ is an 8&#215;8 (twice the size of mine), it allowed me
 
 # Result
 
-
+<div class="box">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H8aTMaAC5_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 I&#8217;m pleased with the result. The clock is stable and has so far been running for days without issue. It&#8217;s a Christmas present for the lab but my parents want one too so I&#8217;ll make another. The next one will be one piece with _dovetail_ joints between sections amongst other points I&#8217;d like to improve on:
 
   * Clock set routine invoked from tactile switch or even better a hand wave across one of the cells (the one with the controller in).
   * Alarm routine that can be remotely set via phone app &#8211; I&#8217;d use a bluetooth module for this.
 
-_UPDATE:_[I&#8217;ve added both!](http://engineer.john-whittington.co.uk/2015/05/setting-wooden-bits-via-ble-and-esp8266/)
+_UPDATE:_ [I&#8217;ve added both!](/2015/05/setting-wooden-bits-via-ble-and-esp8266/)
 
 ### [Click if you like what you see and want to buy one.](https://shop.jbrengineering.co.uk/product/wooden-bits-binary-wall-clock/)
 
-<div id='gallery-12' class='gallery galleryid-487 gallery-columns-3 gallery-size-thumbnail'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0034/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0034-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0035/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0035-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0036/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0036-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0030/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0030-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-523" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-12-523'> 08:33 </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0037/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0037-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-527" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-12-527'> 08:36 </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0043-2/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0043-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-529" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-12-529'> 07:59 </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0039/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0039-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-528" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-12-528'> 07:59 </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0044-2/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0044-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-530" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-12-530'> Full blue rows on the hour for 10s </figcaption></figure>
-</div>
+<figure class='gallery-item'> 
+<img src="/assets/img/uploads/2014/12/DSC_0034.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+</figure><figure class='gallery-item'> 
 
-<div id='gallery-13' class='gallery galleryid-487 gallery-columns-3 gallery-size-thumbnail'>
-  <figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0048/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0048-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0009/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0009-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0018-3/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0018-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></a>
-  </div></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0027-2/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0027-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-13-641" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-13-641'> Pressing the tactile button runs an ISR that flags a setting routine. The display goes red and pressing the button increments the minutes. </figcaption></figure><figure class='gallery-item'> 
-  
-  <div class='gallery-icon landscape'>
-    <a href='http://localhost/2014/12/wooden-bits-binary-clock/dsc_0033/'><img width="150" height="150" src="/assets/img/uploads/2014/12/DSC_0033-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-13-640" /></a>
-  </div><figcaption class='wp-caption-text gallery-caption' id='gallery-13-640'> Rainbow colours! </figcaption></figure>
-</div>
+<img src="/assets/img/uploads/2014/12/DSC_0035.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+</figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0036.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+</figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0030.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-523" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-12-523'> 08:33 </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0037.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-527" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-12-527'> 08:36 </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0043.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-529" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-12-529'> 07:59 </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0039.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-528" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-12-528'> 07:59 </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0044.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-12-530" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-12-530'> Full blue rows on the hour for 10s </figcaption></figure>
+
+<figure class='gallery-item'> 
+<img src="/assets/img/uploads/2014/12/DSC_0048.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+</figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0009.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+</figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0018.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" />
+</figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0027.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-13-641" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-13-641'> Pressing the tactile button runs an ISR that flags a setting routine. The display goes red and pressing the button increments the minutes. </figcaption></figure><figure class='gallery-item'> 
+
+<img src="/assets/img/uploads/2014/12/DSC_0033.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-13-640" />
+<figcaption class='wp-caption-text gallery-caption' id='gallery-13-640'> Rainbow colours! </figcaption></figure>

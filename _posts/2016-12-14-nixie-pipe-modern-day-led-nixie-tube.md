@@ -4,7 +4,7 @@ title: 'Nixie Pipe &#8211; Modern Day LED Nixie Tube'
 date: 2016-12-14T13:40:16+00:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=945
+guid: /?p=945
 permalink: /2016/12/nixie-pipe-modern-day-led-nixie-tube/
 image: assets/img/uploads/2016/12/Nixie-Pipe-Design-Blog-825x510.png
 categories:
@@ -28,7 +28,7 @@ Nixie Pipe is my interpretation of a modern day Nixie Tube &#8211; the cold-cath
 <iframe width="560px" height="315px" src="https://www.youtube.com/embed/2T2dwJ4tU8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-The project came about when I decided to make a clock for my kitchen, with specific requirement for an egg timer function! I&#8217;ve always wanted to make a Nixie Tube clock but having completed a [Nixie Tube](http://engineer.john-whittington.co.uk/2015/12/nixie-tube-energy-meter/) project recently and one pipe failing after around 6,000 hours, I wanted to come up this something better. Something that didn&#8217;t require high voltages, special driving circuitry, could be easily interfaced and was modular, but which maintained the unique visual depth of a Nixie Tube.
+The project came about when I decided to make a clock for my kitchen, with specific requirement for an egg timer function! I&#8217;ve always wanted to make a Nixie Tube clock but having completed a [Nixie Tube](/2015/12/nixie-tube-energy-meter/) project recently and one pipe failing after around 6,000 hours, I wanted to come up this something better. Something that didn&#8217;t require high voltages, special driving circuitry, could be easily interfaced and was modular, but which maintained the unique visual depth of a Nixie Tube.
 
 <figure class='gallery-item'> 
 <img src="/assets/img/uploads/2016/12/fullsizeoutput_1a9e.jpeg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" aria-describedby="gallery-29-1023" />
@@ -90,9 +90,9 @@ My initial design was enclosure based with the layers &#8216;wedged&#8217; insid
 ### Electrical
 
 <figure id="attachment_1015" aria-describedby="caption-attachment-1015" style="class=wp-caption aligncenter">
-<img loading="lazy" class="size-large wp-image-1015" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/IMG_2175-1024x768.jpg" alt="I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED." srcset="/assets/img/uploads/2016/12/IMG_2175-1024x768.jpg 1024w, /assets/img/uploads/2016/12/IMG_2175-300x225.jpg 300w, /assets/img/uploads/2016/12/IMG_2175-768x576.jpg 768w" /><figcaption id="caption-attachment-1015" class="wp-caption-text">I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED.</figcaption></figure> 
+<img loading="lazy" class="size-large wp-image-1015" src="/assets/img/uploads/2016/12/IMG_2175-1024x768.jpg" alt="I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED." srcset="/assets/img/uploads/2016/12/IMG_2175-1024x768.jpg 1024w, /assets/img/uploads/2016/12/IMG_2175-300x225.jpg 300w, /assets/img/uploads/2016/12/IMG_2175-768x576.jpg 768w" /><figcaption id="caption-attachment-1015" class="wp-caption-text">I had four PCB iterations before coming to my final design. Mostly small functional changes other than adding the forgotten zero LED.</figcaption></figure> 
 
-  1. **PCB 1.0**: The design worked great with only one issue&#8230;I forgot a zero!! Funny how double checking the design a million times one misses the obvious. My mind was obviously still in [binary clock](http://engineer.john-whittington.co.uk/2014/12/wooden-bits-binary-clock/) mode, assuming off would be zero &#8211; I quickly realised that wouldn&#8217;t be obvious enough and just looked like I&#8217;d forgotten a zero&#8230;
+  1. **PCB 1.0**: The design worked great with only one issue&#8230;I forgot a zero!! Funny how double checking the design a million times one misses the obvious. My mind was obviously still in [binary clock](/2014/12/wooden-bits-binary-clock/) mode, assuming off would be zero &#8211; I quickly realised that wouldn&#8217;t be obvious enough and just looked like I&#8217;d forgotten a zero&#8230;
   2. **PCB 1.1**: I got rid of the QFN package because I was hand-soldering prototypes and added one more LED for zero. 45deg skew on the QFP actually made the routing easier due to space in the middle.
   3. **PCB 1.2**: Regulator on-board went (not sure what I was thinking) and since the current was low (< 500mA) I opted for micro USB connector rather than terminal block. This made connection and power availability much more friendly.
   4. **PCB 1.3**: With the USB interface, why not add USB serial so that the display can be set via a host? On went an FTDI FT230XS USB serial. 1.2 did actually have USB D+/- going to INT. pins on the Atmega328p as I had intention of using [VUSB](https://www.obdev.at/products/vusb/index.html) rather an a USB serial. Once I got a basic firmware enumerating however, I decided the additional development time and potential driver issues weren&#8217;t worth the saving over using a USB serial converter IC.
@@ -145,7 +145,7 @@ pipes.getNumber( function() { console.log(pipes.number); }); // Return display n
 #### 4. Electron App
 
 <figure id="attachment_1078" aria-describedby="caption-attachment-1078" style="class=wp-caption aligncenter" >
-<img loading="lazy" class="wp-image-1078 size-full" src="http://engineer.john-whittington.co.ukassets/img/uploads/2016/12/screenshot.png" srcset="/assets/img/uploads/2016/12/screenshot.png 912w, /assets/img/uploads/2016/12/screenshot-300x201.png 300w, /assets/img/uploads/2016/12/screenshot-768x515.png 768w" /><figcaption id="caption-attachment-1078" class="wp-caption-text">I put this app together over a weekend to trial Electron development. I&#8217;ll be using it again in the future.</figcaption>
+<img loading="lazy" class="wp-image-1078 size-full" src="/assets/img/uploads/2016/12/screenshot.png" srcset="/assets/img/uploads/2016/12/screenshot.png 912w, /assets/img/uploads/2016/12/screenshot-300x201.png 300w, /assets/img/uploads/2016/12/screenshot-768x515.png 768w" /><figcaption id="caption-attachment-1078" class="wp-caption-text">I put this app together over a weekend to trial Electron development. I&#8217;ll be using it again in the future.</figcaption>
 </figure>
 
 With the Node module developed, I went to work making an [Electron app](https://github.com/tuna-f1sh/electron-nixiepipe) &#8211; having not used Electron before I saw it as the project as the perfect test bed. The experience only took a couple of days as I&#8217;m familiar with web design methods and Javascript. Overall I was impressed with Electron and would use it again.

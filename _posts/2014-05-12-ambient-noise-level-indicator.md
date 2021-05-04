@@ -4,7 +4,7 @@ title: Ambient Noise Level Indicator
 date: 2014-05-12T22:12:58+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=341
+guid: /?p=341
 permalink: /2014/05/ambient-noise-level-indicator/
 image: assets/img/uploads/2014/05/2014-05-14-20.16.55-1000x288.jpg
 categories:
@@ -19,27 +19,23 @@ tags:
 ---
 As part of my work at MACH Acoustics &#8211; understanding how internal ambient noise levels affect different environments &#8211; I was inspired to create an indicator that shows when noise becomes higher than the base level. [Some solutions already exist](http://www.soundear.com/noise-monitoring-equipment-and-noise-level-measurement/noise-monitoring-equipment-for-hospitals.html) but they are pricey (because they used calibrated sound level meters), and not very engaging. I wanted something that could sit in a classroom and be a friendly indicator for the teachers and students, bringing the noise back down and perhaps learning something in the process!
 
-The solution is a simple RGB led connected to the PWM outputs of an Arduino and uses [Processing](http://www.processing.org/) with the [Minim Library](http://code.compartmental.net/tools/minim/) to perform a FFT on the mic input &#8211; similar to a [couple of other projects](http://engineer.john-whittington.co.uk/2013/01/playing-halo-with-an-arduino/ "Light Feedback – Playing Halo with an Arduino").
+The solution is a simple RGB led connected to the PWM outputs of an Arduino and uses [Processing](http://www.processing.org/) with the [Minim Library](http://code.compartmental.net/tools/minim/) to perform a FFT on the mic input &#8211; similar to a [couple of other projects](/2013/01/playing-halo-with-an-arduino/ "Light Feedback – Playing Halo with an Arduino").
 
 The operation is best described by the video below and commented code. I&#8217;ve added a handy GUI that allows the user to do a number of things:
 
-  * View the mic reading, background sample, instantaneous sample, current colour and sample difference.
-  * Change the threshold between colours and benchmark colour.
-  * Set continuous sampling, direct LED/mic feedback
-  * Resample the background
-  * Set the frequency band that is used for the amplitude average &#8211; this is useful to demonstrate that it is working and also to ignore low frequency to only show speech for example; screechy children in a classroom!<figure id="attachment_356" aria-describedby="caption-attachment-356" style="width: 814px" class="wp-caption aligncenter">
+* View the mic reading, background sample, instantaneous sample, current colour and sample difference.
+* Change the threshold between colours and benchmark colour.
+* Set continuous sampling, direct LED/mic feedback
+* Resample the background
+* Set the frequency band that is used for the amplitude average &#8211; this is useful to demonstrate that it is working and also to ignore low frequency to only show speech for example; screechy children in a classroom!
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png" alt="The control panel when the Java applet is running." width="814" height="536" class="size-full wp-image-356" srcset="/assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png 814w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16-300x197.png 300w, /assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16-455x300.png 455w" sizes="(max-width: 814px) 100vw, 814px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png)<figcaption id="caption-attachment-356" class="wp-caption-text">The control panel when the Java applet is running.</figcaption></figure> 
+<figure id="attachment_356" aria-describedby="caption-attachment-356" class="wp-caption aligncenter">
+<img loading="lazy" src="/assets/img/uploads/2014/05/Screen-Shot-2014-05-11-at-16.23.16.png" alt="The control panel when the Java applet is running." class="size-full wp-image-356" /><figcaption id="caption-attachment-356" class="wp-caption-text">The control panel when the Java applet is running.</figcaption></figure> 
 
 Its only a prototype concept at the moment. I&#8217;d like to design an enclosure that would suit the particular environment, such as a glowing star or dragon for a classroom.
 
-
-
-
-
-<!--more-->
-
-<pre>/**
+```c
+**
 RGB Sound Feedback 
 
 This script takes a sample of the background noise as a base level, then compares to a rolling sample period. An RGB level is
@@ -48,7 +44,7 @@ when noise levels are higher than they were before.
 
 John Whittington - March 2014
 @j_whittington
-http://engineer.john-whittington.co.uk
+
 **/
 
 import processing.serial.*; 
@@ -382,6 +378,4 @@ void cBaseSlider(int theValue) {
 void cDivSlider(int theValue) {
   cDiv = round(theValue);
 }
-
-
-  </pre>
+```

@@ -4,7 +4,7 @@ title: BootCamp Partition Virtual Machine with VirtualBox
 date: 2013-03-30T14:52:41+00:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=235
+guid: /?p=235
 permalink: /2013/03/bootcamp-partition-virtual-boot-with-virtualbox/
 image: assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1000x288.png
 categories:
@@ -38,7 +38,7 @@ The virtual machine should now be booting your BootCamp installation just fine. 
 
 **26/02/2016 UPDATE: After a Virtual Box update my bootcamp stopped working with &#8216;VERR\_NOT\_SUPPORTED&#8217; error. After some digging, I found you have to enable &#8216;Use Host I/O Cache&#8217; in Settings -> Storage -> Controller:SATA.**
 
-Second to the permission problem, I was recieving the error &#8216;VERR\_FILE\_NOT_FOUND&#8217; every few boots. Many attribute this to the permissions not being set but even after `chmod` I would still get the error. It turned out that since I now have [](http://engineer.john-whittington.co.uk/2012/09/macbook-core-duo-goes-solid-state/ "two disks") in my Macbook, sometimes the mount points would change at boot (SDD disk1 not disk0) leaving the virtual disk referring to a non-existent partition.
+Second to the permission problem, I was recieving the error &#8216;VERR\_FILE\_NOT_FOUND&#8217; every few boots. Many attribute this to the permissions not being set but even after `chmod` I would still get the error. It turned out that since I now have [](/2012/09/macbook-core-duo-goes-solid-state/ "two disks") in my Macbook, sometimes the mount points would change at boot (SDD disk1 not disk0) leaving the virtual disk referring to a non-existent partition.
 
 The .vmdk can be edited using a text editor and contains the line `RW 78125000 FLAT "/dev/disk1s3" 0`, clearly referring to the physical disk. Correcting this stopped the error. So my script is a little more complex than some but makes it almost flawless. The operation is:
 
@@ -83,4 +83,4 @@ fi
 
 How it looks when it runs:
 
-[<img loading="lazy" src="http://engineer.john-whittington.co.ukassets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png" alt="BootCamp VM Bash Script" width="584" height="376" class="aligncenter size-large wp-image-238" srcset="/assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png 1024w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-300x193.png 300w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-465x300.png 465w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png 1148w" sizes="(max-width: 584px) 100vw, 584px" />](http://engineer.john-whittington.co.ukassets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png)
+[<img loading="lazy" src="/assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png" alt="BootCamp VM Bash Script" width="584" height="376" class="aligncenter size-large wp-image-238" srcset="/assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-1024x660.png 1024w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-300x193.png 300w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54-465x300.png 465w, /assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png 1148w" sizes="(max-width: 584px) 100vw, 584px" />](/assets/img/uploads/2013/03/Screen-shot-2013-03-30-at-15.16.54.png)

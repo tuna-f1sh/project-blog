@@ -21,6 +21,7 @@ layout: default
         </h1>
         <p class="meta">
           {{ post.date | date: "%B %-d, %Y" }}
+          {% include categories_list.html categories=post.categories count=post.categories.size %}
         </p>
       </header>
       <div class="excerpt">

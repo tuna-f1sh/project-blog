@@ -4,7 +4,7 @@ title: 'AirPi: DIY Airplay Speakers using Shairport and a Raspberry Pi'
 date: 2012-08-28T10:20:02+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=71
+guid: /?p=71
 permalink: /2012/08/airpi-diy-airplay-speakers/
 categories:
   - Programming
@@ -19,7 +19,7 @@ We have speakers in all the ground floor rooms of our house, all driven from the
 Surrounded by iDevices too and with apps like iPlayer, Spotify and home share on iTunes, being able to throw audio to the speaker system had to be done. Que [Airplay](http://www.apple.com/uk/itunes/airplay/), however, this requires a nice Airplay amp or getting an AirPort. I then found out about [Shairport](https://github.com/albertz/shairport), a program that emulates an AirPort&#8217;s Airplay function. With a Raspberry Pi kicking around, I had just found its new job.  
 <!--more-->
 
-**_Quite a lot has changed in the year since I did this and rather than try and add more updates to this, I have run through the process again and created a [new tutorial](http://engineer.john-whittington.co.uk/2013/05/airpi-diy-airplay-speakers-using-shairport-and-a-raspberry-pi-updated/)._**
+**_Quite a lot has changed in the year since I did this and rather than try and add more updates to this, I have run through the process again and created a [new tutorial](/2013/05/airpi-diy-airplay-speakers-using-shairport-and-a-raspberry-pi-updated/)._**
 
 # Setting Up Arch ARM
 
@@ -85,7 +85,7 @@ All being well, Shairport should have built and you can now run it with the name
 
 # Create daemon
 
-**18/12/12 &#8211; This may not work now due to Arch builds now using `systemd`. If it doesn&#8217;t, [this comment thread](http://engineer.john-whittington.co.uk/2012/08/airpi-diy-airplay-speakers/#comment-18) has a solution.**  
+**18/12/12 &#8211; This may not work now due to Arch builds now using `systemd`. If it doesn&#8217;t, [this comment thread](/2012/08/airpi-diy-airplay-speakers/#comment-18) has a solution.**  
 Install the new build
 
 <pre>make install</pre>

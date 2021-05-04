@@ -4,7 +4,7 @@ title: Setting Wooden Bits via BLE and ESP8266
 date: 2015-05-29T14:40:32+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=714
+guid: /?p=714
 permalink: /2015/05/setting-wooden-bits-via-ble-and-esp8266/
 categories:
   - Electronics
@@ -15,7 +15,7 @@ tags:
   - esp8266
   - IoT
 ---
-My [laser cut binary clock, Wooden Bits](http://engineer.john-whittington.co.uk/2014/12/wooden-bits-binary-clock/), originally had no means to set the clock, other than at compile time. I later added a tactile button and ISR to provide this function (increment the time until the correct time is shown) but I wanted a way to tap into the extra features of the [DS3231](http://datasheets.maximintegrated.com/en/ds/DS3231.pdf) (alarm, temperature) and also to experiment in wireless control.
+My [laser cut binary clock, Wooden Bits](/2014/12/wooden-bits-binary-clock/), originally had no means to set the clock, other than at compile time. I later added a tactile button and ISR to provide this function (increment the time until the correct time is shown) but I wanted a way to tap into the extra features of the [DS3231](http://datasheets.maximintegrated.com/en/ds/DS3231.pdf) (alarm, temperature) and also to experiment in wireless control.
 
 <!--more-->
 
@@ -35,15 +35,9 @@ To send the HTTP requests, I created a basic [Bootstrap](http://getbootstrap.com
 
 The result is the same as using the BLE solution but the webpage makes it instantly cross-compatible. Here&#8217;s a video demonstrating both methods:
 
-
-
 My initial experiences with both is that the BLE is much more reliable &#8211; it works 100% of the time &#8211; but is considerably more expensive. <del datetime="2015-07-18T17:26:25+00:00">The ESP8266 solution doesn&#8217;t always seem to receive the requests. I have ideas as to why this might be but need to perform more debugging.</del> This was due to using bit-banged serial rather than a hardware one &#8211; use a hardware serial and save software serial for debug.
 
 I&#8217;ve branched the original code on GitHub for each solution:
 
   * [BLE Code](https://github.com/tuna-f1sh/wooden-bits/tree/bluetooth)
   * [ESP8266 Code](https://github.com/tuna-f1sh/wooden-bits/tree/esp8266)
-
-&nbsp;
-
-&nbsp;

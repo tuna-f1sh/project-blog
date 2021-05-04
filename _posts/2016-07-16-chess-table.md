@@ -4,7 +4,7 @@ title: Chess Table
 date: 2016-07-16T09:58:11+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=928
+guid: /?p=928
 permalink: /2016/07/chess-table/
 image: assets/img/uploads/2016/07/IMG_1616-825x510.jpg
 categories:

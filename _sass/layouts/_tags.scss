@@ -8,3 +8,12 @@
     margin-bottom: 0;
   }
 }
+a.category {
+  text-transform: uppercase;
+  // color: $header-desc-text-color;
+  margin-right: 0.4em;
+}
+a.category:hover {
+  text-transform: uppercase;
+  // color: $selection-color;
+}

@@ -4,7 +4,7 @@ title: Garmin Quarter Turn iPhone Mount
 date: 2015-06-17T18:44:35+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=750
+guid: /?p=750
 permalink: /2015/06/garmin-quarter-turn-iphone-mount/
 image: assets/img/uploads/2015/06/DSC_0011.jpg
 categories:

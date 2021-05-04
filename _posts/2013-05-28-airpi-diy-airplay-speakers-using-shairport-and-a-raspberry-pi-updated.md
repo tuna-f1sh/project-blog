@@ -4,7 +4,7 @@ title: 'AirPi: DIY Airplay Speakers using Shairport and a Raspberry Pi Updated'
 date: 2013-05-28T09:36:06+01:00
 author: John
 layout: post
-guid: http://engineer.john-whittington.co.uk/?p=270
+guid: /?p=270
 permalink: /2013/05/airpi-diy-airplay-speakers-using-shairport-and-a-raspberry-pi-updated/
 categories:
   - Programming
@@ -14,7 +14,7 @@ tags:
   - linux
   - raspberrypi
 ---
-[My last AirPi post](http://engineer.john-whittington.co.uk/2012/08/airpi-diy-airplay-speakers/) has been popular &#8211; and still is &#8211; but part of why of like Arch linux is that it is constantly updating so you must be hands on, learning a new part of the OS the hard way!
+[My last AirPi post](/2012/08/airpi-diy-airplay-speakers/) has been popular &#8211; and still is &#8211; but part of why of like Arch linux is that it is constantly updating so you must be hands on, learning a new part of the OS the hard way!
 
 Since my post a year ago, Shairport has some new features and dependencies, and Arch has moved to the _systemd_ service manager, changing the tutorial process somewhat. In order to update it, I have run through the process with the current build (2013-02-11).
 
@@ -109,7 +109,7 @@ WantedBy=multi-user.target</pre>
 
 Or you get use `wget` again and download mine:
 
-<pre>wget http://engineer.john-whittington.co.ukassets/img/uploads/2013/05/shairport.service -O /etc/systemd/system/shairport.service</pre>
+<pre>wget /assets/img/uploads/2013/05/shairport.service -O /etc/systemd/system/shairport.service</pre>
 
 Now enable the new service
 
