@@ -21,4 +21,6 @@ For more details of my (now dated!) cycling career, visit: [cyclist.john-whittin
 
 For my engineering career, see [LinkedIn](https://www.linkedin.com/in/jwilliamwhittington/) or contact me for an update to date CV.
 
+I can be contacted by email: jw.whittington+blog@pm.me, GPG: [CDA7B3488A686F6D4CF34FCC5241B05D60B0A9ED](https://api.protonmail.ch/pks/lookup?op=get&search=jw.whittington@pm.me)
+
 John.

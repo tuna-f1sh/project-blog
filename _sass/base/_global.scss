@@ -5,12 +5,13 @@
 }
 figure {
   margin: 1em 0;
-  border: 1px solid $border-color;
+  // border: 1px solid $border-color;
   text-align: center;
 }
 figcaption {
-  font-weight: bold;
-  text-align: center;
+  color: rgba($text_color, 0.8);
+  text-align: left;
+  font-size: 0.9em;
   padding: 0.67em;
 }
 // For correct line number width in Github Gists
@@ -153,4 +154,5 @@ header {
 }
 .post-title h1 {
   margin: 0;
+  font-size: 3.5em;
 }
