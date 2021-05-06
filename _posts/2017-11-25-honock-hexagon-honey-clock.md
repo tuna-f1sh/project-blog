@@ -12,9 +12,10 @@ categories:
   - Fabrication
   - Mechanical
   - Programming
+excerpt_separator: "<!--more-->"
 ---
 
-I never got around to doing a full post on my Hexagonal clock, _Honock_. Here is a _imgur_ album with descriptions.
+<!--more-->
 
 <div class="box">
     <blockquote class="imgur-embed-pub" lang="en" data-id="a/i6B7j" data-context="false" ><a href="//imgur.com/a/i6B7j"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>

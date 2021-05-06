@@ -7,13 +7,17 @@ layout: page
 guid: http://engineer.john-whittington.co.uk/?page_id=2
 ---
 
-![john in his basement building a Nixie Pipe](/assets/img/uploads/2012/06/IMG_0144.jpg)
+<div class="box">
+    <img src="/assets/img/uploads/2012/06/IMG_0144.jpg" alt="john in his basement building a Nixie Pipe" width="600"/>
+</div>
+
+## /[A-z]+ware Engineer/g
 
 A mechanical engineering graduate from the [University of Bath](http://www.bath.ac.uk), I also developed into an international mountain biker during my studies. Initially choosing to follow a career in cycling, I still had the &#8216;maker&#8217; mindset that lead me to pursue an engineering degree. I originally created this website to document projects that I complete around my racing and training, in order to keep my brain as active as my legs!
 
 The blog has been going since 2012 and is a history of my development as an engineer; the old posts are not a true reflection of my current skill level. I hope to continue updating this blog with personal projects throughout my life.
 
-![JBR Engineering Logo](/assets/img/uploads/2014/10/cropped-JBRLogo-1024x262.png)
+<img src="/assets/img/uploads/2014/10/cropped-JBRLogo-1024x262.png" alt="JBR Engineering Logo" width="200px"/>
 
 _JBR Engineering Research Limited_ is the name of my engineering company, which I sell my products under and provide consulting. See the landing page here: [JBR Engineering Website](https://www.jbrengineering.co.uk) and [Shop](https://shop.jbrengineering.co.uk).
 

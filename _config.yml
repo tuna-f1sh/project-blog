@@ -9,12 +9,12 @@ theme_settings:
   avatar: assets/img/avatar.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "John Whittington's personal project blog" # used by search engines
+  description: "John Whittington engineer personal project blog" # used by search engines
 
-  # Header and footej text
+  # Header and footer text
   header_text:
   header_text_feature_image:
-  footer_text: "hello world"
+  footer_text:
 
   # Icons
   rss: true

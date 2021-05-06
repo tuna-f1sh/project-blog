@@ -12,8 +12,10 @@ categories:
 tags:
   - design
   - wood
+excerpt_separator: "<!--more-->"
 ---
 
+<!--more-->
 <figure class='gallery-item'> 
 <img src="/assets/img/uploads/2015/12/DSC_0076.jpg" class="attachment-medium size-medium" alt="" loading="lazy" aria-describedby="gallery-18-846" />
 <figcaption class='wp-caption-text gallery-caption' id='gallery-18-846'> Made with a nice piece of Beech I found in the basement! </figcaption></figure><figure class='gallery-item'> 
