@@ -1,5 +1,6 @@
 ---
 title: Same Same but Different
+layout: post
 date: 2021/05/06
 ---
 
@@ -30,6 +31,7 @@ services:
         - 443:443
       environment:
         WORDPRESS_DB_HOST: db
+        # I changed these to match the hosted database (in 'db' service too) but not sure it's required since the wp_config is created for the service
         WORDPRESS_DB_USER: db_user
         WORDPRESS_DB_PASSWORD: db_password
         WORDPRESS_DB_NAME: db_name

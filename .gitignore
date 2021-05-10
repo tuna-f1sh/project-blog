@@ -1,3 +1,6 @@
+.jekyll-cache/
+_compress_images_cache.yml
+.env
 *.DS_Store
 *.gem
 .bundle

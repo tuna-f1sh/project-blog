@@ -5,16 +5,16 @@ url: "https://engineer.john-whittington.co.uk/"
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: John Whittington Engineering Blog
+  title: John Whittington's Blog
   avatar: assets/img/avatar.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "John Whittington engineer personal project blog" # used by search engines
+  description: "Engineer John Whittington's personal project blog" # used by search engines
 
   # Header and footer text
   header_text:
   header_text_feature_image:
-  footer_text:
+  footer_text: true
 
   # Icons
   rss: true
@@ -63,25 +63,13 @@ theme_settings:
   # Post navigation
   post_navigation: false
 
+imageoptim:
+  verbose: true
+  svgo: false
+
 # PAGINATION
 paginate: 8
 paginate_path: "blog/:num"
-
-# ARCHIVES
-# jekyll-archives:
-#   enabled:
-#     - tags
-#     - month
-#   layouts:
-#     month: month
-#     tag: tag
-#   permalinks:
-#     month: '/:year/:month/'
-#     tag: '/tag/:name/'
-#   title_prefix: Archives
-
-imageoptim:
-  verbose: true
 
 # BUILD SETTINGS
 markdown: kramdown
@@ -95,3 +83,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - README.md
+  - LICENSE
+  - .env
+  - Makefile
