@@ -79,6 +79,9 @@ sass:
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-compress-images]
 
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;" # https://bendodson.com/weblog/2016/01/11/fixing-emoji-footnote-arrow-in-jekyll/
+
 exclude:
   - Gemfile
   - Gemfile.lock

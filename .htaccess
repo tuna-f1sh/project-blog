@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+<Files *.php>
+deny from all
+</Files>
+
