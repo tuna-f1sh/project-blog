@@ -2,6 +2,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 
+RedirectMatch "^/feed/(.*)$" /feed.xml
+ErrorDocument 404 /404.html
+
 <Files .htaccess>
 order allow,deny
 deny from all
