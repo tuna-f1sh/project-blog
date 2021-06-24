@@ -2,6 +2,7 @@
 title: Linear Clock
 date: 2021/06/16
 tags: mechanical, electronics, programming, fabrication
+image: assets/img/linear-clock/linear-clock-max-kitchen-3.jpg
 layout: post
 ---
 
@@ -221,6 +222,9 @@ __Verifying the FEM modelled air gap required for a 15 mm sintered ferrite ball,
 
 The R2 schematic matched R1 since it worked - the change was purely mechanical. I created a split and cut lines in order to detach the rows from each other. One might wonder why I didn't just create symmetrical PCBs for each row. I opted for a single board with cut so that I could use the board in a wide flat design if I desired; I could keep a single connector to the _Controller_ without changing that design; to minimise changes in the layout/tracking at this stage.
 
+![hardware debugging](/assets/img/linear-clock/hardware-debugging.jpg)
+__There were very few hardware issues in the design process. Only one mod wire required! There was one gotcha in the split that did require some hardware debugging: the cut disconnected the top layer ground plane, resulting in the DRV8833s working at low power (5 V/3 A) but not the intended 9 V/3 A. A good lesson that a bad ground return can allow something to work but not work _well_.__
+
 ### Stepped Case
 
 <div class="box">
@@ -246,7 +250,7 @@ I'm pleased with both designs. The rolling noise is different but pleasing on bo
 </div>
 __Demo reel of the split and stepped _Max_ design. The increased air gap allows the clock to work with 15 mm balls, which was my original design intent.__
 
-![linear clock max open](/assets/img/linear-clock/max-open.jpg)
+![linear clock max open](/assets/img/linear-clock/max-open.JPG)
 __The _Max_ design involves some soldered connections unlike the _Mini_. I would probably change the interconnects if I were to revise this, so that both boards connect directly to the _Controller_.__
 
 ## Final Design Gallery
