@@ -7,5 +7,5 @@ _compress_images_cache.yml
 .sass-cache
 _site
 Gemfile.lock
-assets/img/uploads
+assets/img/
 vendor/

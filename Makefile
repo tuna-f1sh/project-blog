@@ -6,7 +6,7 @@ SITE_FOLDER = _site
 .PHONY: serve deploy clean deploy dry-run build optimise
 
 serve:
-	bundle exec jekyll serve --livereload
+	bundle exec jekyll serve --livereload --drafts --livereload-ignore "_compress_images_cache.yml"
 
 build:
 	bundle exec jekyll build --destination $(SITE_FOLDER)

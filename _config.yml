@@ -77,7 +77,7 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-compress-images]
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-compress-images, jekyll-loading-lazy]
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;" # https://bendodson.com/weblog/2016/01/11/fixing-emoji-footnote-arrow-in-jekyll/
@@ -90,3 +90,4 @@ exclude:
   - LICENSE
   - .env
   - Makefile
+  - _compress_images_cache.yml
