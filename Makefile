@@ -15,10 +15,10 @@ optimise:
 	imageoptim $(SITE_FOLDER)/assets
 
 dry-run: build
-	rsync -avP --delete --dry-run $(SITE_FOLDER)/ $(HOST):$(HOST_FOLDER)
+	rsync -avP --dry-run $(SITE_FOLDER)/ $(HOST):$(HOST_FOLDER)
 
 deploy: build
-	rsync -avP --delete $(SITE_FOLDER)/ $(HOST):$(HOST_FOLDER)
+	rsync -avP $(SITE_FOLDER)/ $(HOST):$(HOST_FOLDER)
 
 clean:
 	rm -rf $(SITE_FOLDER)
