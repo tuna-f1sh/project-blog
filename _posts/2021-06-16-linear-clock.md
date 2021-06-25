@@ -8,11 +8,7 @@ layout: post
 
 My latest clock project has been the longest and most challenging to complete. There have been times when I've been tempted to can it or thought I'd reached a dead-end but persevered. I had to keep reminding myself that I do these projects primarily for the challenge, to learn new things and to further my knowledge: if it were simple I wouldn't have started.
 
-Overall I'm now fairly happy with the outcome - an outcome which resulted in two designs! I've tried to compact the development's interesting points into this post, which also serves as a sort of script for the video blog below.
-
-<div class="box">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_xnCBslNjTs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Overall I'm now fairly happy with the outcome - an outcome which resulted in two designs! I've tried to compact the development's interesting points into this post, which also serves as a sort of script for the [video blog](https://www.youtube.com/embed/_xnCBslNjTs).
 
 ## Idea and Concept
 
@@ -30,7 +26,7 @@ __Basic form sketch. The idea was two rows: one for fives of minutes and one for
 At this point, I could design around an array of electromagnets from Aliexpress. I had recently come [across PCB motors](https://hackaday.io/project/39494-pcb-motor) however and wanted to explore this. It would also allow for a compact and easy to assemble design. Of course, I wasn't sure at this stage how well they would work with a gap between the PCB and attracting ball..
 
 ![image of clock concept development](/assets/img/linear-clock/linear-clock-concept-development.jpg)
-**An ongoing idea board. This shows some later developments and how I resulted in two designs! Shows some gauging for the clock sizing and consideration of shared channel 3-phase motor control rather than the independent h-bridge design that I ended up with.**
+**An ongoing idea board - it features some later developments. Shows some gauging for the clock sizing and consideration of shared channel 3-phase motor control rather than the independent h-bridge design that I ended up with.**
 
 ## Prototype One
 
@@ -45,7 +41,9 @@ So I started out designing a _Coil Board_ and enclosure that would feature track
 
 In terms of electronics, the _Coil Board_ was quite simple: a I2C PWM driver (PCA9685PW) per row to control each coil independently via a low-side switch (single direction) and a WS2812B LED strip in centre for sun clock and visual feedback. The challenge was in the coil design and layout.
 
-I found [Spiki](https://github.com/in3otd/spiki) a Python tool for creating KiCad spirals, which I used to create a 26 mm diameter coil with a 0.2 mm trace width. It required some fudging however to morph the output into what I could use for creating rows of coils. Since it generated a PCB, I made this into a footprint with some _vim_ since the KiCad editor does not allow multi-layer footprints. KiCad also does not allow vias in footprints so I ended up with a mix of footprint and layout, which I then used as a pattern using another script to create two rows of twelve coils.
+I found [Spiki](https://github.com/in3otd/spiki) a Python tool for creating KiCad spirals, which I used to create a 26 mm diameter coil with a 0.2 mm trace width. It required some fudging however to morph the output into what I could use for creating rows of coils. 
+
+Since it generated a PCB, I made this into a footprint with some _vim_ since the KiCad editor does not allow multi-layer footprints. KiCad also does not allow vias in footprints so I ended up with a mix of footprint and layout, which I then used as a pattern using another script to create two rows of twelve coils.
 
 <div class="box">
     <img src="/assets/img/linear-clock/pcb-coil.gif"/>
@@ -91,12 +89,14 @@ What didn't work was a ferrous steel ball, which I had based the design around; 
 The first hurdle with using a permanent magnet rather than ferrous steel was that it had poles and this meant single direction current control of the coil was not going to work. With the steel, I had hoped I could just shift the attracting coil down the row and the ball would roll with it. The magnet meant that it would have its poles aligned with the current coil and that the direction of the next coil needed to be the opposite. I turned to some (basic) FEM using [FEMM](https://www.femm.info/wiki/MagneticsTutorial).
 
 ![FEM model two pcb coil](/assets/img/linear-clock/linear-clock-two-balls-air-model.png)
-__FEM model of the PCB coil with balls illustated but configured as air. One can see that the field lines from the active coil form such that the poles would be inverse on the adjacent pad. Turning on the next coil with the same polarity simply _locks_ the ball on the other pad; the polarity must switch to attract the ball, something R0 did not allow.__
+__FEM model of the PCB coil with balls illustrated but configured as air. One can see that the field lines from the active coil form such that the poles would be inverse on the adjacent pad. Turning on the next coil with the same polarity simply _locks_ the ball on the other pad; the polarity must switch to attract the ball, something R0 did not allow.__
 
 ![FEM model single ball](/assets/img/linear-clock/linear-clock-one-ball-ans.png)
 __More pretty colours! FEM model of the PCB coil with single neodymium ball. I'm not going to pretend I had to go much beyond the tutorial but I was pleased to find the model matched my measurements for Telsas generated by the PCB coil: ~1.5 mT on the PCB and ~1.0 mT through the case (0.6 mm).__
 
-I hoped the wavey track might counter this flaw, by causing the ball to rest between coils it would allow the next coil to _pick up_ the ball. In practice it was not successful however. I tried a number of profiles but faced a few issues. One was the increased material/air gap degrading the holding field strength and also struggling to get the ball stable when held. Another was that the track biasing had to be symmetrical (in order to work both directions) but this meant the ball would not always roll to the correct coil. It's possible with more effort one could find a track profile but I opted for a different path.
+I hoped the wavey track might counter this flaw, by causing the ball to rest between coils it would allow the next coil to _pick up_ the ball. In practice it was not successful however. I tried a number of profiles but faced a few issues. 
+
+One was the increased material/air gap degrading the holding field strength and also struggling to get the ball stable when held. Another was that the track biasing had to be symmetrical (in order to work both directions) but this meant the ball would not always roll to the correct coil. It's possible with more effort one could find a track profile but I opted for a different path.
 
 ![wavey track profile cut](/assets/img/linear-clock/track-profile-cut.png)
 __I could not find a track profile that solved R0's design flaws. This track had small peaks but also narrowing to make the ball less stable at the coils so that it would carry momentum between coils. The problem was biasing the roll in the correct direction, whilst maintaining bidirectional control.__
@@ -150,7 +150,7 @@ __Demo of _magnets_ state machine with LED debugging enabled. Green: hall sensor
 
 Another state machine [_linear-time_](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/linear-time.cpp), controls the clock state and sets the _magnets_ FSM based on the time. It also controls a configuration state, which allows one to set the time and other run-time parameters.
 
-Separate to all this is the [solor clock](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/colour-time.cpp) I designed that sets the hour position LED colour temperature based on the solar cycle:
+Separate to all this is the [solar clock](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/colour-time.cpp) I designed that sets the hour position LED colour temperature based on the solar cycle:
 
 `night -> dawn -> sunrise -> day -> sunset > dusk -> night`
 
@@ -223,23 +223,23 @@ __Verifying the FEM modelled air gap required for a 15 mm sintered ferrite ball,
 The R2 schematic matched R1 since it worked - the change was purely mechanical. I created a split and cut lines in order to detach the rows from each other. One might wonder why I didn't just create symmetrical PCBs for each row. I opted for a single board with cut so that I could use the board in a wide flat design if I desired; I could keep a single connector to the _Controller_ without changing that design; to minimise changes in the layout/tracking at this stage.
 
 ![hardware debugging](/assets/img/linear-clock/hardware-debugging.jpg)
-__There were very few hardware issues in the design process. Only one mod wire required! There was one gotcha in the split that did require some hardware debugging: the cut disconnected the top layer ground plane, resulting in the DRV8833s working at low power (5 V/3 A) but not the intended 9 V/3 A. A good lesson that a bad ground return can allow something to work but not work _well_.__
+__There were very few hardware issues in the design process. There was one gotcha in the split that did require some hardware debugging: the cut disconnected the top layer ground plane, resulting in the DRV8833s working at low power (5 V/3 A) but not the intended 9 V/3 A. A good lesson that a bad ground return can allow something to work but not work _well_.__
 
 ### Stepped Case
 
 <div class="box">
     <img src="/assets/img/linear-clock/linear-clock-max-model-overview.gif"/>
 </div>
-__Overview of the _Max_ model. I think I made the most of the forced geometry and it did not become too combersome. The track features _tees_ to aid keeping the ball in position.__
+__Overview of the _Max_ model. I think I made the most of the forced geometry and it did not become too cumbersome. The track features _tees_ to aid keeping the ball in position.__
 
-Prototype Three a completely new enclosure design. Nothing too complex though: again based on the PCB outline to minimise size but with a slope based on the calculated minimum air gap + fudge factor between the rows. I made full use of the slope to make the position indicators clearer with an LED light diffuser between them.
+Prototype Three demanded a completely new enclosure design. Nothing too complex though: again based on the PCB outline to minimise size but with a slope based on the calculated minimum air gap + fudge factor between the rows. I made full use of the slope to make the position indicators clearer with an LED light diffuser between them.
 
 ![anodised base for max](/assets/img/linear-clock/max-base-machining.jpg)
 __The ferrite balls have a dark gray appearance so for this design, I requested a gray anodising to the aluminium machined base to match.__
 
 ### It Works!
 
-I placed the order for the printed top and machined base and crossed my fingers. When they arrived, I was dreading the test but thankfully, it worked! The big balls were controllable, through the full clock cycle. The firmware for both designs is the same, apart from some different timing values for the motion due to the different ball inertia.
+I placed the order for the printed top and machined base then crossed my fingers. When they arrived, I was dreading the test but thankfully, it worked! The big balls were controllable through the full clock cycle. The firmware for both designs is the same, apart from some different timing values for the motion due to the different ball inertia.
 
 There is minor interaction between the rows on both the _Mini_ and the _Max_ design - more so on the _Mini_ in fact. With the motion sensing however, the controller can overcome this. It flips the parallel row to ensure the poles are opposing one another and will re-attempt a move if _stuck_ - this can be seen in the demo videos. Running at accelerated speed for the demos, this is more apparent as the coils and balls warm up and the control is less effective. I think the repeated movement is almost part of the charm.
 

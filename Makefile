@@ -11,9 +11,6 @@ serve:
 build:
 	bundle exec jekyll build --destination $(SITE_FOLDER)
 
-optimise:
-	imageoptim $(SITE_FOLDER)/assets
-
 dry-run: build
 	rsync -avP --dry-run $(SITE_FOLDER)/ $(HOST):$(HOST_FOLDER)
 
