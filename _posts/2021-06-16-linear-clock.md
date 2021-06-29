@@ -150,7 +150,7 @@ __Demo of _magnets_ state machine with LED debugging enabled. Green: hall sensor
 
 Another state machine [_linear-time_](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/linear-time.cpp), controls the clock state and sets the _magnets_ FSM based on the time. It also controls a configuration state, which allows one to set the time and other run-time parameters.
 
-Separate to all this is the [solar clock](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/colour-time.cpp) I designed that sets the hour position LED colour temperature based on the solar cycle:
+Separate to all this is the [solar clock](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/colour-clock.cpp) I designed that sets the hour position LED colour temperature based on the solar cycle:
 
 `night -> dawn -> sunrise -> day -> sunset > dusk -> night`
 
