@@ -29,7 +29,7 @@ sudo apt install smokeping
 # enable cgi
 sudo ln -s /usr/share/smokeping/www /var/www/html/smokeping
 sudo cp /var/www/html/smokeping/smokeping.fcgi.dist /var/www/html/smokeping/smokeping.fcgi
-echo 'exec /usr/lib/cgi-bin/smokeping.cgi /etc/smokeping/config' > /var/www/html/smokeping/smokeping.fcgi
+echo 'exec /usr/lib/cgi-bin/smokeping.cgi /etc/smokeping/config' >> /var/www/html/smokeping/smokeping.fcgi
 ```
 
 ## Setup Fast cgi /etc/lighttpd/conf-available/10-fastcgi.conf
