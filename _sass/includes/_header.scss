@@ -57,8 +57,8 @@
     /* --- Search form --- */
     form {
         border: 0;
-        border-bottom: 2px solid $search-color;
         outline: 0;
+        display: inline;
 
         *:focus {
             outline: none;
@@ -70,6 +70,8 @@
                 border: 0;
                 outline: 0;
                 color: $search-color;
+                border-bottom: 1px solid $border-color;
+                width: 10vw;
             }
 
             &::-moz-placeholder {

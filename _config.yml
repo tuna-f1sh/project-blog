@@ -42,7 +42,7 @@ theme_settings:
 
   # Scripts
   katex: true # Enable if using math markup
-  search: false # Enable the search feature
+  search: true # Enable the search feature
 
   # Localization strings
   str_follow_on: "Follow on"
@@ -77,7 +77,7 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-compress-images, jekyll-loading-lazy]
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-loading-lazy]
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;" # https://bendodson.com/weblog/2016/01/11/fixing-emoji-footnote-arrow-in-jekyll/
