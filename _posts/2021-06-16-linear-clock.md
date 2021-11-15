@@ -130,14 +130,14 @@ __Testing the DRV8833 control of coils with first board before redesign. I wante
 
 The next step was how to independently control each DRV8833. I would have six DRV8833 per row (one per two coils), each with five inputs and one output. A shift register came to my mind first, but would not provide read-back of fault or the hall sensors so I would require another chip just for this. Since the speed or timing of the coil switching was not important, I went for the MCP23017 GPIO expander: three per row, each controlling and reading the state of four coils via the DRV8833 and hall sensors.
 
-Whilst the _Coil Board_ was having quite the overhaul, the nice thing about using the GPIO expander was that it could be controlled over I2C and so the PicoLock cable to the _Controller_ reminded the same. The firmware became a bit more complex, due to addressing the six MCP23017 in order to shift along the coil row but I created an [abstraction layer that made this transparent as my first task](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/coils.cpp).
+Whilst the _Coil Board_ was having quite the overhaul, the nice thing about using the GPIO expander was that it could be controlled over I2C and so the PicoLock cable to the _Controller_ reminded the same. The firmware became a bit more complex, due to addressing the six MCP23017 in order to shift along the coil row but I created an abstraction layer that made this transparent as my first task.
 
 ### Development and Testing
 
 ![r1 coil board assembly](/assets/img/linear-clock/small-ball-open.jpg)
 __The assembled R1 _Coil Board_ with DRV8833 H-bridge control via MCP23017 GPIO expanders and hall sensors below each coil is quite pleasing, even if I do say so myself - and only one bodge wire! It's four layer so there is some hidden complexity below the solder mask.__
 
-The updated boards arrived, I assembled and to my joy the system worked! I had polarity control and sensing of all the coils via the _Controller_. With the wind in my sails, I set out developing the [firmware](https://github.com/tuna-f1sh/linear-clock-fw). My approach to the firmware was to create a coil control abstraction, which a [_magnets_](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/magnets.cpp) stage machine interfaces with. 
+The updated boards arrived, I assembled and to my joy the system worked! I had polarity control and sensing of all the coils via the _Controller_. With the wind in my sails, I set out developing the firmware. My approach to the firmware was to create a coil control abstraction, which a _magnets_ state machine interfaces with. 
 
 The _magnets_ state machine on a basic level, takes a seek position and moves the magnet to this location. It also constantly tracks the state of the magnet, ensuring that it is always where it should be, if it is missing or if the system is faulting. 
 
@@ -148,9 +148,9 @@ Movement is achieved by enabling the next coil in the direction of the seek posi
 </div>
 __Demo of _magnets_ state machine with LED debugging enabled. Green: hall sensor active; Blue: coil enabled with north polarity; Red: coil enabled with south polarity.__
 
-Another state machine [_linear-time_](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/linear-time.cpp), controls the clock state and sets the _magnets_ FSM based on the time. It also controls a configuration state, which allows one to set the time and other run-time parameters.
+Another state machine _linear-time_, controls the clock state and sets the _magnets_ FSM based on the time. It also controls a configuration state, which allows one to set the time and other run-time parameters.
 
-Separate to all this is the [solar clock](https://github.com/tuna-f1sh/linear-clock-fw/blob/master/colour-clock.cpp) I designed that sets the hour position LED colour temperature based on the solar cycle:
+Separate to all this is the solar clock I designed that sets the hour position LED colour temperature based on the solar cycle:
 
 `night -> dawn -> sunrise -> day -> sunset > dusk -> night`
 
