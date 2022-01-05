@@ -1,25 +1,24 @@
 ---
-title: Entreé USB-C CAN Bus Interface with USB-PD
+title: Entrée USB-C CAN Bus Interface with USB-PD
 date: 2021/03/16
 tags: electronics, programming
 image: assets/img/uploads/2021/03/entree-pcba.jpg
 layout: post
 ---
 
-Entreé - like a Canapé but tastier...yes the logo is, and name was, Canapé but I didn't want to face a [Trademark](http://tmsearch.uspto.gov/bin/showfield?f=doc&state=4801:pgy4lj.2.5) dispute over an acute e for a hobby project...
+Entrée - like a Canapé but tastier...yes the logo is, and name was, Canapé but I didn't want to face a [Trademark](http://tmsearch.uspto.gov/bin/showfield?f=doc&state=4801:pgy4lj.2.5) dispute over an acute e for a hobby project...
 
-The Entreé is a USB-C CAN interface. It is a variant of the open source [candleLight](https://github.com/HubertD/candleLight) platform and its many spawns. Not only does it add USB-C, it brings new features and CAN/USB controlled USB-PD for powering devices under test.
+The Entrée is a USB-C CAN interface. It is a variant of the open source [candleLight](https://github.com/HubertD/candleLight) platform and its many spawns. Not only does it add USB-C, it brings new features and CAN/USB controlled USB-PD for powering devices under test.
 
 This post is a copy and paste of the [README.md](https://github.com/tuna-f1sh/entree) - the repository one should be used as the source of truth. I thought I'd share it here for the record, as it is both a useful and interesting project.
 
-![Entreé Plugged In](/assets/img/uploads/2021/03/entree-plugged-oak.jpg)
-![Entreé Back](/assets/img/uploads/2021/03/entree-backside-oak.jpg)
+![Entrée Plugged In](/assets/img/uploads/2021/03/entree-plugged-oak.jpg)
+![Entrée Back](/assets/img/uploads/2021/03/entree-backside-oak.jpg)
 
 ## Features
 
 * Compatiable with:
     * gs_usb firmware [candleLight_fw](https://github.com/candle-usb/candleLight_fw); Linux mainline native support.
-    * [PCAN cantact](https://github.com/moonglow/pcan_cantact); (Windows) PCAN software support.
     * [slcan cantact](https://github.com/normaldotcom/cantact-fw); Linux CAN over USART/CDC.
 * USB-C connection for use with modern hardware.
 * USB-PD negotiation for powering devices rather than using USB communication interface. Up-to 20 V/1 A can be requested and supplied to a device.
@@ -53,9 +52,9 @@ A secondary unfitted [_JST SM04B_](https://www.digikey.ch/products/en?keywords=4
 
 ### Wiring Example
 
-Below is a wiring example showing the Entreé Picoblade and JST pinout. A Black Magic 0.1" female header cable is connected to the Picoblade and standard STEMMA QT connected to the secondary JST header. **Note both cable colouring is non-standard due to optimal board layout**.
+Below is a wiring example showing the Entrée Picoblade and JST pinout. A Black Magic 0.1" female header cable is connected to the Picoblade and standard STEMMA QT connected to the secondary JST header. **Note both cable colouring is non-standard due to optimal board layout**.
 
-![Entreé wiring diagram](/assets/img/uploads/2021/03/entree-wiring-diagram.png)
+![Entrée wiring diagram](/assets/img/uploads/2021/03/entree-wiring-diagram.png)
 
 ## Software
 
@@ -63,7 +62,7 @@ A [Vagrant](https://www.vagrantup.com/) virtual machine environment is provided 
 
 ### Linux SocketCAN
 
-Entreé comes with _candleLight_ firmware which is intended for use with a Linux host. Most Linux distributions include the gs_usb driver and can kernel modules by default so getting started is very easy.
+Entrée comes with _candleLight_ firmware which is intended for use with a Linux host. Most Linux distributions include the gs_usb driver and can kernel modules by default so getting started is very easy.
 
 #### Create CAN network interface [[ref]](https://elinux.org/Bringing_CAN_interface_up)
 
@@ -94,8 +93,6 @@ The Cangaroo GUI can be compiled for Linux hosts. See [Cangaroo](https://github.
 
 To use the default _candleLight_ firmware on Windows, one can use [Cangaroo](https://github.com/normaldotcom/cangaroo/): [Pre-compiled Win32 binary](https://www.dropbox.com/s/dyh9gvt572v8nhn/cangaroo-win32-0363ce7.zip?dl=0).
 
-The _PCAN\_cantact_ firmware can be used with the [PCAN software suit](https://www.peak-system.com/Software.68.0.html?&L=1) and [Python](#python) modules.
-
 Alternatively, to use [SocketCAN](#linux-socketcan) one can use the pre-configured virtual machine explained at the start of the [Software section](#software).
 
 ### Python
@@ -113,7 +110,7 @@ The 4 bit DIP switch sets unique runtime settings when in the 'ON' position; for
 | Switch | Decimal | Set Action                                                    |
 |--------|---------|---------------------------------------------------------------|
 | 1      | 1       | Force bootloader for DFU.                                     |
-| 2      | 2       | Enable Entreé internal configuration CAN IDs.                 |
+| 2      | 2       | Enable Entrée internal configuration CAN IDs.                 |
 | 3      | 4       | Enable VBUS -> VBS always not just when USB-PD profile valid. |
 | 4      | 8       | Enable 120 ohm CAN\_H/CAN\_L termination resistor               |
 
@@ -122,12 +119,11 @@ The 4 bit DIP switch sets unique runtime settings when in the 'ON' position; for
 ## USB Power Delivery (USB-PD)
 
 The on-board USB-C controller (STUSB4500) is configured for 5 V / 1A power delivery by default (PDO 2). One can configure the controller using the below CAN bus commands when using the [**candleLight_fw**](https://github.com/tuna-f1sh/candleLight_fw) fork and with the [internal CAN IDs switch](#dip-switches) set.
-Please refer to the [**candleLight_fw Entreé fork**](https://github.com/tuna-f1sh/candleLight_fw) README for usage.
+Please refer to the [**candleLight_fw Entrée fork**](https://github.com/tuna-f1sh/candleLight_fw) README for usage.
 
 ## Firmware
 
-* [**candleLight_fw Entreé fork**](https://github.com/tuna-f1sh/candleLight_fw) - [[BIN DOWNLOAD]](./bin/entree_fw_101.bin): Default firmware shipping with Entreé. Works with [Linux SocketCAN](#linux-socketcan) and the [Cangaroo](#cangaroo-gui) GUI. Includes support for configuration of the on-board STUSB4500 USB-C controller and DFU without setting DIP switch.
-* [**PCAN CANtact**](https://github.com/moonglow/pcan_cantact) - [[BIN DOWNLOAD]](./bin/pcan_entree_hw.bin): Open source PCAN compatible firmware; works like a PCAN USB adaptor with the PCAN software suite and python-can module. Does not include USB-PD configuration or DFU.
+* [**candleLight_fw Entrée fork**](https://github.com/tuna-f1sh/candleLight_fw) - [[BIN DOWNLOAD]](./bin/entree_fw_101.bin): Default firmware shipping with Entrée. Works with [Linux SocketCAN](#linux-socketcan) and the [Cangaroo](#cangaroo-gui) GUI. Includes support for configuration of the on-board STUSB4500 USB-C controller and DFU without setting DIP switch.
 * [**cantact_slcan**](https://github.com/normaldotcom/cantact-fw): slcand is a USART CAN daemon for Linux, which emulates a CAN network socket over USART. The pre-cursor of the candleLight_fw and gs_usb driver, it offers no real advantage since it is still over USB as a CDC. I've found it to drop frames at common bus rates and so do not recommend it. USART pins are exposed however if one wishes to play with slcan over physical USART. A virtual network interface can be created: `sudo slcand -o -s8 -t hw -S 3000000 /dev/ttyS0` and then used like a [SocketCAN](#linux-socketcan) interface.
 
 ### Update
@@ -148,12 +144,11 @@ Where `$FIRMWARE_FILE.bin` is the firmware file to be updated. Binaires are stor
 
 ```
 sudo dfu-util -d 0483:df11 -c 1 -i 0 -a 0 -s 0x08000000 -D ./bin/entree_fw.bin # candleLight_fw
-sudo dfu-util -d 0483:df11 -c 1 -i 0 -a 0 -s 0x08000000 -D ./bin/pcan_entree_hw.bin # pcan_cantact
 ```
 
 # Credits
 
-The open source CAN community is large and this project adds to that in the true spirit of open source. The [canable](canable.io) devices (of which I have many!) started me on my journey into CAN hardware and software development. Entreé fixes areas I felt could be improved upon and brought up-to date.
+The open source CAN community is large and this project adds to that in the true spirit of open source. The [canable](canable.io) devices (of which I have many!) started me on my journey into CAN hardware and software development. Entrée fixes areas I felt could be improved upon and brought up-to date.
 
 Please find links below to projects that have supported the development of the open source CAN ecosystem.
 
