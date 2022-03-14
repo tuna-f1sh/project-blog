@@ -19,7 +19,7 @@ Considering my next project, I wanted to make an electromechanical display using
 
 I found a 900mm, 56&#215;7 display on eBay from a bus salvager (who know such a thing existed!). The displays used to be common on public transport &#8211; prior to being replaced my dot matrix LEDs &#8211; to display the route number and destination. It cost me £170, which may seem expensive to some, but for 392 individually mechanically actuated pixels that are quite a feat of engineering, I thought it cheap.
 
-Manufactured by _Hanover Displays_ and with a [basic datasheet](http://www.destination-blinds.co.uk/HanoverDisplays/Flip_Dot_Manual_vB.pdf) to hand, I took the plunge.
+Manufactured by _Hanover Displays_ and with a [basic datasheet](/assets/Flip_Dot_Manual_vB.pdf) to hand, I took the plunge.
 
 ## Software
 
