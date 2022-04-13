@@ -6,6 +6,5 @@ _compress_images_cache.yml
 .bundle
 .sass-cache
 _site
-Gemfile.lock
 assets/img/
 vendor/
