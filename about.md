@@ -23,6 +23,6 @@ _JBR Engineering Research Limited_ is the name of my engineering company, which 
 
 For more details of my (now dated!) cycling career, visit: [cyclist.john-whittington.co.uk](https://cyclist.john-whittington.co.uk).
 
-I can be contacted by email: _john+blog at john-whittington.co.uk_, GPG: [4b4d78c23801f4dd7d13201d7add6d7250035a41](https://api.protonmail.ch/pks/lookup?op=get&search=john@john-whittington.co.uk)
+I can be contacted by email: _j+blog at john-whittington.co.uk_ [\[GPG\]](https://api.protonmail.ch/pks/lookup?op=get&search=j@john-whittington.co.uk), or [Telegram](https://t.me/tunaf1sh)
 
 John.
