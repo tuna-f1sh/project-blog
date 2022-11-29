@@ -1,7 +1,12 @@
 ---
 title: Ceramic Nixie Tube Clock
 date: 2022/11/01
-tags: mechanical, electronics, programming, fabrication
+tags: nixie
+categories:
+  - Electronics
+  - Fabrication
+  - Mechanical
+  - Clock
 image: assets/img/nixie-clock/header.jpg
 layout: post
 ---

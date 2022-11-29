@@ -38,7 +38,7 @@ theme_settings:
   tumblr:
   twitter:
   wordpress:
-  youtube:
+  youtube: "@johnwhittington"
 
   # Scripts
   katex: true # Enable if using math markup

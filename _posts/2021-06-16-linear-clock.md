@@ -1,7 +1,12 @@
 ---
 title: Linear Clock
 date: 2021/06/16
-tags: mechanical, electronics, programming, fabrication
+categories:
+  - Electronics
+  - Fabrication
+  - Mechanical
+  - Clock
+tags: design, magnets, clock
 image: assets/img/linear-clock/linear-clock-max-kitchen-3.jpg
 layout: post
 ---

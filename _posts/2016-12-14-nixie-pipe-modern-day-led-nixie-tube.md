@@ -12,6 +12,7 @@ categories:
   - Fabrication
   - Mechanical
   - Programming
+  - Clock
 tags:
   - acrylic
   - CAD
