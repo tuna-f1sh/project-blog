@@ -9,21 +9,22 @@ layout: post
 
 I recently had to check a CAN node was providing a cyclic message within a 10% threshold of the defined period. Logging the messages, it appeared that it was slipping by as much as 25% at times.
 
-In addition to a hardware specific logger, I was debugging with a _SocketCAN_ 'gs_usb' compatiable tool and wanted to ensure that the host OS was not introducing any timing error.
+In addition to a hardware specific logger, I was debugging with a _SocketCAN_ 'gs_usb' compatible tool and wanted to ensure that the host OS was not introducing any timing error.
 
-_SocketCAN_ `candump` has a flag `-H` to enable hardware timestamps; timestamps from the capturing device rather than the host OS stamping upon receipt (software timestamps). When the tool provides a timestamp, it should be much closer to when the transceiver actually received the massage[^1]. Timestamps provided by the host OS may be inaccurate due to preemption by a higher priority task before the USB packet is retrieved; it's the time it was popped from the USB queue so the period that the OS got around to this is included. [More on the Linux kernel net timestamping opitions](https://www.kernel.org/doc/html/latest/networking/timestamping.html)
+_SocketCAN_ `candump` has a flag `-H` to enable hardware timestamps; timestamps from the capturing device rather than the host OS stamping upon receipt (software timestamps). When the tool provides a timestamp, it should be much closer to when the transceiver actually received the message[^1]. Timestamps provided by the host OS may be inaccurate due to preemption by a higher priority task before the USB packet is retrieved; it's the time it was popped from the USB queue so the period that the OS got around to this is included. [More on the Linux kernel net timestamping options](https://www.kernel.org/doc/html/latest/networking/timestamping.html)
 
-My USB CAN tool of choice is and my [Entree]({% post_url 2021-03-16-entree-usb-c-can-interface %}) board, which uses candleLight firmwre. The problem was that adding the `-H` flag resulted in zeros. Digging into the firmware, I saw that it does support [sending timestamps as part of the gs_usb packet](https://github.com/candle-usb/candleLight_fw/blob/f07aed4a5b939408cb9a2c6a8cd7e7edf6daf940/src/main.c#L144) but that the Linux kernel module did not yet use it.
+My USB CAN tool of choice is and my [Entree]({% post_url 2021-03-16-entree-usb-c-can-interface %}) board, which uses candleLight firmware. The problem was that adding the `-H` flag resulted in zeros. Digging into the firmware, I saw that it does support [sending timestamps as part of the gs_usb packet](https://github.com/candle-usb/candleLight_fw/blob/f07aed4a5b939408cb9a2c6a8cd7e7edf6daf940/src/main.c#L144) but that the Linux kernel module did not yet use it.
 
-The module that required changing was [gs_usb](https://github.com/torvalds/linux/blob/v5.19/drivers/net/can/usb/gs_usb.c). Contributing to something like Linux is probably the most intimidating but also rewarding things to do in open-source. It's not something that is easy to jump into and so opportunities to actually change some code are few. Additionally, whilst it is mirrored on GitHub the collaboration process is still mailing list based so it's just not a simple case of opening a PR in a nice web GUI!
+The module that required changing was [gs_usb](https://github.com/torvalds/linux/blob/v5.19/drivers/net/can/usb/gs_usb.c). Contributing to something like Linux is probably the most intimidating but also rewarding things to do in open-source. It's not something that is easy to jump into and so opportunities to actually change some code are few. Additionally, whilst it is mirrored on GitHub the collaboration process is still mailing list based so it's not just a simple case of opening a PR in a nice web GUI!
 
 To my benefit, one of the contributors to candleLight is also a maintainer of the CAN modules and was very helpful in pointing me in the right directions. It also meant I already had someone on-board to do the final merge request. Reading the excellent [documentation](https://docs.kernel.org/process/submitting-patches.html) first also got me a long way before submitting to the mailing list. In all, the process took around four months from identifying the problem, patching then finally it being merged and release as part of Kernel 6.1. [Here it is in the Linux commit log 😏](https://github.com/torvalds/linux/commit/45dfa45f52e66f8eee30a64b16550a9c47915044). It's actually quite involved as the timestamp sent is a tick count from a 32 bit timer, which requires a worker to maintain a datetime relative timestamp.
 
 The process really epitomised why I love open-source:
 1. Was quickly able to pin point what was missing and where by looking at the code. That's not possible with closed-source tools.
 2. The feature wasn't present but I wanted it and it would benefit others to add it.
-3. Existing experienced contributors aided but hopefully were not berdened by a new feature being developed by someone else.
-4. It all happened asynchronously, remotely and without any meetings in four months to being included in one of the World's most used software.
+3. Good documentation meant setting up a development environment was quick and abiding to contribution guidelines easy.
+4. Existing experienced contributors aided but hopefully were not burdened by a new feature being developed by someone else.
+5. It all happened asynchronously, remotely and without any meetings in four months to being included in one of the World's most used software.
 
 # Usage and Difference Illustration
 
