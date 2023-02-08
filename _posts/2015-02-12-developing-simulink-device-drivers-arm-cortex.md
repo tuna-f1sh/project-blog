@@ -39,14 +39,14 @@ enable the peripheral clock
 inline static void pmc_enable_periph_clk_matlab(int ul_id)
 {
 
-    if (ul_id &lt; 32) {
-        if ((PMC-&gt;PMC_PCSR0 & (1u &lt;&lt; ul_id)) != (1u &lt;&lt; ul_id)) {
-            PMC-&gt;PMC_PCER0 = 1 &lt;&lt; ul_id;
+    if (ul_id < 32) {
+        if ((PMC->PMC_PCSR0 & (1u << ul_id)) != (1u << ul_id)) {
+            PMC->PMC_PCER0 = 1 << ul_id;
         }
         } else {
         ul_id -= 32;
-        if ((PMC-&gt;PMC_PCSR1 & (1u &lt;&lt; ul_id)) != (1u &lt;&lt; ul_id)) {
-            PMC-&gt;PMC_PCER1 = 1 &lt;&lt; ul_id;
+        if ((PMC->PMC_PCSR1 & (1u << ul_id)) != (1u << ul_id)) {
+            PMC->PMC_PCER1 = 1 << ul_id;
         }
     }
 }
@@ -57,15 +57,15 @@ configure pins
 *------------------------------------------------------------------------------*/
 void pio_config_pin(int pin)  {
 
-  int mask = (1 &lt;&lt; pin);
+  int mask = (1 << pin);
 
     pmc_enable_periph_clk_matlab(ID_PIOA);
 
     /* Set up LED pins. */
-    PIO-&gt;PIO_PER = mask; // enable pin mask
-    PIO-&gt;PIO_OER = mask; // direction output
-    PIO-&gt;PIO_PUDR = mask; // pull-up disable
-    PIO-&gt;PIO_OWER = mask; // enable output write
+    PIO->PIO_PER = mask; // enable pin mask
+    PIO->PIO_OER = mask; // direction output
+    PIO->PIO_PUDR = mask; // pull-up disable
+    PIO->PIO_OWER = mask; // enable output write
     pio_block( mask, 0x0 ); // turn everything off
 }
 ```
@@ -78,10 +78,10 @@ pio set pins
 *------------------------------------------------------------------------------*/
 void pio_pin(int pin, int level)  { 
 
-  int mask = (1 &lt;&lt; pin);
+  int mask = (1 << pin);
 
-  PIO-&gt;PIO_SODR = mask & level; // set output 
-  PIO-&gt;PIO_CODR = mask & ~level; // clear output
+  PIO->PIO_SODR = mask & level; // set output 
+  PIO->PIO_CODR = mask & ~level; // clear output
 
 } 
 ```
@@ -91,7 +91,7 @@ void pio_pin(int pin, int level)  {
 ```c
 void pio_terminate_pin(int pin) { 
 
-  int mask = (1 &lt;&lt; pin);
+  int mask = (1 << pin);
 
   pio_block( mask, 0x0 ); // turn everything off
 
@@ -146,7 +146,7 @@ static void mdlStart(SimStruct *S)
   /*
    * Get access to Parameter/Input/Output/DWork/size information
    */
-  uint8_T *p1 = (uint8_T *) ssGetRunTimeParamInfo(S, 0)-&gt;data;
+  uint8_T *p1 = (uint8_T *) ssGetRunTimeParamInfo(S, 0)->data;
 
   /*
    * Call the legacy code function

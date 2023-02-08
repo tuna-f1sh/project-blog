@@ -122,7 +122,7 @@ case "$1" in
             stat_fail
             exit 1
         else
-            echo $(get_pid) &gt; /var/run/$daemon_name.pid
+            echo $(get_pid) > /var/run/$daemon_name.pid
             add_daemon $daemon_name
             stat_done
         fi
@@ -136,13 +136,13 @@ case "$1" in
         stat_busy "Stopping $daemon_name daemon"
         PID=$(get_pid)
         # KILL
-        [[ -n $PID ]] && kill $PID &&gt; /dev/null
+        [[ -n $PID ]] && kill $PID &> /dev/null
         #
         if [[ $? -gt 0 ]]; then
             stat_fail
             exit 1
         else
-            rm -f /var/run/$daemon_name.pid &&gt; /dev/null
+            rm -f /var/run/$daemon_name.pid &> /dev/null
             rm_daemon $daemon_name
             stat_done
         fi

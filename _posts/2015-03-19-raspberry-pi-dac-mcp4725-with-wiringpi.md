@@ -37,10 +37,10 @@ void setVoltage(int fd, int voltage, int persist) {
   int data[2];
 
   // limit check voltage
-  voltage = (voltage &gt; 4095) ? 4095 : voltage;
+  voltage = (voltage > 4095) ? 4095 : voltage;
 
   // MCP4725 expects a 12bit data stream in two bytes (2nd & 3rd of transmission)
-  data[0] = (voltage &gt;&gt; 8) & 0xFF; // [0 0 0 0 D12 D11 D10 D9 D8] (first bits are modes for our use 0 is fine)
+  data[0] = (voltage >> 8) & 0xFF; // [0 0 0 0 D12 D11 D10 D9 D8] (first bits are modes for our use 0 is fine)
   data[1] = voltage; // [D7 D6 D5 D4 D3 D2 D1 D0]
 
   // 1st byte is the register
@@ -125,11 +125,11 @@ int main(int argc, char *argv[]) {
   // setup chip
   mcp4725Setup(100,MCP4725);
 
-  if (argc &gt; 1) {
+  if (argc > 1) {
     analogWrite(100, output);
   } else {
     for (;;) {
-      for (i = 0; i &lt; sizeof(sine)/sizeof(sine[1]); ++i) {
+      for (i = 0; i < sizeof(sine)/sizeof(sine[1]); ++i) {
         analogWrite(100, sine[i]);
       }
     }

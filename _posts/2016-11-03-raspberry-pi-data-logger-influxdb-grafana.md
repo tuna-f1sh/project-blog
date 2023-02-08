@@ -78,8 +78,8 @@ interval = 1
 # GPIO.setup(channel, GPIO.IN)¬
 
 # Allow user to set session and runno via args otherwise auto-generate
-if len(sys.argv) &gt; 1:
-    if (len(sys.argv) &lt; 3):
+if len(sys.argv) > 1:
+    if (len(sys.argv) < 3):
         print "Must define session and runNo!!"
         sys.exit()
     else:

@@ -204,7 +204,7 @@ void draw()
     leq = leqTot/sample;
   }
   //Sample period check for background levels
-  else if (millis() - timer_sample >= 0 & leq &lt; 0) {
+  else if (millis() - timer_sample >= 0 & leq < 0) {
     leq = leqTot/sample;
     cscale = 1;
   }
@@ -229,7 +229,7 @@ void draw()
   } 
   //If we're till sampling, fade through RGB
   else {
-    if (cscale &lt; 6 &#038; millis() - fade >= 100) {
+    if (cscale < 6 &#038; millis() - fade >= 100) {
       cscale++;
 
       fade = millis();
@@ -281,7 +281,7 @@ void stop()
 }
 
 public void cscale() {
-  if (diff &lt; cBase - cDiv) { cscale = 0; } // white - under background
+  if (diff < cBase - cDiv) { cscale = 0; } // white - under background
   if (diff > cBase - cDiv) { cscale = 1; } // light blue - less than sample
   if (diff > cBase + cDiv) {cscale =  2; } // blue - slightly above
   if (diff > cBase + (2*cDiv)) { cscale = 3; } // purple - getting louder
@@ -328,15 +328,15 @@ void led()
   //Check Values and adjust "Active" Value
   if(RED != RED_A){
     if(RED_A > RED) RED_A = RED_A - 1;
-    if(RED_A &lt; RED) RED_A++;
+    if(RED_A < RED) RED_A++;
   }
   if(GREEN != GREEN_A){
     if(GREEN_A > GREEN) GREEN_A = GREEN_A - 1;
-    if(GREEN_A &lt; GREEN) GREEN_A++;
+    if(GREEN_A < GREEN) GREEN_A++;
   }
   if(BLUE != BLUE_A){
     if(BLUE_A > BLUE) BLUE_A = BLUE_A - 1;
-    if(BLUE_A &lt; BLUE) BLUE_A++;
+    if(BLUE_A < BLUE) BLUE_A++;
   }
 
   //Assign modified values to the pwm outputs for each colour led
@@ -360,7 +360,7 @@ void keyPressed() {
     checkbox.deactivateAll();
   } 
   else {
-    for (int i=0;i&lt;2;i++) {
+    for (int i=0;i<2;i++) {
       // check if key 0-1 have been pressed and toggle
       // the checkbox item accordingly.
       if (keyCode==(48 + i)) { 

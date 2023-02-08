@@ -106,14 +106,14 @@ uint8_t x; // row inc.
   uint8_t yy; // full column inc.
   uint8_t xx = 0; // full row inc.
 
-  for ( i = 0; i &lt; size; i++) {
-    for (yy = 0;yy &lt; PIXEL_COLUMN; yy += height) {
-      for (y = 0; y &lt; height; y++) {
-        for (x = 0; x &lt; {
+  for ( i = 0; i < size; i++) {
+    for (yy = 0;yy < PIXEL_COLUMN; yy += height) {
+      for (y = 0; y < height; y++) {
+        for (x = 0; x < {
           if (x == 0 && y == 0) {
-            setPixel(pixelMap[xx+x][yy+y],((bMatrix[i] &gt;&gt; yy/height) & 1),color1);
+            setPixel(pixelMap[xx+x][yy+y],((bMatrix[i] >> yy/height) & 1),color1);
           } else {
-            setPixel(pixelMap[xx+x][yy+y],((bMatrix[i] &gt;&gt; yy/height) & 1),color2);
+            setPixel(pixelMap[xx+x][yy+y],((bMatrix[i] >> yy/height) & 1),color2);
           }
         }
       }
@@ -143,8 +143,8 @@ uint8_t i; // row inc.
   // The cord either starts at 0 or length of row depending on whether it's rotated
   pixel_inc = rotate ? PIXEL_ROW : 0;
 
-  for (i = 0; i &lt; PIXEL_COLUMN; i++) {
-    for (j = 0; j &lt; PIXEL_ROW; j++) {
+  for (i = 0; i < PIXEL_COLUMN; i++) {
+    for (j = 0; j < PIXEL_ROW; j++) {
       // We either increment or decrement depending on column due to snakes and ladders arrangement
       if (rotate) {
         pixelMap[i][j] = (i % 2 == 0) ? --pixel_inc : ++pixel_inc;
@@ -161,7 +161,7 @@ The binary nybles are created using bit-wise comparison on the decimal digit. Fo
 
 ```c
 // convert the time into 4 nybles for each column of matrix
-  if (hour &gt;= 0 && hour &lt; 10) { bTime[1] = hour | 0b0000; bTime[0] = 0b0000; // 2nd digit still needs clearing } else { bTime[1] = (uint8_t) (hour-(floor(hour/10)*10)) | 0b0000; bTime[0] = (uint8_t) (floor(hour-(hour-floor(hour)))/10) | 0b0000; } if (minute &gt;= 0 && minute &lt; 10) {
+  if (hour >= 0 && hour < 10) { bTime[1] = hour | 0b0000; bTime[0] = 0b0000; // 2nd digit still needs clearing } else { bTime[1] = (uint8_t) (hour-(floor(hour/10)*10)) | 0b0000; bTime[0] = (uint8_t) (floor(hour-(hour-floor(hour)))/10) | 0b0000; } if (minute >= 0 && minute < 10) {
     bTime[3] = minute | 0b0000;
     bTime[2] = 0b0000; // 2nd digit still needs clearing
   } else {

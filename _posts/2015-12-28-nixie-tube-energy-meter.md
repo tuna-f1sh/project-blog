@@ -78,7 +78,7 @@ void printPwr(uint16_t Pwr) {
     tube.printf("%02d",Pwr);
     SI_PORT |= (SI_OFF_MASK & SI_WATT_MASK);
 
-    if ((Pwr &gt;= 100) && (Pwr &lt; 1000)) { tube.setColon(1,(Colon) Lower); } else if ((Pwr &gt;= 1000) && (Pwr &lt; 10000)) { SI_PORT &= SI_KILO_MASK; tube.setColon(0,(Colon) Upper); } else if (Pwr &gt;= 10000) {
+    if ((Pwr >= 100) && (Pwr < 1000)) { tube.setColon(1,(Colon) Lower); } else if ((Pwr >= 1000) && (Pwr < 10000)) { SI_PORT &= SI_KILO_MASK; tube.setColon(0,(Colon) Upper); } else if (Pwr >= 10000) {
         SI_PORT &= SI_MEGA_MASK;
         tube.setColon(1,(Colon) Upper);
     } else {

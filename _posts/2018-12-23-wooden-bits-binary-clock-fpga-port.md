@@ -51,9 +51,9 @@ module counter(
 
   always @ (posedge clk or posedge rst) begin
     if (rst)
-      digit &lt;= 0;
+      digit <= 0;
     else
-      digit &lt;= digit + 1;
+      digit <= digit + 1;
   end
 
 endmodule
@@ -101,28 +101,28 @@ module binary_clock(clk, reset, ce, count);
 
    always @(posedge clk or posedge reset) begin
       if (reset) begin
-         count &lt;= 0;
+         count <= 0;
       end else begin
         if (ce) begin
            if (count[3] & count[0]) begin // 9
-              count[3:0] &lt;= 0;
+              count[3:0] <= 0;
               if (count[6] & count[4]) begin // 5
-                count[6:4] &lt;= 0;
+                count[6:4] <= 0;
                 if (count[10] & count[7]) begin // 9
-                  count[10:7] &lt;= 0;
+                  count[10:7] <= 0;
                   if (count[12] & count[8] * count[7]) begin // 2 & last 3
                     count[12:11] = 0;
                   end else begin
-                    count[12:11] &lt;= count[12:11] + 1;
+                    count[12:11] <= count[12:11] + 1;
                   end
                 end else begin
-                  count[10:7] &lt;= count[10:7] + 1;
+                  count[10:7] <= count[10:7] + 1;
                 end
               end else begin
-                count[6:4] &lt;= count[6:4] + 1;
+                count[6:4] <= count[6:4] + 1;
               end
            end else begin
-              count[3:0] &lt;= count[3:0] + 1;
+              count[3:0] <= count[3:0] + 1;
            end
          end
       end
@@ -157,8 +157,8 @@ assign led_matrix = {
     dh1[1], dh0[1], dm1[1], dm0[1],
     dm0[0], dm1[0], dh0[0], dh1[0]};
 
-for (i=0; i&lt;NUM_LEDS; i=i+1) begin
-    led_rgb_data[24 * i +: 24] &lt;= (led_matrix[i] | rainbow) ? display_rgb : 24'h00_00_00;
+for (i=0; i<NUM_LEDS; i=i+1) begin
+    led_rgb_data[24 * i +: 24] <= (led_matrix[i] | rainbow) ? display_rgb : 24'h00_00_00;
 end
 ```
 
@@ -189,18 +189,18 @@ My original clock also fills the display with a rainbow colour routine at midday
 
 ```c
 task colour_wheel; begin
-  if (wheel &lt; 85) begin
-    red &lt;= (255 - wheel * 3);
-    green &lt;= 0;
-    blue &lt;= wheel * 3;
-  end else if (wheel &lt; 170)  begin
-    red &lt;= 0;
-    green &lt;= (wheel - 85) * 3;
-    blue &lt;= (255 - (wheel - 85) * 3);
+  if (wheel < 85) begin
+    red <= (255 - wheel * 3);
+    green <= 0;
+    blue <= wheel * 3;
+  end else if (wheel < 170)  begin
+    red <= 0;
+    green <= (wheel - 85) * 3;
+    blue <= (255 - (wheel - 85) * 3);
   end else begin
-    red &lt;= (wheel - 170) * 3;
-    green &lt;= (255 - (wheel - 170)* 3);
-    blue &lt;= 0;
+    red <= (wheel - 170) * 3;
+    green <= (255 - (wheel - 170)* 3);
+    blue <= 0;
   end
 end endtask
 ```
