@@ -114,3 +114,7 @@ Overall I think the outcome is great and it's near to what I envisaged. I partic
 <div class="box">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/eiXbshH5SjY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## Manual
+
+![](/assets/img/nixie-clock/JBRNixieTubeClockManual.png)
