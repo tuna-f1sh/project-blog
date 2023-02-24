@@ -118,3 +118,8 @@ Overall I think the outcome is great and it's near to what I envisaged. I partic
 ## Manual
 
 ![](/assets/img/nixie-clock/JBRNixieTubeClockManual.png)
+
+## Shop
+
+[Aluminium Solar Clock](https://shop.jbrengineering.co.uk/product/nixie-tube-clock-solar/)
+[Ceramic Clock](https://shop.jbrengineering.co.uk/product/ceramic-nixie-tube-clock/)
