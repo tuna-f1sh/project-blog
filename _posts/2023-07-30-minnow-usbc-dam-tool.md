@@ -41,6 +41,10 @@ I also added the option of using the _extra_ SWD lines (NRST and TRACE, not requ
 
 The on-board FT230X's GPIO can also be used to control power to the target device, reset the device or control something else.
 
+There is some circuitry required on the target device to support USB DAM and the Minnow configuration (see below). Essentially the target must detect when the CC lines are **both** pulled up with the values specified in the USB specification. Since normal cables do not connect both CC lines, the Minnow must feature a plug to connect directly to the target.
+
+The example board uses two op-amps configured as non-inverting amplifiers to buffer this to a logic AND, which enables a 4-channel switch to connect the debug lines to the Alternate Mode pins. It must be honoured with the corrected values as the CC lines are used for all sorts of upstream and downstream control.
+
 You can find a quick video demo below. The design is open-source but if you'd rather purchase assembled boards or just support my work, PCBAs are on [my shop](https://shop.jbrengineering.co.uk/product/minnow-usb-c-debug-accessory-mode-tool-dam/) and [Tindie](https://www.tindie.com/products/jbrengineering/minnow-usb-c-debug-accessory-mode-tool-dam/).
 
 <div class="box">
