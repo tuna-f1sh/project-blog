@@ -17,6 +17,7 @@ docker-serve:
 
 docker-build:
 	$(DOCKER_RUN) jekyll build $(BUILD_ARGS)
+	find _site -type f -exec chmod 644 {} +
 
 serve:
 	bundle exec jekyll serve $(SERVE_ARGS)
