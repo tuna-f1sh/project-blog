@@ -9,7 +9,8 @@ BUILD_ARGS := --destination $(SITE_FOLDER)
 .PHONY: serve deploy clean deploy dry-run build optimise image docker-serve docker-build
 
 image:
-	docker build -t engineer-blog .
+	# will work on linux/arm64 too but amd64 seems to include the image optimisation tools
+	docker build -t engineer-blog . #--platform linux/amd64
 
 docker-serve:
 	$(DOCKER_RUN) jekyll serve $(SERVE_ARGS) --force_polling --host 0.0.0.0
