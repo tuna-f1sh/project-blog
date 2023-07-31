@@ -12,4 +12,7 @@ WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
 
+# uncomment the bundle config --global frozen 1 line to add bundle for example this line to add the arm64
+# RUN bundle lock --add-platform aarch64-linux
+
 RUN bundle install

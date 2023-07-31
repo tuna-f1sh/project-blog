@@ -2,7 +2,7 @@ HOST = krystal
 HOST_FOLDER = engineer.john-whittington.co.uk
 SHELL := /bin/bash
 SITE_FOLDER = _site
-DOCKER_RUN := docker run -p 4000:4000 --rm -v "$(shell pwd)":/usr/src/app -u $(shell id -u):$(shell id -g) engineer-blog:latest
+DOCKER_RUN := docker run -p 4000:4000 -p 35729:35729 --rm -v "$(shell pwd)":/usr/src/app -u $(shell id -u):$(shell id -g) engineer-blog:latest
 SERVE_ARGS := --livereload --drafts --livereload-ignore "_compress_images_cache.yml" --watch
 BUILD_ARGS := --destination $(SITE_FOLDER)
 
