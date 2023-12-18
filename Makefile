@@ -2,7 +2,7 @@ HOST = krystal
 HOST_FOLDER = engineer.john-whittington.co.uk
 SHELL := /bin/bash
 SITE_FOLDER = _site
-DOCKER_RUN := docker run -p 4000:4000 -p 35729:35729 --rm -v "$(shell pwd)":/usr/src/app -u $(shell id -u):$(shell id -g) engineer-blog:latest
+DOCKER_RUN := docker run --platform linux/amd64 -p 4000:4000 -p 35729:35729 --rm -v "$(shell pwd)":/usr/src/app -u $(shell id -u):$(shell id -g) engineer-blog:latest
 SERVE_ARGS := --livereload --drafts --livereload-ignore "_compress_images_cache.yml" --watch
 BUILD_ARGS := --destination $(SITE_FOLDER)
 
@@ -10,7 +10,7 @@ BUILD_ARGS := --destination $(SITE_FOLDER)
 
 image:
 	# will work on linux/arm64 too but amd64 seems to include the image optimisation tools
-	docker build -t engineer-blog . #--platform linux/amd64
+	docker build -t engineer-blog . --platform linux/amd64
 
 docker-serve:
 	$(DOCKER_RUN) jekyll serve $(SERVE_ARGS) --force_polling --host 0.0.0.0
